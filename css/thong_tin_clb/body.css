@@ -1,0 +1,250 @@
+.body-left{
+    position: relative;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 15%;
+
+    background-image: linear-gradient(90deg, rgb(199, 222, 227), rgb(192, 247, 255));
+}
+
+.body-center{
+    position: relative;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 65%;
+
+}
+
+.body-right{
+    position: relative;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 20%;
+}
+
+/* left */
+.body-left__block{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    background-color: antiquewhite;
+}
+
+.body-left__search-block{
+    position: relative;
+    left: 0;
+    right: 0;
+    height: 5%;
+
+    display: flex;
+
+    font-size: 0.9vw;
+    justify-content: center;
+    align-items: center;
+
+    padding: none;
+    border-top: 0.2vw solid rgb(207, 207, 207);
+    background-color: antiquewhite;
+}
+
+@media screen and (max-width: 310px){
+    .body-left__search-block{
+        font-size: 2.79px;
+        border-top: 0.62px solid rgb(207, 207, 207);
+    }
+}
+
+@media screen and (min-width: 1400px){
+    .body-left__search-block{
+        font-size: 12.6px;
+        border-top: 2.8px solid rgb(207, 207, 207);
+    }
+}
+
+#body-left__search--input{
+    width: 70%;
+    height: 100%;
+
+    padding: none;
+    border: none;
+    outline: none;
+}
+
+#body-left__search--button{
+    width: 30%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    padding: none;
+    border: none;
+    background-color: rgb(37, 37, 37);
+}
+
+#body-left__search--button:hover{
+    background-color: rgb(108, 108, 108);
+}
+
+#body-left__search--button:active{
+    background-color: rgb(144, 144, 144);
+    border: none;
+}
+
+.body-left__result-block{
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+.body-left__result-block--title{
+    position: relative;
+    width: 100%;
+
+    font-size: 1.3vw;
+    text-align: center;
+    padding: 3% 0;
+    color: black;
+    background-color: rgb(255, 211, 160);
+}
+
+.body-left__result-block--element{
+    position: relative;
+
+    padding: 3% 3%;
+    margin: 3% 0;
+    margin-right: 5%;
+
+    background-color: aqua;
+}
+
+.body-left__result-block--link{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    display: flex;
+    align-items: center;
+
+    padding-left: 3%;
+    color: rgb(37, 37, 37);
+    background-color: bisque;
+}
+
+.body-left__result-block--link:hover{
+    background-color: rgb(255, 245, 183);
+}
+
+.body-left__result-block--link:active{
+    color: rgb(114, 114, 114);
+    background-color: rgb(255, 223, 135);
+}
+
+/* right */
+.body-right__element{
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    margin: 5% 5%;
+    padding: 5%;
+    border-radius: 5%;
+    color: rgb(37, 37, 37);
+    background-color: rgb(255, 255, 255);
+}
+
+.body-right__element h3{
+    font-size: 1.3em;
+}
+
+.body-right__element--list{
+    padding: 0;
+    list-style: none;
+}
+
+.body-right__element--list--obj{
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 3% 0;
+    padding-left: 10%;
+    color: rgb(37, 37, 37);
+    font-size: 1em;
+}
+
+.body-right__element--list--obj:hover{
+    background-color: rgb(37, 37, 37);
+    color: rgb(255, 255, 255);
+}
+
+/* CENTER */
+.body-center__content{
+    display: flex;
+    flex-direction: column;
+
+    margin: 2%;
+    margin-right: 5%;
+    color: black;
+    font-size: 1em;
+    background-color: rgb(255, 255, 255);
+}
+
+.body-center__content ul.a{
+    padding-bottom: 2%;
+    padding-right: 5%;
+
+    background-color: rgb(255, 230, 179);
+}
+
+.body-center__content ul.p{
+    padding-bottom: 2%;
+    padding-right: 5%;
+
+    background-color: rgb(255, 255, 255);
+}
+
+.body-center__content--a_element{
+    display: flex;
+
+    width: fit-content;
+    background-color: rgb(255, 244, 194);
+    border: 0.1vw solid rgb(255, 231, 164);
+    color: rgb(37, 37, 37);
+    padding: 1.5% 5%;
+    margin-right: 5%;
+}
+
+.body-center__content--a_element:hover{
+    background-color: rgb(37, 37, 37);
+    color: rgb(255, 255, 255);    
+}
+
+.body-center__content--p_element{
+    background-color: rgb(243, 243, 243);
+    color: rgb(37, 37, 37);
+    padding: 1% 0;
+    padding-left: 5%;
+}
+
+.body-center__content--listblock{
+    padding-left: 5%;
+    border: 0.2vw solid rgb(56, 56, 56);
+}
+
+.body-center__content--title{
+    margin-right: 5%;
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/thong_tin_clb/body.css">
+    <script src="https://kit.fontawesome.com/0afaeea3b6.js" crossorigin="anonymous"></script>
+    <script src = "js/main.js"></script>
+    <script src="js/create_header.js"></script>
+    <title>CÂU LẠC BỘ</title>
+</head>
+<body>
+    <!-- BODY BODY BODY -->
+    <!-- KHỞI TẠO KHUNG THÂN -->
+    <div class="under-header">
+        <!-- KHỞI TẠO KHUNG BODY -->
+        <div class = "body grid">
+            <!-- KHUNG BODY -->
+            <div class="body__content">
+                <!-- TRÁI BODY SEARCH-BLOCK --> 
+                <div class="body-left body-part">
+                    <div class="body-left__block">
+                        <div class="body-left__search-block">
+                            <input type="text" class="body-left__search--part" id = "body-left__search--input">
+                            <script>
+                                function haha(){
+                                    alert("BẠN ĐÃ BẤM NÚT SEARCH")
+                                }
+                            </script>
+                            <button class="fa-solid fa-magnifying-glass body-left__search--part" id = "body-left__search--button" onclick = haha()></button>
+                        </div>
+                        <div class="body-left__result-block">
+                            <h3 class="body-left__result-block--title">KẾT QUẢ TÌM KIẾM</h3>
+                            <ul class="body-left__result-block--list" style = "list-style: circle; color: black; padding-left: 10%;">
+                                <li class="body-left__result-block--element">
+                                    <a href="" class="body-left__result-block--link">Test_resultA00</a>
+                                </li>
+                                <li class="body-left__result-block--element">
+                                    <a href="" class="body-left__result-block--link">Test_resultA01</a>
+                                </li>
+                                <li class="body-left__result-block--element">
+                                    <a href="" class="body-left__result-block--link">Test_resultA02</a>
+                                </li>
+                                <li class="body-left__result-block--element">
+                                    <a href="" class="body-left__result-block--link">Test_resultA03</a>
+                                </li>
+                                <li class="body-left__result-block--element">
+                                    <a href="" class="body-left__result-block--link">Test_resultA04</a>
+                                </li>
+                                <li class="body-left__result-block--element">
+                                    <a href="" class="body-left__result-block--link">Test_resultA05</a>
+                                </li>
+                                <li class="body-left__result-block--element">
+                                    <a href="" class="body-left__result-block--link">Test_resultA06</a>
+                                </li>
+                                <li class="body-left__result-block--element">
+                                    <a href="" class="body-left__result-block--link">Test_resultA07</a>
+                                </li>
+                                <li class="body-left__result-block--element">
+                                    <a href="" class="body-left__result-block--link">Test_resultA08</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- GIỮA BODY -->
+                <div class="body-center body-part">
+                    <!-- CÁC PHẦN TỬ CON -->
+                    <div class="body-center__content">
+                        <ul class = "body-center__content--listblock p">
+                            <h1 class = "body-center__content--title">THÔNG TIN CÂU LẠC BỘ:</h1>
+                            <p href = "" class="body-center__content--p_element">TÊN: <span id = "club--name">TEST_GROUP_0</span></p>
+                            <p href = "" class="body-center__content--p_element">NGÀY THÀNH LẬP: <span id = "club--date">20/12/2023</span></p>
+                            <p href = "" class="body-center__content--p_element">SỐ THÀNH VIÊN: <span id = "club--members">16</span></p>
+                            <p href = "" class="body-center__content--p_element">HỘI CHỦ: <span id = "club--monitor">Huỳnh Thăng Long</span></p>
+                            <p href = "" class="body-center__content--p_element">HỘI PHÓ: <span id = "club--viceMonitor">Đặng Anh Tào</span></p>
+                        </ul>
+                    </div>
+                    <div class="body-center__content">
+                        <ul class = "body-center__content--listblock p">
+                            <h1 class = "body-center__content--title">THÔNG TIN LIÊN HỆ:</h1>
+                            <p href = "" class="body-center__content--p_element">EMAIL: <a href = "" id = "club--email" style = "color: rgb(70, 166, 201)">TEST_GROUP_0@gmail.com</a></p>
+                            <p href = "" class="body-center__content--p_element">FACEBOOK: <a href = "" id = "club--facebook" style = "color: rgb(70, 166, 201)">TEST_GROUP_0_A00</a></p>
+                            <p href = "" class="body-center__content--p_element">SĐT: <span id = "club--phone">0832678234</span></p>
+                        </ul>
+                    </div>
+                </div>
+                <!-- PHẢI BODY -->  
+                <div class="body-right body-part body-sidebar">
+                    <!-- CÁC PHẦN TỬ CON -->
+                    <div class="body-right__element" id = "student_rank">
+                        <h3>CÁC CÂU LẠC BỘ HÀNG ĐẦU:</h3>
+                        <ul class="body-right__element--list">
+                            <a class="body-right__element--list--obj" href="">CLB 1</a>
+                            <a class="body-right__element--list--obj" href="">CLB 2</a>
+                            <a class="body-right__element--list--obj" href="">CLB 3</a>
+                        </ul>
+                    </div>
+                    <div class="body-right__element" id = "student_rank">
+                        <h3>CÁC HOẠT ĐỘNG NỔI BẬT:</h3>
+                        <ul class="body-right__element--list">
+                            <a class="body-right__element--list--obj" href="">ACT 1</a>
+                            <a class="body-right__element--list--obj" href="">ACT 2</a>
+                            <a class="body-right__element--list--obj" href="">ACT 3</a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- FOOTER FOOTER FOOTER -->
+            <!-- PHẦN CHÂN KHUNG -->
+            <iframe class = "footer" src="footer.html" frameborder="0"></iframe>    
+        </div>
+    </div>
+</body>
+</html> 

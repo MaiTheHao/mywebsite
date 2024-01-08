@@ -1,0 +1,77 @@
+.title{
+    position: relative;
+    width: 99%;
+    height: max-content;
+
+    text-align: center;
+
+    padding: 4% 0;
+    color: black;
+    background-color: white;
+    text-decoration: underline rgb(37, 37, 37);
+    font-size: 6vw;
+}
+
+.list{
+    position: relative;
+    width: 99%;
+    height: max-content;
+}
+
+.element{
+    margin: 5% 0;
+    padding: 1% 1%;
+}
+
+.element.none{
+    background-color: rgb(255, 255, 255);
+    color: black;
+    
+    cursor: pointer;
+}
+
+.element.active{
+    background-color: rgb(37, 37, 37);
+}
+
+.element.active .element--title {
+    color: white;
+}
+
+.element.active .poster{
+    color: rgb(188, 255, 252);
+}
+
+.element.active .element--description{
+    color: white;
+}
+
+.element.none:hover{
+    background-color: rgb(225, 225, 225);
+}
+
+.element.none:active{
+    background-color: rgb(175, 175, 175);
+}
+
+.element--title{
+    position: relative;
+    left: 0;
+
+    font-size: 4.7vw;
+    padding: 1.6% 2%;
+}
+
+.poster{
+    margin-left: 2%;
+    color: rgb(5, 108, 129);
+    text-decoration: underline;
+}
+
+.element--description{
+    position: relative;
+    
+    padding: 1% 5%;
+    margin-top: 1%;
+    font-size: 5vw;
+}

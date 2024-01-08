@@ -1,0 +1,114 @@
+.body-right{
+    position: relative;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 20%;
+}
+
+.body-center{
+    position: relative;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 80%;
+
+}
+
+/* right */
+.body-right__element{
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    margin: 5% 5%;
+    padding: 5%;
+    border-radius: 5%;
+    color: rgb(37, 37, 37);
+    background-color: rgb(255, 255, 255);
+}
+
+.body-right__element h3{
+    font-size: 1.3em;
+}
+
+.body-right__element--list{
+    padding: 0;
+    list-style: none;
+}
+
+.body-right__element--list--obj{
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 3% 0;
+    padding-left: 10%;
+    color: rgb(37, 37, 37);
+    font-size: 1em;
+}
+
+.body-right__element--list--obj:hover{
+    background-color: rgb(37, 37, 37);
+    color: rgb(255, 255, 255);
+}
+
+/* CENTER */
+.body-center__content{
+    display: flex;
+    flex-direction: column;
+
+    margin: 2%;
+    margin-right: 5%;
+    color: black;
+    font-size: 1em;
+    background-color: rgb(255, 255, 255);
+}
+
+.body-center__content ul.a{
+    padding-bottom: 2%;
+    padding-right: 5%;
+
+    background-color: rgb(255, 230, 179);
+}
+
+.body-center__content ul.p{
+    padding-bottom: 2%;
+    padding-right: 5%;
+
+    background-color: rgb(255, 255, 255);
+}
+
+.body-center__content--a_element{
+    display: flex;
+
+    width: fit-content;
+    background-color: rgb(255, 244, 194);
+    border: 0.1vw solid rgb(255, 231, 164);
+    color: rgb(37, 37, 37);
+    padding: 1.5% 5%;
+    margin-right: 5%;
+}
+
+.body-center__content--a_element:hover{
+    background-color: rgb(37, 37, 37);
+    color: rgb(255, 255, 255);    
+}
+
+.body-center__content--p_element{
+    background-color: rgb(243, 243, 243);
+    color: rgb(37, 37, 37);
+    padding: 1% 0;
+    padding-left: 5%;
+}
+
+.body-center__content--listblock{
+    padding-left: 5%;
+    border: 0.2vw solid rgb(56, 56, 56);
+}
+
+.body-center__content--title{
+    margin-right: 5%;
+}

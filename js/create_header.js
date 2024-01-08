@@ -74,8 +74,9 @@ function addHeader() {
                 <!-- THANH ĐIỀU HƯỚNG -->
                 <div class="header-nav__menu">
                     <a href="index.html" class="header-nav__menu--element navbutton">TRANG CHỦ</a>
+                    <a href="thong_tin_hs.html" class="header-nav__menu--element navbutton">HỌC SINH</a>
                     <a href="thong_tin_lop.html" class="header-nav__menu--element navbutton">LỚP</a>
-                    <a href="thong_tin_clb.html" class="header-nav__menu--element navbutton">CÂU LẠC BỘ</a>
+                    <a href="thong_tin_clb.html" class="header-nav__menu--element navbutton">NHÓM</a>
                     <a href="thu_vien.html" class="header-nav__menu--element navbutton">THƯ VIỆN</a>
                     <a href="hoat_dong.html" class="header-nav__menu--element navbutton">HOẠT ĐỘNG</a>
                     <a href="gioi_thieu.html" class="header-nav__menu--element navbutton">GIỚI THIỆU TRƯỜNG</a>

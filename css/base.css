@@ -5,15 +5,15 @@
 
 @font-face {
     font-family: zahoma;
-    src:url('/fonts/tahoma.ttf') format('truetype'),
-        url('/fonts/tahoma.woff') format('truetype');
+    src:url('../fonts/tahoma.ttf') format('truetype'),
+        url('../fonts/tahoma.woff') format('truetype');
     font-style:normal;
 }
 
 @font-face {
     font-family: roboto;
-    src:url('/fonts/roboto.ttf') format('truetype'),
-        url('/fonts/roboto.woff') format('truetype');
+    src:url('../fonts/roboto.ttf') format('truetype'),
+        url('../fonts/roboto.woff') format('truetype');
     font-style:normal;
 }
 

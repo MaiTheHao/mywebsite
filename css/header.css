@@ -529,7 +529,6 @@
 @media screen and (max-width: 310px){
     #search--bar{
         left: 1.55px;
-        width: 31px;
         min-width: 31px;
         padding-left: 1.55px;
         padding-right: 3.1px;
@@ -542,7 +541,7 @@
 @media screen and (min-width: 1400px){
     #search--bar{
         left: 7px;
-        width: 140px;
+        max-width: 140px;
         padding-left: 7px;
         padding-right: 14px;
         border-radius: 0 14px 0 0;

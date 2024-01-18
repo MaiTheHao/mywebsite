@@ -88,4 +88,28 @@ function addHeader() {
 }
 
 // Gọi hàm addHeader khi trang web được tải
-window.onload = addHeader;
+// VÀ
+// ADD ALL FILE CSS, (SUPPORT FOR BACK_END)
+window.onload = function() {
+    addHeader()
+    let links = [
+        "css/base.css",
+        "css/header.css",
+        "css/dang_nhap/body.css",
+        "css/gioi_thieu/body.css",
+        "css/thong_tin_lop/body.css",
+        "css/thong_tin_nhom/body.css",
+        "css/thong_tin_thanh_vien/body.css",
+        "css/thu_vien/body.css",
+        "css/thu_vien/sidebar.css",
+        "css/trang_chu/body.css"
+    ];
+
+    for (let i = 0; i < links.length; i++) {
+        let link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = links[i];
+        document.head.appendChild(link);
+    }
+
+}

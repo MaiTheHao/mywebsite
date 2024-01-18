@@ -25,7 +25,7 @@
     margin-top: 5%;
 }
 
-.body__center5__element--block{
+.body__center5__element__block{
     position: relative;
 
     color: black;
@@ -35,12 +35,12 @@
     padding: 2% 4%;
 }
 
-.body__center5__element--block + .body__center5__element--block{
+.body__center5__element__block + .body__center5__element__block{
     margin-top: 5%;
 }
 
 /* XỬ LÍ DỮ LIỆU (title, text-box, heading, paragraph, list, list--heading, list--paragraph) */
-.title{
+.body__center5__element__block__title{
     position: relative;
     left: 0;
     right: 0;
@@ -55,7 +55,7 @@
     padding: 0.7% 0;
 }
 
-.title--icon1{
+.body__center5__element__block__title--icon1{
     position: relative;
     right: 5%;
     height: 5vw;
@@ -66,13 +66,13 @@
     border: 0.2vw solid rgb(0, 82, 189)
 }
 
-.title--heading{
+.body__center5__element__block__title--heading{
     font-size: 2.2em;
 
     color: rgb(255, 255, 255);
 }
 
-.title--icon2{
+.body__center5__element__block__title--icon2{
     position: relative;
     left: 5%;
     height: 5vw;

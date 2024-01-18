@@ -130,7 +130,6 @@
     flex-direction: column;
 
     margin: 2%;
-    margin-right: 5%;
     color: black;
     font-size: 1em;
     background-color: rgb(255, 255, 255);
@@ -181,13 +180,6 @@
 .body-center3__content--listblock{
     padding-left: 5%;
     border: 0.2vw solid rgb(56, 56, 56);
-}
-
-.body-center3__content--title{
-    margin-right: 5%;
-
-    display: flex;
-    justify-content: center;
 }
 
 /* AVT */
@@ -260,10 +252,7 @@
 /* DANH SÁCH */
 .body-center3__container__element{
     position: relative;
-    left: 0;
-    right: 0;
-    top: 0;
-    max-width: 100%;
+    width: 100%;
 
     display: flex;
 
@@ -294,9 +283,9 @@
 }
 
 .body-center3__container__element--part::-webkit-scrollbar {
-    height: 0.3vw;
-    min-height: 0.93px;
-    max-height: 4.2px;
+    height: 0.25vw;
+    min-height: 0.775px;
+    max-height: 3.5px;
 
     background: rgb(220, 220, 220);
 }
@@ -319,7 +308,7 @@
 }
 
 .body-center3__element--name{
-    width: 17%;;
+    width: 17%;
 }
 
 .body-center3__element--gender{

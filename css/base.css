@@ -256,3 +256,11 @@ body{
         top: 100px;
     }
 }
+
+.contentBox__title{
+    margin: 1% 0;
+    margin-right: 5%;
+
+    display: flex;
+    justify-content: center;
+}

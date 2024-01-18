@@ -9,6 +9,18 @@
     font-size: 2vw;
 }
 
+@media screen and (max-width: 310px) {
+    #webLoginBody{
+        font-size: 6.2px;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    #webLoginBody{
+        font-size: 28px;
+    }
+}
+
 /* TABLE */
 #loginTable{
     position: relative;
@@ -36,7 +48,13 @@
     align-items: center;
 
     color: black;
-    font-size: 0.6em;
+    font-size: 1em;
+
+    padding: 2% 0;
+}
+
+#tableHeading h1{
+    font-size: 1.3em;
 }
 
 /* TABLE BODY */
@@ -67,6 +85,10 @@
     border-radius: 1.2vw;
 
     padding: 2% 3.5%;
+}
+
+.tableBody__part__element input{
+    font-size: 1em;
 }
 
 

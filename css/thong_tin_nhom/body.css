@@ -1,0 +1,349 @@
+.body-left3{
+    position: relative;
+    bottom: 0;
+    width: 20%;
+
+    background-image: linear-gradient(90deg, rgb(199, 222, 227), rgb(192, 247, 255));
+}
+
+.body-center3{
+    position: relative;
+    bottom: 0;
+    width: 75%;
+    height: max-content;
+
+    margin-left: 3vw;
+    background-color: rgb(240, 240, 240);
+    box-shadow: 0px 0px 1.5vw 1vw rgb(210, 210, 210);
+}
+
+.body-right3{
+    right: 0;
+}
+
+/* LEFT */
+.body-left3__block{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    overflow-y: auto;
+    background-color: rgb(255, 255, 255);
+}
+
+.body-left3__search-block{
+    position: relative;
+    width: 95%;
+    height: 2.2vw;
+    min-height: 6.82px;
+    max-height: 30.8px;
+
+    margin: 5% 2.5%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 0.9vw;
+    background-color: rgb(230, 230, 230);
+    border-radius: 1vw;
+}
+
+@media screen and (max-width: 310px){
+    .body-left3__search-block{
+        font-size: 2.79px;
+    }
+}
+
+@media screen and (min-width: 1400px){
+    .body-left3__search-block{
+        font-size: 12.6px;
+    }
+}
+
+#body-left3__search--icon{
+    color: rgb(180, 180, 180);
+}
+
+#body-left3__search--input{
+    width: 80%;
+    height: 80%;
+
+    margin-left: 2%;
+    outline: none;
+    border: none;
+
+    background-color: transparent;
+}
+
+.body-left3__result-block{
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+
+    margin-bottom: 5%;
+}
+
+.body-left3__result-block--list{
+    position: relative;
+    width: 95%;
+}
+
+.body-left3__result-block__element{
+    position: relative;
+    left: 2.5%;
+}
+
+.body-left3__result-block__element + .body-left3__result-block__element{
+    margin-top: 4%;
+}
+
+.body-left3__result-block--link{
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    font-size: 0.9em;
+    padding: 2.5% 3%;
+    color: rgb(37, 37, 37);
+    background-color: rgb(240, 240, 240);
+    border-radius: 0.8vw;
+}
+
+.body-left3__result-block--link:hover{
+    background-color: rgb(230, 230, 230);
+}
+
+.body-left3__result-block--link:active{
+    background-color: rgb(210, 210, 210);
+}
+
+/* CENTER */
+.body-center3__content{
+    display: flex;
+    flex-direction: column;
+
+    margin: 2%;
+    margin-right: 5%;
+    color: black;
+    font-size: 1em;
+    background-color: rgb(255, 255, 255);
+
+    border-radius: 1.5vw;
+}
+
+.body-center3__content ul.a{
+    padding-bottom: 2%;
+    padding-right: 5%;
+
+    background-color: rgb(255, 230, 179);
+    border-radius: 1.5vw;
+}
+
+.body-center3__content ul.p{
+    padding-bottom: 2%;
+    padding-right: 5%;
+
+    background-color: rgb(255, 255, 255);
+    border-radius: 1.5vw;
+}
+
+.body-center3__content--a_element{
+    display: flex;
+
+    width: fit-content;
+    background-color: rgb(255, 244, 194);
+    border: 0.1vw solid rgb(255, 231, 164);
+    color: rgb(37, 37, 37);
+    padding: 1.5% 5%;
+    margin-right: 5%;
+}
+
+.body-center3__content--a_element:hover{
+    background-color: rgb(37, 37, 37);
+    color: rgb(255, 255, 255);    
+}
+
+.body-center3__content--p_element{
+    background-color: rgb(243, 243, 243);
+    color: rgb(37, 37, 37);
+    padding: 1% 0;
+    padding-left: 5%;
+
+}
+
+.body-center3__content--listblock{
+    padding-left: 5%;
+    border: 0.2vw solid rgb(56, 56, 56);
+}
+
+.body-center3__content--title{
+    margin-right: 5%;
+
+    display: flex;
+    justify-content: center;
+}
+
+/* AVT */
+#pictures-block{
+    position: relative;
+    height: 20vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: black;
+}
+
+#pictures--background{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#background{
+    position: absolute;
+    width: 95%;
+    height: 90%;
+
+    object-fit: cover;
+    border-radius: 1.5vw;
+}
+
+#pictures--avatar{
+    position: absolute;
+    width: 15vw;
+    height: 15vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+
+    background-color: aqua;
+    border-radius: 50%;
+}
+
+#avatar{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    border: 0.5vw solid white;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 310px){
+    #avatar{
+        border: 1.55px solid white;
+    }
+}
+
+@media screen and (min-width: 1400px){
+    #avatar{
+        border: 7px solid white;
+    }
+}
+
+/* DANH SÁCH */
+.body-center3__container__element{
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    max-width: 100%;
+
+    display: flex;
+
+    padding: 0.5% 0.5%;
+    background-color: rgb(241, 241, 241);
+    margin-right: 5%;
+}
+
+.body-center3__container__element--part{
+    text-wrap: nowrap;
+    overflow-x: auto;
+
+    display: flex;
+    align-items: center;
+    padding: 0.5% 1%;
+
+    background-color: rgb(232, 255, 246);
+}
+
+.container__element--heading{
+    overflow-x: hidden;
+    color: white;
+    background-color: rgb(0, 123, 68)
+}
+
+.body-center3__container__element--part + .body-center3__container__element--part{
+    margin-left: 0.7%;
+}
+
+.body-center3__container__element--part::-webkit-scrollbar {
+    height: 0.3vw;
+    min-height: 0.93px;
+    max-height: 4.2px;
+
+    background: rgb(220, 220, 220);
+}
+
+.body-center3__container__element--part::-webkit-scrollbar-thumb {
+    background: #6c6c6c;
+}
+
+.body-center3__container__element--part::-webkit-scrollbar-thumb:hover {
+    background: #ababab;
+}
+
+.body-center3__container__element a{
+    color: rgb(0, 60, 238);
+}
+
+.body-center3__container__element a:hover{
+    cursor: pointer;
+    color: rgb(30, 180, 255);
+}
+
+.body-center3__element--name{
+    width: 17%;;
+}
+
+.body-center3__element--gender{
+    width: 12%;
+}
+
+.body-center3__element--date{
+    width: 14%;
+}
+
+.body-center3__element--doanvien{
+    width: 13%;
+}
+
+.body-center3__element--class{
+    width: 9%;
+}
+
+.body-center3__element--position{
+    width: 12%;
+}
+
+.body-center3__element--phone{
+    width: 14%;
+}
+
+.body-center3__element--email{
+    width: 20%;
+}

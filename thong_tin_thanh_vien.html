@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/thong_tin_thanh_vien/body.css">
+    <script src="https://kit.fontawesome.com/0afaeea3b6.js" crossorigin="anonymous"></script>
+    <script src = "js/main.js"></script>
+    <script src="js/create_header.js"></script>
+    <title>THÀNH VIÊN</title>
+</head>
+<body>
+    <!-- BODY BODY BODY -->
+    <!-- KHỞI TẠO KHUNG THÂN -->
+    <div class="under-header">
+        <!-- KHỞI TẠO KHUNG BODY -->
+        <div class = "body grid">
+            <!-- KHUNG BODY -->
+            <div class="body__content">
+                <!-- TRÁI BODY -->
+                <div class="body-left1 body-part">
+                    <div class="body-left1__block set-scrollbar--x">
+                        <div class="body-left1__search-block">
+                            <i class="fa-solid fa-magnifying-glass" id = "body-left1__search--icon"></i>
+                            <input type="text" class="body-left1__search--part" id = "body-left1__search--input" placeholder = "Tìm kiếm">
+                        </div>
+                        <div class="body-left1__result-block">
+                            <ul class="body-left1__result-block--list" style = "list-style: none; color: black; padding-left: 0;">
+                                <li class="body-left1__result-block__element">
+                                    <a href="" class="body-left1__result-block--link">Test_resultA00</a>
+                                </li>
+                                <li class="body-left1__result-block__element">
+                                    <a href="" class="body-left1__result-block--link">Test_resultA00</a>
+                                </li>
+                                <li class="body-left1__result-block__element">
+                                    <a href="" class="body-left1__result-block--link">Test_resultA00</a>
+                                </li>
+                                <li class="body-left1__result-block__element">
+                                    <a href="" class="body-left1__result-block--link">Test_resultA00</a>
+                                </li>
+                                <li class="body-left1__result-block__element">
+                                    <a href="" class="body-left1__result-block--link">Test_resultA00</a>
+                                </li>
+                                <li class="body-left1__result-block__element">
+                                    <a href="" class="body-left1__result-block--link">Test_resultA00</a>
+                                </li>
+                                <li class="body-left1__result-block__element">
+                                    <a href="" class="body-left1__result-block--link">Test_resultA00</a>
+                                </li>
+                                <li class="body-left1__result-block__element">
+                                    <a href="" class="body-left1__result-block--link">Test_resultA00</a>
+                                </li>
+                                <li class="body-left1__result-block__element">
+                                    <a href="" class="body-left1__result-block--link">Test_resultA00</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="sideBar paddingBottom" style="color: black"><i class="fa-solid fa-circle-info"></i>Đã hết danh sách</div>
+                    </div>
+                </div>
+                <!-- GIỮA BODY -->
+                <div class="body-center1 body-part">
+                    <!-- CÁC PHẦN TỬ CON -->
+                    <div class="body-center1__content" id="pictures-block">
+                        <div id="pictures--background">
+                            <img src = "pic/user_background.jpg"  alt = "background" id = "background">
+                            <div id="pictures--avatar">
+                                <img src = "pic/user_avatar.jpg" alt = "avatar" id = "avatar">
+                                <i class="fa-regular fa-image" id = "addAvatar"></i>
+                            </div>
+                        </div>                   
+                    </div>
+                    <div class="body-center1__content">
+                        <ul class = "body-center1__content--listblock p">
+                            <h1 class = "body-center1__content--title">THÔNG TIN CÁ NHÂN:</h1>
+                            <p href = "" class="body-center1__content--p_element">TÊN: <span id = "student--name"></span></p>
+                            <p href = "" class="body-center1__content--p_element">NĂM SINH: <span id = "student--date"></span></p>
+                            <p href = "" class="body-center1__content--p_element">ĐOÀN VIÊN: <span id = "student--doanVien"></span></p>
+                            <p href = "" class="body-center1__content--p_element">LỚP: <span id = "student--class"></span></p>
+                            <p href = "" class="body-center1__content--p_element">CHỨC VỤ: <span id = "student--position"></span></p>
+                            <p href = "" class="body-center1__content--p_element">CÂU LẠC BỘ: <span id = "student--club"></span></p>
+                            <p href = "" class="body-center1__content--p_element">ID THÀNH VIÊN: <span id = "student--id"></span></p>
+                        </ul>
+                    </div>
+                    <div class="body-center1__content">
+                        <ul class = "body-center1__content--listblock p">
+                            <h1 class = "body-center1__content--title">THÔNG TIN LIÊN HỆ:</h1>
+                            <p href = "" class="body-center1__content--p_element">EMAIL: <a href = "" id = "student--email" style = "color: rgb(70, 166, 201)"></a></p>
+                            <p href = "" class="body-center1__content--p_element">FACEBOOK: <a href = "" id = "student--facebook" style = "color: rgb(70, 166, 201)"></a></p>
+                            <p href = "" class="body-center1__content--p_element">SĐT: <span id = "student--phone"></span></p>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FOOTER FOOTER FOOTER -->
+    <!-- PHẦN CHÂN KHUNG -->
+    <iframe class = "footer" src="footer.html" frameborder="0"></iframe>    
+</body>
+</html>

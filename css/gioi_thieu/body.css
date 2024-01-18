@@ -1,0 +1,137 @@
+.body__center5{
+    position: relative;
+    width: 100%;
+    height: max-content;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.body__center5__element{
+    position: relative;
+    width: 80%;
+    height: max-content;
+
+    padding: 3% 3%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-radius: 2vw;
+    background-color: rgb(240, 240, 240);
+    box-shadow: 0px 0px 1.5vw 1vw rgb(210, 210, 210);
+}
+
+.body__center5__element + .body__center5__element{
+    margin-top: 5%;
+}
+
+.body__center5__element--block{
+    position: relative;
+
+    color: black;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 1.5vw 1vw rgb(210, 210, 210);
+    border-radius: 1.5vw;
+    padding: 2% 4%;
+}
+
+.body__center5__element--block + .body__center5__element--block{
+    margin-top: 5%;
+}
+
+/* XỬ LÍ DỮ LIỆU (title, text-box, heading, paragraph, list, list--heading, list--paragraph) */
+.title{
+    position: relative;
+    left: 0;
+    right: 0;
+    height: max-content;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(90deg, rgb(0, 52, 207), rgb(45, 83, 222), rgb(0, 52, 207));
+
+    border-radius: 2vw 2vw 0 0;
+    padding: 0.7% 0;
+}
+
+.title--icon1{
+    position: relative;
+    right: 5%;
+    height: 5vw;
+    min-height: 15.5px;
+    max-height: 70px;
+
+    border-radius: 50%;
+    border: 0.2vw solid rgb(0, 82, 189)
+}
+
+.title--heading{
+    font-size: 2.2em;
+
+    color: rgb(255, 255, 255);
+}
+
+.title--icon2{
+    position: relative;
+    left: 5%;
+    height: 5vw;
+    min-height: 15.5px;
+    max-height: 70px;
+
+    border-radius: 50%;
+    border: 0.2vw solid rgb(0, 82, 189)
+}
+
+.text-box{
+    position: relative;
+    left: 0;
+    right: 0;
+
+    padding: 0 0 2% 0;
+    background-color: rgb(242, 244, 255);
+}
+
+.text-box + .text-box{
+    margin: 2% 0;
+}
+
+.heading{
+    font-size: 1.2vw;
+    background-color: rgb(211, 228, 255);
+
+    padding: 0.7% 2%;
+}
+
+.paragraph{
+    font-size: 1vw;
+    margin: 0 2%;
+
+    line-height: 170%;
+}
+
+.paragraph + .paragraph{
+    margin-top: 2%;
+}
+
+.list{
+    position: relative;
+    margin-top: 1%;
+
+}
+
+.list--heading{
+    width: max-content;
+
+    font-size: 1.2vw;
+}
+
+.list--paragraph{
+    font-size: 1vw;
+    margin-left: 5%;
+    margin-top: 1%;
+}
+
+.list--paragraph + .list--paragraph{
+    margin-top: 2%;
+}

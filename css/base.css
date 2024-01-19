@@ -155,6 +155,7 @@ body{
 
 .body-part{
     display: inline-block;
+    min-height: 300px;
 }
 
 .body-sidebar{

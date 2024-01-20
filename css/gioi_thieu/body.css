@@ -39,7 +39,7 @@
     margin-top: 5%;
 }
 
-/* XỬ LÍ DỮ LIỆU (title, text-box, heading, paragraph, list, list--heading, list--paragraph) */
+/* XỬ LÍ DỮ LIỆU (title, body__center5__element__block__text-box, text-box5__heading, text-box5__paragraph, list, container, list--text-box5__heading, list--text-box5__paragraph) */
 .body__center5__element__block__title{
     position: relative;
     left: 0;
@@ -66,7 +66,7 @@
     border: 0.2vw solid rgb(0, 82, 189)
 }
 
-.body__center5__element__block__title--heading{
+.body__center5__element__block__title--text-box5__heading{
     font-size: 2.2em;
 
     color: rgb(255, 255, 255);
@@ -83,7 +83,7 @@
     border: 0.2vw solid rgb(0, 82, 189)
 }
 
-.text-box{
+.body__center5__element__block__text-box{
     position: relative;
     left: 0;
     right: 0;
@@ -92,25 +92,25 @@
     background-color: rgb(242, 244, 255);
 }
 
-.text-box + .text-box{
+.body__center5__element__block__text-box + .body__center5__element__block__text-box{
     margin: 2% 0;
 }
 
-.heading{
+.text-box5__heading{
     font-size: 1.2vw;
     background-color: rgb(211, 228, 255);
 
     padding: 0.7% 2%;
 }
 
-.paragraph{
+.text-box5__paragraph{
     font-size: 1vw;
     margin: 0 2%;
 
     line-height: 170%;
 }
 
-.paragraph + .paragraph{
+.text-box5__paragraph + .text-box5__paragraph{
     margin-top: 2%;
 }
 
@@ -120,18 +120,48 @@
 
 }
 
-.list--heading{
+.list--text-box5__heading{
     width: max-content;
 
     font-size: 1.2vw;
 }
 
-.list--paragraph{
+.list--text-box5__paragraph{
     font-size: 1vw;
     margin-left: 5%;
     margin-top: 1%;
 }
 
-.list--paragraph + .list--paragraph{
+.list--text-box5__paragraph + .list--text-box5__paragraph{
     margin-top: 2%;
+}
+
+.gridContainer5{
+    display: flex;
+    flex-direction: column;
+
+    background-color: rgb(232, 255, 246);
+}
+
+.gridContainer5__element{
+    position: relative;
+    left: 0;
+    right: 0;
+
+    display: grid;
+    grid-template-columns: 15% 40% 30% 15%;
+}
+
+.gridContainer5__element__title{
+    background-color: rgb(0, 123, 68);
+    color: white;
+}
+
+.gridContainer5__element__part{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.15vw solid rgb(220, 220, 220);
+
+    padding: 1% 2%;
 }

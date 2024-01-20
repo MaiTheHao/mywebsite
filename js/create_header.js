@@ -72,7 +72,7 @@ function addHeader() {
                 </div>
                 <!-- THANH ĐIỀU HƯỚNG -->
                 <div class="header-nav__menu">
-                    <a href="index.html" class="header-nav__menu--element navbutton--active">TRANG CHỦ</a>
+                    <a href="index.html" class="header-nav__menu--element navbutton--normal">TRANG CHỦ</a>
                     <a href="thong_tin_thanh_vien.html" class="header-nav__menu--element navbutton--normal">THÀNH VIÊN</a>
                     <a href="thong_tin_lop.html" class="header-nav__menu--element navbutton--normal">LỚP</a>
                     <a href="thong_tin_nhom.html" class="header-nav__menu--element navbutton--normal">NHÓM</a>
@@ -88,10 +88,33 @@ function addHeader() {
     document.body.insertAdjacentHTML('afterbegin', headerHTML);
 }
 
+// // ANIMOTION HEADER NAV
+// var list_element = [];
+// function addEvent(){
+//     let elements = document.getElementsByClassName("header-nav__menu--element");
+//     console.log(elements)
+
+//     for(let i = 0; i < elements.length; i++){
+//         elements[i].addEventListener('click', function() {
+//             console.log("part 1")
+//             // Reset all elements to normal
+//             for(let j = 0; j < elements.length; j++){
+//                 elements[j].classList.remove("navbutton--active");
+//                 elements[j].classList.add("navbutton--normal");
+//             }
+
+//             // Set the clicked element to active
+//             this.classList.remove("navbutton--normal");
+//             this.classList.add("navbutton--active");
+//         });
+//     }
+// }
+
 // Gọi hàm addHeader khi trang web được tải
-// VÀ
-// ADD ALL FILE CSS, (SUPPORT FOR BACK_END)
-window.onload = addHeader
+window.onload = function(){
+    addHeader();
+    addEvent();
+}
 
 // let links = [
 //     "css/base.css",

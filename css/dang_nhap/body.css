@@ -42,7 +42,7 @@
 }
 
 /* TABLE HEADER */
-#tableHeading{
+#loginTableHeading{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -53,12 +53,12 @@
     padding: 2% 0;
 }
 
-#tableHeading h1{
+#loginTableHeading h1{
     font-size: 1.3em;
 }
 
 /* TABLE BODY */
-#tableBody{
+#loginTableBody{
     position: relative;
     left: 0;
     right: 0;
@@ -72,14 +72,14 @@
     font-size: 1em;
 }
 
-.tableBody__part{
+.loginTableBody__part{
     position: relative;
     width: 60%;
 
     font-size: 1em;
 }
 
-.tableBody__part__element{
+.loginTableBody__part__element{
     position: relative;
     font-size: 0.5em;
     border-radius: 1.2vw;
@@ -87,28 +87,28 @@
     padding: 2% 3.5%;
 }
 
-.tableBody__part__element input{
+.loginTableBody__part__element input{
     font-size: 1em;
 }
 
 
-#tableBodyTop{
+#loginTableBodyTop{
     display: flex;
     flex-direction: column;
 }
 
-#tableBodyTop .tableBody__part__element{
+#loginTableBodyTop .loginTableBody__part__element{
     display: flex;
     align-items: center;
 
     background-color: rgb(240, 240, 240);
 }
 
-#tableBodyTop .tableBody__part__element i{
+#loginTableBodyTop .loginTableBody__part__element i{
     flex: 1;
 }
 
-#tableBodyTop .tableBody__part__element input{
+#loginTableBodyTop .loginTableBody__part__element input{
     flex: 15;
     border: none;
     outline: none;
@@ -116,11 +116,11 @@
     background-color: transparent;
 }
 
-#tableBodyTop .tableBody__part__element + .tableBody__part__element{
+#loginTableBodyTop .loginTableBody__part__element + .loginTableBody__part__element{
     margin-top: 2%;
 }
 
-#tableBodyBottom{
+#loginTableBodyBottom{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -128,7 +128,7 @@
 
 }
 
-#tableBodyBottom .tableBody__part__element{
+#loginTableBodyBottom .loginTableBody__part__element{
     position: relative;
     display: flex;
     justify-content: center;
@@ -141,18 +141,18 @@
 }
 
 @media screen and (min-width: 310px) {
-    #tableBodyBottom .tableBody__part__element{
+    #loginTableBodyBottom .loginTableBody__part__element{
         border: 0.217px solid rgba(200, 200, 200, 0.648);
     }
 }
 
 @media screen and (max-width: 1400px) {
-    #tableBodyBottom .tableBody__part__element{
+    #loginTableBodyBottom .loginTableBody__part__element{
         border: 0.98px solid rgba(200, 200, 200, 0.648);
     }
 }
 
-#tableBodyBottom .tableBody__part__element:hover{
+#loginTableBodyBottom .loginTableBody__part__element:hover{
     opacity: 0.7;
     box-shadow: 0px 0px 1vw 0.1vw rgb(210, 210, 210);
 }

@@ -1,7 +1,7 @@
 // Tạo một hàm để thêm header vào trang web
 function addHeader() {
     // Mã HTML của header
-    var headerHTML = `
+    let headerHTML = `
     <!-- KHỞI TẠO HEADER -->
     <link rel="stylesheet" href="css/header.css">
     <div class="header grid" id = "webHeader">
@@ -27,7 +27,8 @@ function addHeader() {
                 <div class="header-title--center header-title--elements">
                     <div class="header-title--center-title">
                         <div class="header-title--center-title--block">
-                            <p><i class="fa-solid fa-book" style="color: rgb(255, 255, 255)"></i> HUYNH VAN NGHE HIGH SCHOOL</p>
+                            <img src = pic/HVN_icon.jpg>
+                            <p>HUYNH VAN NGHE HIGH SCHOOL</p>
                         </div>
                     </div>
                 </div>
@@ -60,7 +61,7 @@ function addHeader() {
                     </div>
                 </div>
             </div>
-            <div class="header-nav">
+            <div class="header-nav set-scrollbar--y">
                 <!-- NÚT TÌM KIẾM -->
                 <div class = "header-nav__search-block" id = "search--block">
                     <div class = "header-nav__search-block__button" id = "search--button">
@@ -72,15 +73,37 @@ function addHeader() {
                 </div>
                 <!-- THANH ĐIỀU HƯỚNG -->
                 <div class="header-nav__menu">
-                    <a href="index.html" class="header-nav__menu--element navbutton--normal">TRANG CHỦ</a>
-                    <a href="thong_tin_thanh_vien.html" class="header-nav__menu--element navbutton--normal">THÀNH VIÊN</a>
-                    <a href="thong_tin_lop.html" class="header-nav__menu--element navbutton--normal">LỚP</a>
-                    <a href="thong_tin_nhom.html" class="header-nav__menu--element navbutton--normal">NHÓM</a>
-                    <a href="thu_vien.html" class="header-nav__menu--element navbutton--normal">THƯ VIỆN</a>
-                    <a href="gioi_thieu.html" class="header-nav__menu--element navbutton--normal">GIỚI THIỆU</a>
-                    <a href="dang_nhap.html" class="header-nav__menu--element navbutton--normal" style = "color: gray">CHỨC NĂNG THỬ NGHIỆM (ĐĂNG NHẬP)</a>
+                    <div id = "header__clock">
+                    <span id="week-number"></span><span id="current-date"></span>
+                    </div>  
+                    <a href="index.html" class="header-nav__menu--element navbutton" id = "page0">TRANG CHỦ</a>
+                    <a href="thong_tin_thanh_vien.html" class="header-nav__menu--element navbutton" id = "page1">THÀNH VIÊN</a>
+                    <a href="thong_tin_lop.html" class="header-nav__menu--element navbutton" id = "page2">LỚP</a>
+                    <a href="thong_tin_nhom.html" class="header-nav__menu--element navbutton" id = "page3">NHÓM</a>
+                    <a href="thu_vien.html" class="header-nav__menu--element navbutton" id = "page4">THƯ VIỆN</a>
+                    <a href="gioi_thieu.html" class="header-nav__menu--element navbutton" id = "page5">GIỚI THIỆU</a>
+                    <a href="dang_nhap.html" class="header-nav__menu--element navbutton" style = "color: gray">ĐĂNG NHẬP-test</a>
+                    <a href="dang_nhap.html" class="header-nav__menu--element navbutton" style = "color: gray">TEST ELEMENT</a>
+                    <a href="dang_nhap.html" class="header-nav__menu--element navbutton" style = "color: gray">TEST ELEMENT</a>
+                    <a href="dang_nhap.html" class="header-nav__menu--element navbutton" style = "color: gray">TEST ELEMENT</a>
+                    <a href="dang_nhap.html" class="header-nav__menu--element navbutton" style = "color: gray">TEST ELEMENT</a>
+                    <a href="dang_nhap.html" class="header-nav__menu--element navbutton" style = "color: gray">TEST ELEMENT</a>
+                    <a href="dang_nhap.html" class="header-nav__menu--element navbutton" style = "color: gray">TEST ELEMENT</a>
+                    <a href="dang_nhap.html" class="header-nav__menu--element navbutton" style = "color: gray">TEST ELEMENT</a>
+                    <a href="dang_nhap.html" class="header-nav__menu--element navbutton" style = "color: gray">TEST ELEMENT</a>
+                    <a href="dang_nhap.html" class="header-nav__menu--element navbutton" style = "color: gray">TEST ELEMENT</a>
+                    <a href="dang_nhap.html" class="header-nav__menu--element navbutton" style = "color: gray">TEST ELEMENT</a>
+                    <a href="dang_nhap.html" class="header-nav__menu--element navbutton" style = "color: gray">TEST ELEMENT</a>
+                    <a href="dang_nhap.html" class="header-nav__menu--element navbutton" style = "color: gray">TEST ELEMENT</a>
+                    <a href="dang_nhap.html" class="header-nav__menu--element navbutton" style = "color: gray">TEST ELEMENT</a>
+                    <a href="dang_nhap.html" class="header-nav__menu--element navbutton" style = "color: gray">TEST ELEMENT</a>
+                    <a href="dang_nhap.html" class="header-nav__menu--element navbutton" style = "color: gray">TEST ELEMENT</a>
+                    <a href="dang_nhap.html" class="header-nav__menu--element navbutton" style = "color: gray">TEST ELEMENT</a>
+                    <a href="dang_nhap.html" class="header-nav__menu--element navbutton" style = "color: gray">TEST ELEMENT</a>
+                    <a href="dang_nhap.html" class="header-nav__menu--element navbutton" style = "color: gray">TEST ELEMENT</a>
                 </div>
             </div>
+        <div class = "paddingRight"></div>
         </div>
     </div>
     `;
@@ -88,50 +111,57 @@ function addHeader() {
     document.body.insertAdjacentHTML('afterbegin', headerHTML);
 }
 
-// // ANIMOTION HEADER NAV
-// var list_element = [];
-// function addEvent(){
-//     let elements = document.getElementsByClassName("header-nav__menu--element");
-//     console.log(elements)
+function createDate(){
+    // Đặt ngày bắt đầu YYYY-MM-DD
+    let input = '2023-08-28';
+    const startDate = new Date(input); 
+    let dayInWeek = startDate.getDay();
+    if ( dayInWeek > 1){
+        startDate.setDate(startDate.getDate() - (startDate.getDay() - 1))
+    } else {
+        if (dayInWeek == 0){
+            startDate.setDate(startDate.getDate() - (startDate.getDay() - 7))
+        }
+    }
 
-//     for(let i = 0; i < elements.length; i++){
-//         elements[i].addEventListener('click', function() {
-//             console.log("part 1")
-//             // Reset all elements to normal
-//             for(let j = 0; j < elements.length; j++){
-//                 elements[j].classList.remove("navbutton--active");
-//                 elements[j].classList.add("navbutton--normal");
-//             }
+    // Lấy ngày hiện tại
+    const _currentDate = new Date();
 
-//             // Set the clicked element to active
-//             this.classList.remove("navbutton--normal");
-//             this.classList.add("navbutton--active");
-//         });
-//     }
-// }
+    // Tính số tuần kể từ ngày bắt đầu
+    const weekNumber = Math.floor((_currentDate - startDate) / (7 * 24 * 60 * 60 * 1000)) + 1;
+
+    // Định dạng kiểu DD/MM/YYYY
+    let day = _currentDate.getDate();
+    let month = _currentDate.getMonth() + 1;
+    let year = _currentDate.getFullYear();
+    const formattedDate = `${(day < 10) ? `0${day}` : day}/${(month < 10) ? `0${month}` : month}/${year}`
+
+    // Cập nhật số tuần, ngày
+    document.getElementById('week-number').textContent = "Tuần "+weekNumber;
+    document.getElementById('current-date').textContent = ", "+formattedDate;
+}   
 
 // Gọi hàm addHeader khi trang web được tải
 window.onload = function(){
     addHeader();
-    addEvent();
+    createDate();
+    // let links = [
+    //     "css/base.css",
+    //     "css/header.css",
+    //     "css/dang_nhap/body.css",
+    //     "css/gioi_thieu/body.css",
+    //     "css/thong_tin_lop/body.css",
+    //     "css/thong_tin_nhom/body.css",
+    //     "css/thong_tin_thanh_vien/body.css",
+    //     "css/thu_vien/body.css",
+    //     "css/thu_vien/sidebar.css",
+    //     "css/trang_chu/body.css"
+    // ];
+    
+    // for (let i = 0; i < links.length; i++) {
+    //     let link = document.createElement('link');
+    //     link.rel = 'stylesheet';
+    //     link.href = links[i];
+    //     document.head.appendChild(link);
+    // }
 }
-
-// let links = [
-//     "css/base.css",
-//     "css/header.css",
-//     "css/dang_nhap/body.css",
-//     "css/gioi_thieu/body.css",
-//     "css/thong_tin_lop/body.css",
-//     "css/thong_tin_nhom/body.css",
-//     "css/thong_tin_thanh_vien/body.css",
-//     "css/thu_vien/body.css",
-//     "css/thu_vien/sidebar.css",
-//     "css/trang_chu/body.css"
-// ];
-
-// for (let i = 0; i < links.length; i++) {
-//     let link = document.createElement('link');
-//     link.rel = 'stylesheet';
-//     link.href = links[i];
-//     document.head.appendChild(link);
-// }

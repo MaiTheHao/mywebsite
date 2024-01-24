@@ -5,7 +5,7 @@ window.onresize = function x(){
     width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
     height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
 };
-console.log("width ", width, " height",height);
+console.log("HELLO WWW: width ", width, " height",height);
 
 // CLICK -> SUMMON SIDE BAR
 function set_side_bar(){

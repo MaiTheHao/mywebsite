@@ -77,6 +77,75 @@
                             </div>
                         </div>                   
                     </div>
+                    <!-- CHỈNH SỬA -->
+
+                    <!--  -->
+                    <div id="updateInfoDiv" class = "set-scrollbar--y" style="margin: 2%">
+                        <div class="updateInfoDiv__element updateInfoDiv__pic">
+                            <span><i class="fa-solid fa-image"></i> Thay đổi ảnh đại diện</span>
+                        </div>
+                        <div class="updateInfoDiv__element updateInfoDiv__infomation" onclick=show_updateInfoDiv()>
+                            <span><i class="fa-solid fa-pen"></i> Cập nhật thông tin cá nhân</span>
+                        </div>
+                    </div>
+                    <!--  -->
+
+                    <script>
+                        function show_updateInfoDiv(){
+                            let e = document.getElementById("updateInfoDiv__hideBlock")
+                            while(!Boolean(e)){
+                                e = document.getElementById("updateInfoDiv__hideBlock")
+                            }
+                            if (e.style.display == "none"){
+                                e.style.display = "flex"
+                            } else {
+                                if(e.style.display == "flex"){
+                                    e.style.display = "none"
+                                }else{
+                                    e.style.display = "flex"
+                                }
+                            }
+                        }
+                    </script>
+
+                    <!-- BLOCK CẬP NHẬT-->
+                    <div id = "updateInfoDiv__hideBlock">
+                        <div class="undateInfoDiv__infomation__hideBlock">
+                            <div id="updateInfoDiv__hideBlock--exit" onclick = show_updateInfoDiv()>x</div>
+                            <form action="" method="post">
+                                <label for="c-name">  <!-- c = change -->
+                                    <span>Tên</span>
+                                    <input type="text" id = "c-name" name = "n-name"> <!-- n = new -->
+                                </label>
+                                <label for="c-gender">
+                                    <span>Giới tính</span>
+                                    <input type="text" id = "c-gender" name = "n-gender">
+                                </label>
+                                <label for="c-date">
+                                    <span>Ngày sinh</span>
+                                    <input type="date" id = "c-date" name = "n-date">
+                                </label>
+                                <label for="c-doanvien">
+                                    <span>Đoàn viên</span>
+                                    <input type="checkbox" id = "c-doanvien" name = "n-doanvien">
+                                </label>
+                                <label for="c-class">
+                                    <span>Lớp</span>
+                                    <input type="text" id = "c-class" name = "n-class">
+                                </label>
+                                <label for="c-position">
+                                    <span>Chức vụ</span>
+                                    <input type="text" id = "c-position" name = "n-position">
+                                </label>
+                                <label for="c-diary">
+                                    <span>Nhật kí</span>
+                                    <input type="text" id = "c-diary" name = "n-diary">
+                                </label>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- CHỈNH SỬA -->
                     <div class="body-center1__content">
                         <ul class = "body-center1__content--listblock p">
                             <h1 class = "body-center1__content--title contentBox__title">THÔNG TIN CÁ NHÂN</h1>

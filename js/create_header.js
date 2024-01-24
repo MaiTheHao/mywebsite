@@ -73,9 +73,7 @@ function addHeader() {
                 </div>
                 <!-- THANH ĐIỀU HƯỚNG -->
                 <div class="header-nav__menu">
-                    <div id = "header__clock">
-                    <span id="week-number"></span><span id="current-date"></span>
-                    </div>  
+                    <div id = "header__clock"><span id="week-number"></span><span id="current-date"></span></div>  
                     <a href="index.html" class="header-nav__menu--element navbutton" id = "page0">TRANG CHỦ</a>
                     <a href="thong_tin_thanh_vien.html" class="header-nav__menu--element navbutton" id = "page1">THÀNH VIÊN</a>
                     <a href="thong_tin_lop.html" class="header-nav__menu--element navbutton" id = "page2">LỚP</a>
@@ -145,23 +143,29 @@ function createDate(){
 window.onload = function(){
     addHeader();
     createDate();
-    // let links = [
-    //     "css/base.css",
-    //     "css/header.css",
-    //     "css/dang_nhap/body.css",
-    //     "css/gioi_thieu/body.css",
-    //     "css/thong_tin_lop/body.css",
-    //     "css/thong_tin_nhom/body.css",
-    //     "css/thong_tin_thanh_vien/body.css",
-    //     "css/thu_vien/body.css",
-    //     "css/thu_vien/sidebar.css",
-    //     "css/trang_chu/body.css"
-    // ];
-    
-    // for (let i = 0; i < links.length; i++) {
-    //     let link = document.createElement('link');
-    //     link.rel = 'stylesheet';
-    //     link.href = links[i];
-    //     document.head.appendChild(link);
-    // }
+
+    if (Boolean(document.getElementById("webLoginBody"))){
+        let es = document.getElementsByClassName("header-nav__menu")
+        es[0].style.display = "none"
+    }
 }
+
+// let links = [
+//     "css/base.css",
+//     "css/header.css",
+//     "css/dang_nhap/body.css",
+//     "css/gioi_thieu/body.css",
+//     "css/thong_tin_lop/body.css",
+//     "css/thong_tin_nhom/body.css",
+//     "css/thong_tin_thanh_vien/body.css",
+//     "css/thu_vien/body.css",
+//     "css/thu_vien/sidebar.css",
+//     "css/trang_chu/body.css"
+// ];
+
+// for (let i = 0; i < links.length; i++) {
+//     let link = document.createElement('link');
+//     link.rel = 'stylesheet';
+//     link.href = links[i];
+//     document.head.appendChild(link);
+// }

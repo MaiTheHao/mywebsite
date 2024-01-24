@@ -215,11 +215,13 @@ body{
 }
 
 .paddingRight{
-    width: 95%;
+    position: relative;
+    width: 95% !important;
 }
 
 .paddingBottom{
-    height: 95%;
+    position: relative;
+    height: 95% !important;
 
     display: flex;
     justify-content: center;
@@ -266,4 +268,70 @@ body{
 
     display: flex;
     justify-content: center;
+}
+
+/* THANH CHỈNH SỬA THÔNG TIN */
+
+#updateInfoDiv{
+    position: relative;
+    display: flex;
+
+    background-color: transparent;
+}
+
+.updateInfoDiv__element{
+    position: relative;
+    width: max-content;
+
+    border-radius: 0.7vw !important;
+
+    padding: 0.25% 1%;
+    border-radius: inherit;
+
+    text-wrap: nowrap;
+    background-color: rgb(37, 37, 37);
+    color: rgb(255, 255, 255);
+    
+    transition: opacity 0.3s;
+    transition: transform 0.3s;
+}
+
+.updateInfoDiv__element + .updateInfoDiv__element{
+    margin-left: 0.5%;
+}
+
+.updateInfoDiv__element:hover{
+    cursor: pointer;
+
+    opacity: 0.7;
+    transform: scale(0.98);
+}
+
+.updateInfoDiv__element:active{
+    cursor: pointer;
+
+    opacity: 1;
+    transform: scale(0.90);
+}
+
+/* UPDATE HIDE BLOCK */
+#updateInfoDiv__hideBlock{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    display: none;
+    justify-content: center;
+
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+#updateInfoDiv__hideBlock div{
+    position: relative;
+    width: 10%;
+    
+    background-color: white;
 }

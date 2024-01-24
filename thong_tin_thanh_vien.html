@@ -77,9 +77,8 @@
                             </div>
                         </div>                   
                     </div>
-                    <!-- CHỈNH SỬA -->
 
-                    <!--  -->
+                    <!-- CHỈNH SỬA -->
                     <div id="updateInfoDiv" class = "set-scrollbar--y" style="margin: 2%">
                         <div class="updateInfoDiv__element updateInfoDiv__pic">
                             <span><i class="fa-solid fa-image"></i> Thay đổi ảnh đại diện</span>
@@ -88,14 +87,12 @@
                             <span><i class="fa-solid fa-pen"></i> Cập nhật thông tin cá nhân</span>
                         </div>
                     </div>
+
                     <!--  -->
 
                     <script>
                         function show_updateInfoDiv(){
                             let e = document.getElementById("updateInfoDiv__hideBlock")
-                            while(!Boolean(e)){
-                                e = document.getElementById("updateInfoDiv__hideBlock")
-                            }
                             if (e.style.display == "none"){
                                 e.style.display = "flex"
                             } else {
@@ -108,44 +105,8 @@
                         }
                     </script>
 
-                    <!-- BLOCK CẬP NHẬT-->
-                    <div id = "updateInfoDiv__hideBlock">
-                        <div class="undateInfoDiv__infomation__hideBlock">
-                            <div id="updateInfoDiv__hideBlock--exit" onclick = show_updateInfoDiv()>x</div>
-                            <form action="" method="post">
-                                <label for="c-name">  <!-- c = change -->
-                                    <span>Tên</span>
-                                    <input type="text" id = "c-name" name = "n-name"> <!-- n = new -->
-                                </label>
-                                <label for="c-gender">
-                                    <span>Giới tính</span>
-                                    <input type="text" id = "c-gender" name = "n-gender">
-                                </label>
-                                <label for="c-date">
-                                    <span>Ngày sinh</span>
-                                    <input type="date" id = "c-date" name = "n-date">
-                                </label>
-                                <label for="c-doanvien">
-                                    <span>Đoàn viên</span>
-                                    <input type="checkbox" id = "c-doanvien" name = "n-doanvien">
-                                </label>
-                                <label for="c-class">
-                                    <span>Lớp</span>
-                                    <input type="text" id = "c-class" name = "n-class">
-                                </label>
-                                <label for="c-position">
-                                    <span>Chức vụ</span>
-                                    <input type="text" id = "c-position" name = "n-position">
-                                </label>
-                                <label for="c-diary">
-                                    <span>Nhật kí</span>
-                                    <input type="text" id = "c-diary" name = "n-diary">
-                                </label>
-                            </form>
-                        </div>
-                    </div>
-
                     <!-- CHỈNH SỬA -->
+
                     <div class="body-center1__content">
                         <ul class = "body-center1__content--listblock p">
                             <h1 class = "body-center1__content--title contentBox__title">THÔNG TIN CÁ NHÂN</h1>
@@ -163,6 +124,7 @@
                         <ul class = "body-center1__content--listblock p">
                             <h1 class = "body-center1__content--title contentBox__title">THÔNG TIN LIÊN HỆ</h1>
                             <p href = "" class="body-center1__content--p_element">EMAIL: <a href = "" id = "personal--email" style = "color: rgb(70, 166, 201)"></a></p>
+                            <p href = "" class="body-center1__content--p_element">FACEBOOK: <a href = "" id = "personal--facebook" style = "color: rgb(70, 166, 201)"></a></p>
                             <p href = "" class="body-center1__content--p_element">SĐT: <span id = "personal--phone"></span></p>
                         </ul>
                     </div>
@@ -181,6 +143,80 @@
     </style>
     <!-- FOOTER FOOTER FOOTER -->
     <!-- PHẦN CHÂN KHUNG -->
-    <iframe class = "footer" src="html/footer.html" frameborder="0"></iframe>    
+    <iframe class = "footer" src="html/footer.html" frameborder="0"></iframe>
+    
+    <!-- BLOCK CẬP NHẬT-->
+    <div class = "set-scrollbar--x" id = "updateInfoDiv__hideBlock">
+        <div id="updateInfoDiv__infomation__hideBlock">
+            <form class = "updateInfoDiv__hideBlock__part" id="updateInfoDiv__hideBlock__information" action="" method="">
+                <div class="updateInfoDiv__hideBlock__title">
+                    <h3>Cập nhật thông tin cơ bản</h3>
+                    <div id="updateInfoDiv__hideBlock__title--exit" onclick = show_updateInfoDiv()><i class="fa-solid fa-xmark"></i></div>
+                </div>
+                <label class = "updateInfoDiv__hideBlock__part__input--text" for="c-name">  <!-- c = change -->
+                    <span>Tên</span>
+                    <input class = "updateInfoInput" type="text" id = "c-name" name = "n-name"> <!-- n = new -->
+                </label>
+                <label class = "updateInfoDiv__hideBlock__part__input--text" for="c-gender">
+                    <span>Giới tính</span>
+                    <input class = "updateInfoInput" type="text" id = "c-gender" name = "n-gender">
+                </label>
+                <label class = "updateInfoDiv__hideBlock__part__input--date" for="c-date">
+                    <span>Ngày sinh</span>
+                    <input class = "updateInfoInput" type="date" id = "c-date" name = "n-date">
+                </label>
+                <label class = "updateInfoDiv__hideBlock__part__input--checkbox" for="c-doanvien">
+                    <span>Đoàn viên</span>
+                    <input class = "updateInfoInput" type="checkbox" id = "c-doanvien" name = "n-doanvien">
+                </label>
+                <label class = "updateInfoDiv__hideBlock__part__input--text" for="c-class">
+                    <span>Lớp</span>
+                    <input class = "updateInfoInput" type="text" id = "c-class" name = "n-class">
+                </label>
+                <label class = "updateInfoDiv__hideBlock__part__input--text" for="c-position">
+                    <span>Chức vụ</span>
+                    <input class = "updateInfoInput" type="text" id = "c-position" name = "n-position">
+                </label>
+                <label class = "updateInfoDiv__hideBlock__part__input--text" for="c-diary">
+                    <span>Nhật kí</span>
+                    <textarea class = "updateInfoInput" id="c-diary" name="n-diary" maxlength="100" placeholder="Kích thước tối đa 100 kí tự"></textarea>
+                </label>
+                <div class="updateInfoDiv__hideBlock__title">
+                    <h3>Cập nhật thông tin liên hệ</h3>
+                </div>
+                <label class = "updateInfoDiv__hideBlock__part__input--text" for="c-email">
+                    <span>Email</span>
+                    <input class = "updateInfoInput" type="text" id = "c-email" name = "n-email">
+                </label>
+                <label class = "updateInfoDiv__hideBlock__part__input--text" for="c-facebook">
+                    <span>Facebook</span>
+                    <input class = "updateInfoInput" type="text" id = "c-facebook" name = "n-facebook">
+                </label>
+                <label class = "updateInfoDiv__hideBlock__part__input--text" for="c-phone">
+                    <span>Số điện thoại</span>
+                    <input class = "updateInfoInput" type="text" id = "c-phone" name = "n-phone">
+                </label>
+                <div class = "updateInfoDiv__hideBlock__part" id="updateInfoDiv__hideBlock__footer">
+                    <button id="updateInfoDiv__hideBlock__footer--cancel" type="button" onclick = cancelUpdate()>ĐẶT LẠI</button>
+                    <button id="updateInfoDiv__hideBlock__footer--submit" type="submit">CẬP NHẬT</button>
+                    <script>
+                        function cancelUpdate(){
+                            let formBlock = document.getElementById("updateInfoDiv__hideBlock__information")
+                            let listInput = formBlock.getElementsByClassName("updateInfoInput")
+                            for(let i = 0; i < listInput.length; i++){
+                                if(listInput[i].type != "checkbox"){
+                                    listInput[i].value = '';
+                                } else {
+                                    listInput[i].checked = false;
+                                }
+                            }
+                        }
+                    </script>
+                </div>
+            </form>
+        </div>
+        <div class="sideBar paddingBottom" style="color: rgb(0, 0, 0)"></div>
+    </div>
+    <!-- BLOCK CẬP NHẬT-->
 </body>
 </html>

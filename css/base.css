@@ -1,10 +1,43 @@
+:root{
+    --updateInfoDiv__hideblock-button__exit--width: 2.2vw;
+}
+
+@media screen and (max-width: 310px){
+    :root{
+        --updateInfoDiv__hideblock-button__exit--width: 6.82px;
+    }
+}
+
+@media screen and (min-width: 1400px){
+    /* :root{
+        --updateInfoDiv__hideblock-button__exit--width: 30.8px;
+    } */
+}
+
 ::-webkit-scrollbar {
     width: 0; /* Độ rộng của thanh cuộn */
+}
+
+::-webkit-scrollbar-thumb{
+    border-radius: 1vw;
 }
 
 * {
     box-sizing: inherit;
     margin: 0;
+}
+
+body::-webkit-scrollbar {
+    height: 0;
+    width: 0.3vw; /* Độ rộng của thanh cuộn */
+}
+
+body::-webkit-scrollbar-thumb{
+    border-radius: 1vw;
+    background: rgba(100, 100, 100);
+
+    transition: opacity 0.3s;
+    transition: transform 0.3s;
 }
 
 @font-face {
@@ -324,14 +357,201 @@ body{
 
     display: none;
     justify-content: center;
+    overflow-y: scroll;
 
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
 
-#updateInfoDiv__hideBlock div{
+#updateInfoDiv__infomation__hideBlock{
     position: relative;
-    width: 10%;
+    top: 5%;
+    width: 45%;
+    height: max-content;
+
+    display: flex;
+    flex-direction: column;
     
-    background-color: white;
+    padding: 2% 1%;
+    padding-bottom: 4%;
+
+    border-radius: 1vw;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0vw 0vw 1vw 0vw rgb(158, 158, 158);
+
+    color: rgb(37, 37, 37);
+    font-size: 1vw;
+}
+
+@media screen and (max-width: 310px){
+    #updateInfoDiv__infomation__hideBlock{
+        font-size: 3.1px;
+    }
+}
+
+@media screen and (min-width: 1400px){
+    /* #updateInfoDiv__infomation__hideBlock{
+        font-size: 14px;
+    } */
+}
+
+.updateInfoDiv__hideBlock__part{
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* UPDATEINFO BODY */
+#updateInfoDiv__hideBlock__information{
+    position: relative;
+
+    font-size: 1em;
+}
+
+#updateInfoDiv__hideBlock__information label{
+    display: flex;
+    align-items: center;
+
+    margin-top: 3%;
+
+    font-size: 1.2em;
+
+    background-color: rgb(255, 255, 255);
+
+    border-radius: 1vw;
+    padding: 0 1%;
+}
+
+.updateInfoDiv__hideBlock__part__input--checkbox span{
+    width: 20%;
+}
+
+.updateInfoDiv__hideBlock__part__input--checkbox input{
+    width: 4% !important
+}
+
+#updateInfoDiv__hideBlock__information label span{
+    width: 20%;
+}
+
+#updateInfoDiv__hideBlock__information label input, textarea{
+    width: 80%;
+
+    border: 0;
+    border-bottom: 0.2vw solid rgb(190, 190, 190);
+    background-color: transparent;
+
+    font-size: 0.8em;
+
+    outline: 0;
+}
+
+#updateInfoDiv__hideBlock__information label textarea{
+    min-width: 80%;
+    max-width: 80%;
+    min-height: 5vw;
+    border: 0.1vw solid rgb(190, 190, 190);
+}
+
+/* UPDATEINFO TITLE */
+
+.updateInfoDiv__hideBlock__title{
+    position: relative;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    flex-direction: row;
+    font-size: 1.5em;
+}
+
+label + .updateInfoDiv__hideBlock__title{
+    margin-top: 2%;
+}
+
+.updateInfoDiv__hideBlock__title h3{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#updateInfoDiv__hideBlock__title--exit{
+    position: absolute;
+    right: 0;
+    width: var(--updateInfoDiv__hideblock-button__exit--width);
+    height: var(--updateInfoDiv__hideblock-button__exit--width);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgb(240, 240, 240);
+    border-radius: 50%;
+
+    transition: opacity 0.3s, transform 0.3s, color 0.3s, background-color 0.3s;
+
+}
+
+#updateInfoDiv__hideBlock__title--exit:hover{
+    opacity: 0.8;
+    transform: scale(0.95);
+
+    cursor: pointer;
+}
+
+#updateInfoDiv__hideBlock__title--exit:active{
+    transform: scale(0.90);
+
+    background-color: rgb(37, 37, 37);
+    color: white;
+
+    cursor: pointer;
+}
+
+/* FOOTER */
+#updateInfoDiv__hideBlock__footer{
+    margin: 0 25%;
+    margin-top: 5%;
+    display: grid;
+    grid-template-columns: 40% 60%;
+
+    font-size: 0.9em;
+}
+
+#updateInfoDiv__hideBlock__footer button{
+    border: 0;
+    border-radius: 1vw;
+
+    padding: 2% 3%;
+    color: white;
+
+    font-size: 1.3em;
+
+    transition: opacity 0.3s;
+    transition: transform 0.3s;
+}
+
+#updateInfoDiv__hideBlock__footer button:hover{
+    opacity: 0.8;
+    transform: scale(0.95);
+
+    cursor: pointer;
+}
+
+#updateInfoDiv__hideBlock__footer button:active{
+    transform: scale(0.90);
+
+    cursor: pointer;
+}
+
+#updateInfoDiv__hideBlock__footer--cancel{
+    background-color: rgb(255, 169, 64);
+}
+
+#updateInfoDiv__hideBlock__footer--submit{
+    background-color: rgb(115, 255, 81);
+    margin-left: 10%;
 }

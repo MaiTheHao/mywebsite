@@ -93,20 +93,31 @@
                         </div>                   
                     </div>
                     <!-- CHỈNH SỬA -->
-
-                    <!--  -->
-                    <div id = "updateInfoDiv" class = "set-scrollbar--y" style="margin: 2%">
+                    <div id="updateInfoDiv" class = "set-scrollbar--y" style="margin: 2%">
                         <div class="updateInfoDiv__element updateInfoDiv__pic">
                             <span><i class="fa-solid fa-image"></i> Thay đổi ảnh đại diện</span>
                         </div>
-                        <div class="updateInfoDiv__element updateInfoDiv__infomation">
+                        <div class="updateInfoDiv__element updateInfoDiv__infomation" onclick=show_updateInfoDiv()>
                             <span><i class="fa-solid fa-pen"></i> Cập nhật thông tin lớp</span>
                         </div>
-                        <div class="updateInfoDiv__element updateInfoDiv__infomation">
-                            <span><i class="fa-solid fa-users"></i> Cập nhật danh sách lớp</span>
-                        </div>
                     </div>
+
                     <!--  -->
+
+                    <script>
+                        function show_updateInfoDiv(){
+                            let e = document.getElementById("updateInfoDiv__hideBlock")
+                            if (e.style.display == "none"){
+                                e.style.display = "flex"
+                            } else {
+                                if(e.style.display == "flex"){
+                                    e.style.display = "none"
+                                }else{
+                                    e.style.display = "flex"
+                                }
+                            }
+                        }
+                    </script>
 
                     <!-- CHỈNH SỬA -->
                     <div class="body-center2__content" id = "class--info">
@@ -125,9 +136,7 @@
                             <h1 class = "body-center2__content--title contentBox__title">THÔNG TIN LIÊN HỆ</h1>
                             <p class="body-center2__content--p_element">EMAIL: <a id = "class--email" href = "" style = "color: rgb(70, 166, 201)"></a></p>
                             <p class="body-center2__content--p_element">FACEBOOK: <a id = "class--facebook" href = "" style = "color: rgb(70, 166, 201)"></a></p>
-                            <p class="body-center2__content--p_element">SĐT LỚP TRƯỞNG: <span id = "class--monitorPhone"></span></p>
-                            <p class="body-center2__content--p_element">SĐT LỚP PHÓ: <span id = "class--viceMonitorPhone"></span></p>
-                            <p class="body-center2__content--p_element">SĐT GIÁO VIÊN: <span id = "class--teacherPhone"></span></p>
+                            <p class="body-center2__content--p_element">SĐT GVCN: <span id = "class--teacherPhone"></span></p>
                         </ul>
                     </div>
                     <div class="body-center2__content" id = "class--students">
@@ -138,7 +147,7 @@
                                     <div class="body-center2__element--name body-center2__container__element--part container__element--heading">TÊN</div>
                                     <div class="body-center2__element--gender body-center2__container__element--part container__element--heading">GIỚI TÍNH</div>
                                     <div class="body-center2__element--date body-center2__container__element--part container__element--heading">NGÀY SINH</div>
-                                    <div class="body-center2__element--doanvien body-center2__container__element--part container__element--heading">ĐOÀN VIÊN</div>
+                                    <div class="body-center2__element--monitor body-center2__container__element--part container__element--heading">ĐOÀN VIÊN</div>
                                     <div class="body-center2__element--group body-center2__container__element--part container__element--heading">TỔ</div>
                                     <div class="body-center2__element--position body-center2__container__element--part container__element--heading">CHỨC VỤ</div>
                                     <div class="body-center2__element--phone body-center2__container__element--part container__element--heading">SĐT</div>
@@ -148,7 +157,7 @@
                                     <div class="body-center2__element--name body-center2__container__element--part">Trần Bảo Toàn</div>
                                     <div class="body-center2__element--gender body-center2__container__element--part">Nam</div>
                                     <div class="body-center2__element--date body-center2__container__element--part">05/12/2006</div>
-                                    <div class="body-center2__element--doanvien body-center2__container__element--part">Có</div>
+                                    <div class="body-center2__element--monitor body-center2__container__element--part">Có</div>
                                     <div class="body-center2__element--group body-center2__container__element--part">1</div>
                                     <div class="body-center2__element--position body-center2__container__element--part">Tổ trưởng</div>
                                     <div class="body-center2__element--phone body-center2__container__element--part">0982938647</div>
@@ -158,7 +167,7 @@
                                     <div class="body-center2__element--name body-center2__container__element--part">Nguyễn Hữu Tài</div>
                                     <div class="body-center2__element--gender body-center2__container__element--part">Nam</div>
                                     <div class="body-center2__element--date body-center2__container__element--part">22/03/2006</div>
-                                    <div class="body-center2__element--doanvien body-center2__container__element--part">Có</div>
+                                    <div class="body-center2__element--monitor body-center2__container__element--part">Có</div>
                                     <div class="body-center2__element--group body-center2__container__element--part">4</div>
                                     <div class="body-center2__element--position body-center2__container__element--part">Tổ trưởng</div>
                                     <div class="body-center2__element--phone body-center2__container__element--part">0837485912</div>
@@ -168,7 +177,7 @@
                                     <div class="body-center2__element--name body-center2__container__element--part">Trần Ngọc Nhi</div>
                                     <div class="body-center2__element--gender body-center2__container__element--part">Nữ</div>
                                     <div class="body-center2__element--date body-center2__container__element--part">25/06/2006</div>
-                                    <div class="body-center2__element--doanvien body-center2__container__element--part">Có</div>
+                                    <div class="body-center2__element--monitor body-center2__container__element--part">Có</div>
                                     <div class="body-center2__element--group body-center2__container__element--part">1</div>
                                     <div class="body-center2__element--position body-center2__container__element--part">Tổ phó</div>
                                     <div class="body-center2__element--phone body-center2__container__element--part">0827364512</div>
@@ -193,5 +202,71 @@
     <!-- FOOTER FOOTER FOOTER -->
     <!-- PHẦN CHÂN KHUNG -->
     <iframe class = "footer" src="html/footer.html" frameborder="0"></iframe>    
+
+    <!-- BLOCK CẬP NHẬT-->
+    <div class = "set-scrollbar--x" id = "updateInfoDiv__hideBlock">
+        <div id="updateInfoDiv__infomation__hideBlock">
+            <form class = "updateInfoDiv__hideBlock__part" id="updateInfoDiv__hideBlock__information" action="" method="">
+                <div class="updateInfoDiv__hideBlock__title">
+                    <h3>Cập nhật thông tin cơ bản</h3>
+                    <div id="updateInfoDiv__hideBlock__title--exit" onclick = show_updateInfoDiv()><i class="fa-solid fa-xmark"></i></div>
+                </div>
+                <label class = "updateInfoDiv__hideBlock__part__input--text" for="c-name">  <!-- c = change -->
+                    <span>Lớp</span>
+                    <input class = "updateInfoInput" type="text" id = "c-name" name = "n-name"> <!-- n = new -->
+                </label>
+                <label class = "updateInfoDiv__hideBlock__part__input--text" for="c-members">
+                    <span>Số thành viên</span>
+                    <input class = "updateInfoInput" type="number" id = "c-members" name = "n-members">
+                </label>
+                <label class = "updateInfoDiv__hideBlock__part__input--text" for="c-teacher">
+                    <span>Chủ nhiệm</span>
+                    <input class = "updateInfoInput" type="text" id = "c-teacher" name = "n-teacher">
+                </label>
+                <label class = "updateInfoDiv__hideBlock__part__input--text" for="c-monitor">
+                    <span>Lớp trưởng</span>
+                    <input class = "updateInfoInput" type="text" id = "c-monitor" name = "n-monitor">
+                </label>
+                <label class = "updateInfoDiv__hideBlock__part__input--text" for="c-viceMonitor">
+                    <span>Lớp phó</span>
+                    <input class = "updateInfoInput" type="text" id = "c-viceMonitor" name = "n-viceMonitor">
+                </label>
+                <div class="updateInfoDiv__hideBlock__title">
+                    <h3>Cập nhật thông tin liên hệ</h3>
+                </div>
+                <label class = "updateInfoDiv__hideBlock__part__input--text" for="c-email">
+                    <span>Email</span>
+                    <input class = "updateInfoInput" type="text" id = "c-email" name = "n-email">
+                </label>
+                <label class = "updateInfoDiv__hideBlock__part__input--text" for="c-facebook">
+                    <span>Facebook</span>
+                    <input class = "updateInfoInput" type="text" id = "c-facebook" name = "n-facebook">
+                </label>
+                <label class = "updateInfoDiv__hideBlock__part__input--text" for="c-teacherPhone">
+                    <span>SĐT GVCN</span>
+                    <input class = "updateInfoInput" type="text" id = "c-teacherPhone" name = "n-teacherPhone">
+                </label>
+                <div class = "updateInfoDiv__hideBlock__part" id="updateInfoDiv__hideBlock__footer">
+                    <button id="updateInfoDiv__hideBlock__footer--cancel" type="button" onclick = cancelUpdate()>ĐẶT LẠI</button>
+                    <button id="updateInfoDiv__hideBlock__footer--submit" type="submit">CẬP NHẬT</button>
+                    <script>
+                        function cancelUpdate(){
+                            let formBlock = document.getElementById("updateInfoDiv__hideBlock__information")
+                            let listInput = formBlock.getElementsByClassName("updateInfoInput")
+                            for(let i = 0; i < listInput.length; i++){
+                                if(listInput[i].type != "checkbox"){
+                                    listInput[i].value = '';
+                                } else {
+                                    listInput[i].checked = false;
+                                }
+                            }
+                        }
+                    </script>
+                </div>
+            </form>
+        </div>
+        <div class="sideBar paddingBottom" style="color: rgb(0, 0, 0)"></div>
+    </div>
+    <!-- BLOCK CẬP NHẬT-->
 </body>
 </html> 

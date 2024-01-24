@@ -38,3 +38,48 @@ function set_search_bar(){
     };
     
 }
+
+// CHỈNH SỬA THÔNG TIN
+function show_updateInfoDiv(type){ //Hàm tạo bảng
+    let e = document.getElementById("updateInfoDiv__hideBlock")
+    let block = null
+    if (e.style.display == "none"){
+        e.style.display = "flex"
+    } else {
+        if(e.style.display == "flex"){
+            e.style.display = "none"
+        }else{
+            e.style.display = "flex"
+        }
+    }
+
+    let block1 = document.getElementById("updateInfoDiv__hideBlock__pic")
+    let block2 = document.getElementById("updateInfoDiv__hideBlock__information")
+
+    if(type == 0){
+        block1.style.display = "block"
+        block2.style.display = "none"
+        
+    } else {
+        block1.style.display = "none"
+        block2.style.display = "block"
+
+    }   
+}
+
+function cancelUpdate(type){ //Hàm reset
+    if(type == 0){
+        var formBlock = document.getElementById("updateInfoDiv__hideBlock__pic")
+    } else {
+        var formBlock = document.getElementById("updateInfoDiv__hideBlock__information")
+    }   
+
+    let listInput = formBlock.getElementsByClassName("updateInfoInput")
+    for(let i = 0; i < listInput.length; i++){
+        if(listInput[i].type != "checkbox"){
+            listInput[i].value = '';
+        } else {
+            listInput[i].checked = false;
+        }
+    }
+}

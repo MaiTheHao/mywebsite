@@ -28,7 +28,7 @@ function addHeader() {
                     <div class="header-title--center-title">
                         <div class="header-title--center-title--block">
                             <img src = pic/HVN_icon.jpg>
-                            <p>HUYNH VAN NGHE HIGH SCHOOL</p>
+                            <p>THPT HUỲNH VĂN NGHỆ</p>
                         </div>
                     </div>
                 </div>

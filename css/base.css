@@ -402,13 +402,13 @@ body{
 
 
 /* UPDATEINFO BODY */
-#updateInfoDiv__hideBlock__information{
+.updateInfoDiv__hideBlock__part{
     position: relative;
 
     font-size: 1em;
 }
 
-#updateInfoDiv__hideBlock__information label{
+.updateInfoDiv__hideBlock__part label{
     display: flex;
     align-items: center;
 
@@ -430,15 +430,38 @@ body{
     width: 4% !important
 }
 
-#updateInfoDiv__hideBlock__information label span{
+.updateInfoDiv__hideBlock__part__input--file input{
+    border: none !important;
+    border-radius: 0.5vw;
+
+    color: rgb(37, 37, 37);
+}
+
+.updateInfoDiv__hideBlock__part__input--file .updateInfoInput::-webkit-file-upload-button{
+    border: 0;
+    border-radius: 0.5vw 0 0 0.5vw;
+    color: white;
+    background-color: rgb(37, 37, 37);
+
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.updateInfoDiv__hideBlock__part__input--file .updateInfoInput::-webkit-file-upload-button:hover{
+    opacity: 0.7;
+    transform: scale(0.9);
+
+    cursor: pointer;
+}
+
+.updateInfoDiv__hideBlock__part label span{
     width: 20%;
 }
 
-#updateInfoDiv__hideBlock__information label input, textarea{
+.updateInfoDiv__hideBlock__part label input, textarea{
     width: 80%;
 
     border: 0;
-    border-bottom: 0.2vw solid rgb(190, 190, 190);
+    border-bottom: 0.1vw solid rgb(190, 190, 190);
     background-color: transparent;
 
     font-size: 0.8em;
@@ -446,7 +469,7 @@ body{
     outline: 0;
 }
 
-#updateInfoDiv__hideBlock__information label textarea{
+.updateInfoDiv__hideBlock__part label textarea{
     min-width: 80%;
     max-width: 80%;
     min-height: 5vw;
@@ -554,4 +577,12 @@ label + .updateInfoDiv__hideBlock__title{
 #updateInfoDiv__hideBlock__footer--submit{
     background-color: rgb(115, 255, 81);
     margin-left: 10%;
+}
+
+#updateInfoDiv__hideBlock__information{
+    display: none;
+}
+
+#updateInfoDiv__hideBlock__pic{
+    display: none;
 }

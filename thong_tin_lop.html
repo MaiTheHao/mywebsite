@@ -94,31 +94,13 @@
                     </div>
                     <!-- CHỈNH SỬA -->
                     <div id="updateInfoDiv" class = "set-scrollbar--y" style="margin: 2%">
-                        <div class="updateInfoDiv__element updateInfoDiv__pic">
+                        <div class="updateInfoDiv__element updateInfoDiv__pic" onclick=show_updateInfoDiv(0)>
                             <span><i class="fa-solid fa-image"></i> Thay đổi ảnh đại diện</span>
                         </div>
-                        <div class="updateInfoDiv__element updateInfoDiv__infomation" onclick=show_updateInfoDiv()>
+                        <div class="updateInfoDiv__element updateInfoDiv__infomation" onclick=show_updateInfoDiv(1)>
                             <span><i class="fa-solid fa-pen"></i> Cập nhật thông tin lớp</span>
                         </div>
                     </div>
-
-                    <!--  -->
-
-                    <script>
-                        function show_updateInfoDiv(){
-                            let e = document.getElementById("updateInfoDiv__hideBlock")
-                            if (e.style.display == "none"){
-                                e.style.display = "flex"
-                            } else {
-                                if(e.style.display == "flex"){
-                                    e.style.display = "none"
-                                }else{
-                                    e.style.display = "flex"
-                                }
-                            }
-                        }
-                    </script>
-
                     <!-- CHỈNH SỬA -->
                     <div class="body-center2__content" id = "class--info">
                         <ul class = "body-center2__content--listblock p">
@@ -206,6 +188,24 @@
     <!-- BLOCK CẬP NHẬT-->
     <div class = "set-scrollbar--x" id = "updateInfoDiv__hideBlock">
         <div id="updateInfoDiv__infomation__hideBlock">
+            <form class = "updateInfoDiv__hideBlock__part" id="updateInfoDiv__hideBlock__pic" action="" method="">
+                <div class="updateInfoDiv__hideBlock__title">
+                    <h3>Cập nhật ảnh đại diện</h3>
+                    <div id="updateInfoDiv__hideBlock__title--exit" onclick = show_updateInfoDiv()><i class="fa-solid fa-xmark"></i></div>
+                </div>
+                <label class = "updateInfoDiv__hideBlock__part__input--file" for="c-backgroundPic">  <!-- c = change -->
+                    <span>Background</span>
+                    <input class = "updateInfoInput" type="file" accept="image/png, image/jpeg" id = "c-backgroundPic" name = "n-backgroundPic"> <!-- n = new -->
+                </label>
+                <label class = "updateInfoDiv__hideBlock__part__input--file" for="c-avatar">  <!-- c = change -->
+                    <span>Avata</span>
+                    <input class = "updateInfoInput" type="file" accept="image/png, image/jpeg" id = "c-avatar" name = "n-avatar"> <!-- n = new -->
+                </label>
+                <div class = "updateInfoDiv__hideBlock__part" id="updateInfoDiv__hideBlock__footer">
+                    <button id="updateInfoDiv__hideBlock__footer--cancel" type="button" onclick = cancelUpdate(0)>ĐẶT LẠI</button>
+                    <button id="updateInfoDiv__hideBlock__footer--submit" type="submit">CẬP NHẬT</button>
+                </div>
+            </form>
             <form class = "updateInfoDiv__hideBlock__part" id="updateInfoDiv__hideBlock__information" action="" method="">
                 <div class="updateInfoDiv__hideBlock__title">
                     <h3>Cập nhật thông tin cơ bản</h3>
@@ -247,21 +247,8 @@
                     <input class = "updateInfoInput" type="text" id = "c-teacherPhone" name = "n-teacherPhone">
                 </label>
                 <div class = "updateInfoDiv__hideBlock__part" id="updateInfoDiv__hideBlock__footer">
-                    <button id="updateInfoDiv__hideBlock__footer--cancel" type="button" onclick = cancelUpdate()>ĐẶT LẠI</button>
+                    <button id="updateInfoDiv__hideBlock__footer--cancel" type="button" onclick = cancelUpdate(1)>ĐẶT LẠI</button>
                     <button id="updateInfoDiv__hideBlock__footer--submit" type="submit">CẬP NHẬT</button>
-                    <script>
-                        function cancelUpdate(){
-                            let formBlock = document.getElementById("updateInfoDiv__hideBlock__information")
-                            let listInput = formBlock.getElementsByClassName("updateInfoInput")
-                            for(let i = 0; i < listInput.length; i++){
-                                if(listInput[i].type != "checkbox"){
-                                    listInput[i].value = '';
-                                } else {
-                                    listInput[i].checked = false;
-                                }
-                            }
-                        }
-                    </script>
                 </div>
             </form>
         </div>

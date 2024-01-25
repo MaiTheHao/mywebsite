@@ -422,12 +422,21 @@ body{
     padding: 0 1%;
 }
 
+.updateInfoDiv__hideBlock__part__input--checkbox{
+    transition: background-color 0.3s;
+}
+
 .updateInfoDiv__hideBlock__part__input--checkbox span{
     width: 20%;
 }
 
 .updateInfoDiv__hideBlock__part__input--checkbox input{
-    width: 4% !important
+    width: 4% !important;
+}
+
+.updateInfoDiv__hideBlock__part__input--checkbox:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+    cursor: pointer;
 }
 
 .updateInfoDiv__hideBlock__part__input--file input{

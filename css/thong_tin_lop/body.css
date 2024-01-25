@@ -193,16 +193,19 @@
 /* DANH SÁCH */
 .body-center2__container__element{
     position: relative;
-    left: 0;
-    right: 0;
-    top: 0;
     
-    display: flex;
+    display: grid;
+    grid-template-columns: 5% 20% 10% 10% 10% 5% 10% 10% 20%;
 
-    padding: 0.5% 0.5%;
     background-color: rgb(241, 241, 241);
+
     margin-right: 5%;
 }
+
+.body-center2__container__element + .body-center2__container__element{
+    border-top: 0.1vw solid rgb(45, 45, 45);
+}
+
 
 .body-center2__container__element--part{
     text-wrap: nowrap;
@@ -210,19 +213,20 @@
 
     display: flex;
     align-items: center;
-    padding: 0.5% 1%;
+    padding: 2% 3%;
 
-    background-color: rgb(232, 255, 246);
-}
-
-.container__element--heading{
-    overflow-x: hidden;
-    color: white;
-    background-color: rgb(0, 123, 68)
+    background-color: rgba(235, 255, 240, 0.6);
+    color: rgb(37, 37, 37);
 }
 
 .body-center2__container__element--part + .body-center2__container__element--part{
-    margin-left: 0.7%;
+    border-left: 0.1vw solid rgb(45, 45, 45);
+}
+
+.container__element--heading{
+    overflow-x: hidden !important;
+    color: white !important;
+    background-color: rgb(0, 147, 81) !important;
 }
 
 .body-center2__container__element--part::-webkit-scrollbar {
@@ -250,34 +254,40 @@
     color: rgb(30, 180, 255);
 }
 
+.body-center2__element--stt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .body-center2__element--name{
-    width: 18%;;
+
 }
 
 .body-center2__element--gender{
-    width: 13%;
+
 }
 
 .body-center2__element--date{
-    width: 15%;
+
 }
 
 .body-center2__element--doanvien{
-    width: 13%;
+
 }
 
 .body-center2__element--group{
-    width: 5%;
+
 }
 
 .body-center2__element--position{
-    width: 12%;
+
 }
 
 .body-center2__element--phone{
-    width: 15%;
+
 }
 
 .body-center2__element--email{
-    width: 20%;
+
 }

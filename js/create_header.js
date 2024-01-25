@@ -143,11 +143,6 @@ function createDate(){
 window.onload = function(){
     addHeader();
     createDate();
-
-    if (Boolean(document.getElementById("webLoginBody"))){
-        let es = document.getElementsByClassName("header-nav__menu")
-        es[0].style.display = "none"
-    }
 }
 
 // let links = [

@@ -68,7 +68,7 @@
                 <!-- GIỮA BODY -->
                 <div class="body-center1 body-part">
                     <!-- CÁC PHẦN TỬ CON -->
-                    <div class="body-center1__content" id="pictures-block">
+                    <div class="Acontent__table" id="pictures-block">
                         <div id="pictures--background">
                             <img src = "pic/user_background.jpg"  alt = "background" id = "background">
                             <div id="pictures--avatar">
@@ -89,26 +89,52 @@
                     </div>
                     <!-- CHỈNH SỬA -->
 
-                    <div class="body-center1__content">
-                        <ul class = "body-center1__content--listblock p">
-                            <h1 class = "body-center1__content--title contentBox__title">THÔNG TIN CÁ NHÂN</h1>
-                            <p href = "" class="body-center1__content--p_element"> HỌ VÀ TÊN: <span id = "personal--name"></span></p>
-                            <p href = "" class="body-center1__content--p_element">GIỚI TÍNH: <span id = "personal--gender"></span></p>
-                            <p href = "" class="body-center1__content--p_element">NGÀY SINH: <span id = "personal--date"></span></p>
-                            <p href = "" class="body-center1__content--p_element">ĐOÀN VIÊN: <span id = "personal--doanVien"></span></p>
-                            <p href = "" class="body-center1__content--p_element">LỚP: <span id = "personal--class"></span></p>
-                            <p href = "" class="body-center1__content--p_element">CHỨC VỤ: <span id = "personal--position"></span></p>
-                            <p href = "" class="body-center1__content--p_element">NHÓM ĐÃ THAM GIA: <span id = "personal--club"></span></p>
-                            <p href = "" class="body-center1__content--p_element">NHẬT KÍ: <span id = "personal--diary"></span></p>
-                        </ul>
+                    <div class="Acontent__table">
+                        <p class="Acontent__table__header">THÔNG TIN CÁ NHÂN</p>
+                        <div class="Acontent__table__contentText">
+                            <div class = "Acontent__table__contentText__element">
+                                <span class = "Acontent__table__contentText__element__title">HỌ VÀ TÊN</span>
+                                <span class = "Acontent__table__contentText__element__main">Trần Ngọc Bảo</span>
+                            </div>
+                            <div class = "Acontent__table__contentText__element">
+                                <span class = "Acontent__table__contentText__element__title">GIỚI TÍNH</span>
+                                <span class = "Acontent__table__contentText__element__main">Nam</span>
+                            </div>
+                            <div class = "Acontent__table__contentText__element">
+                                <span class = "Acontent__table__contentText__element__title">NGÀY SINH</span>
+                                <span class = "Acontent__table__contentText__element__main">03/03/2003</span>
+                            </div>
+                            <div class = "Acontent__table__contentText__element">
+                                <span class = "Acontent__table__contentText__element__title">ĐOÀN VIÊN</span>
+                                <span class = "Acontent__table__contentText__element__main">Có</span>
+                            </div>
+                            <div class = "Acontent__table__contentText__element">
+                                <span class = "Acontent__table__contentText__element__title">LỚP</span>
+                                <span class = "Acontent__table__contentText__element__main">10.07</span>
+                            </div>
+                            <div class = "Acontent__table__contentText__element">
+                                <span class = "Acontent__table__contentText__element__title">CHỨC VỤ</span>
+                                <span class = "Acontent__table__contentText__element__main">Tổ trưởng</span>
+                            </div>
+                            <div class = "Acontent__table__contentText__element">
+                                <span class = "Acontent__table__contentText__element__title">NHẬT KÍ</span>
+                                <span class = "Acontent__table__contentText__element__main">Không</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="body-center1__content">
-                        <ul class = "body-center1__content--listblock p">
-                            <h1 class = "body-center1__content--title contentBox__title">THÔNG TIN LIÊN HỆ</h1>
-                            <p href = "" class="body-center1__content--p_element">EMAIL: <a href = "" id = "personal--email" style = "color: rgb(70, 166, 201)"></a></p>
-                            <p href = "" class="body-center1__content--p_element">FACEBOOK: <a href = "" id = "personal--facebook" style = "color: rgb(70, 166, 201)"></a></p>
-                            <p href = "" class="body-center1__content--p_element">SĐT: <span id = "personal--phone"></span></p>
-                        </ul>
+
+                    <div class="Acontent__table">
+                        <p class="Acontent__table__header">THÔNG TIN LIÊN HỆ</p>
+                        <div class="Acontent__table__contentText">
+                            <div class = "Acontent__table__contentText__element">
+                                <span class = "Acontent__table__contentText__element__title">EMAIL</span>
+                                <span class = "Acontent__table__contentText__element__main">BaoGay206@gmail.com</span>
+                            </div>
+                            <div class = "Acontent__table__contentText__element">
+                                <span class = "Acontent__table__contentText__element__title">SĐT</span>
+                                <span class = "Acontent__table__contentText__element__main">0987654321</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -154,7 +180,7 @@
                     <div id="updateInfoDiv__hideBlock__title--exit" onclick = show_updateInfoDiv()><i class="fa-solid fa-xmark"></i></div>
                 </div>
                 <label class = "updateInfoDiv__hideBlock__part__input--text" for="c-name">  <!-- c = change -->
-                    <span>Tên</span>
+                    <span>Họ và tên</span>
                     <input class = "updateInfoInput" type="text" id = "c-name" name = "n-name"> <!-- n = new -->
                 </label>
                 <label class = "updateInfoDiv__hideBlock__part__input--text" for="c-gender">

@@ -1,10 +1,3 @@
-.body-left0{
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-}
-
 .body-center0{
     position: relative;
     left: 20%;
@@ -13,80 +6,15 @@
     width: 80%;
 }
 
-/* LEFT */
-.body-left0__element{
-    position: relative;
+/* LIST RANK */
 
-    display: flex;
-    flex-direction: column;
-
-    margin: 5% 5%;
-    padding: 5%;
-    border-radius: 1.5vw;
-    color: rgb(37, 37, 37);
-    background-color: rgb(255, 255, 255);
-}
-
-.body-left0__element h3{
-    font-size: 1.3em;
-}
-
-.body-left0__element--list{
-    padding: 0;
-    list-style: none;
-}
-
-.body-left0__element--list--obj{
-    position: relative;
-
+.Acontent__sidebar__element__content__element{
     display: grid;
-    grid-template-columns: 30% 70%;
-
-    padding: 3% 0;
-    padding-left: 10%;
-    color: rgb(37, 37, 37);
-    font-size: 1em;
-
-    border: 0.15vw solid gray;
-    border-radius: 0.5vw;
+    grid-template-columns: 12% auto;
 }
 
-.body-left0__element--list--obj + .body-left0__element--list--obj{
-    margin-top: 1%;
-}
-
-.body-left0__element--list--obj:hover{
-    background-color: rgb(37, 37, 37);
-    color: rgb(255, 255, 255);
-}
-
-.body-left0__element--list--obj span{
-    display: flex;
-    align-items: center;
-}
-
-.body-left0__element--list--obj.rank-1{
-
-}
-
-.body-left0__element--list--obj.rank-1 i{
-    color: yellow;
-}
-
-.body-left0__element--list--obj.rank-2{
-
-}
-
-.body-left0__element--list--obj.rank-3{
-
-}
-
-.body-left0__element--list--obj--rank{  
-    
-}
-
-.body-left0__element--list--obj--name{  
-
+.Acontent__sidebar__element__content__element + .Acontent__sidebar__element__content__element{
+    margin-top: 2%;
 }
 
 /* CENTER */
@@ -164,12 +92,12 @@
 
 #body0-Acontent__table__contentList--type0 .Acontent__table__contentList__element{
     display: grid;
-    grid-template-columns: 10% 70% 20%;
+    grid-template-columns: 10% 60% 30%;
 }
 
 #body0-Acontent__table__contentList--type1 .Acontent__table__contentList__element{
     display: grid;
-    grid-template-columns: 10% 25% 30% 15% 20%;
+    grid-template-columns: 10% 25% 65%;
 }
 
 #body0-Acontent__table__contentList--type0{

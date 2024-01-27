@@ -33,19 +33,7 @@ a{
     position: relative;
     width: fit-content;
 
-    line-height: 1.5vw;
-}
-
-@media screen and (max-width: 310px){
-    #left-content{
-        line-height: 4.65px;
-    }
-}
-
-@media screen and (min-width: 1400px){
-    #left-content{
-        line-height: 21px;
-    }
+    line-height: calc(var(--myfontsize)/1.3);
 }
 
 #right-content{

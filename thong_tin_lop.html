@@ -25,60 +25,87 @@
             <!-- KHUNG BODY -->
             <div class="body__content">
                 <!-- TRÁI BODY -->
-                <div class="body-left2 body-part body-sidebar set-scrollbar--x">
+                <div class="body-left2 body-part Acontent__sidebar AcontentSidebar--left set-scrollbar--x">
                     <!-- CÁC PHẦN TỬ CON -->
-                    <div class="body-left2__element" id = "student_rank">
-                        <h3>DANH SÁCH LỚP 10</h3>
-                        <ul class="body-left2__element--list">
-                            <a class="body-left2__element--list--obj" href="" id = "class--10.1">10.1</a>
-                            <a class="body-left2__element--list--obj" href="" id = "class--10.2">10.2</a>
-                            <a class="body-left2__element--list--obj" href="" id = "class--10.3">10.3</a>
-                            <a class="body-left2__element--list--obj" href="" id = "class--10.4">10.4</a>
-                            <a class="body-left2__element--list--obj" href="" id = "class--10.5">10.5</a>
-                            <a class="body-left2__element--list--obj" href="" id = "class--10.6">10.6</a>
-                            <a class="body-left2__element--list--obj" href="" id = "class--10.7">10.7</a>
-                            <a class="body-left2__element--list--obj" href="" id = "class--10.8">10.8</a>
-                            <a class="body-left2__element--list--obj" href="" id = "class--10.9">10.9</a>
-                            <a class="body-left2__element--list--obj" href="" id = "class--10.10">10.10</a>
-                            <a class="body-left2__element--list--obj" href="" id = "class--10.11">10.11</a>
-                            <a class="body-left2__element--list--obj" href="" id = "class--10.12">10.12</a>
-                        </ul>
+                    <form class = "Acontent__sidebar__element body-left2__searchBlock" action="" for = "findClass">
+                        <i class = "fa-solid fa-magnifying-glass"></i><input type="text" id = "findClass" placeholder="Tìm Lớp">
+                    </form>
+                    <!-- CÁC PHẦN TỬ CON -->
+                    <div class="Acontent__sidebar__element">
+                        <p class="Acontent__sidebar__element__header">DANH SÁCH KHỐI 10</p>
+                        <div class="Acontent__sidebar__element__content" id = "group10">
+                            <a class="Acontent__sidebar__element__content__element" href="" id = "class--10.1">10.1</a>
+                            <a class="Acontent__sidebar__element__content__element" href="" id = "class--10.2">10.2</a>
+                            <a class="Acontent__sidebar__element__content__element" href="" id = "class--10.3">10.3</a>
+                            <a class="Acontent__sidebar__element__content__element" href="" id = "class--10.4">10.4</a>
+                            <a class="Acontent__sidebar__element__content__element" href="" id = "class--10.5">10.5</a>
+                            <a class="Acontent__sidebar__element__content__element" href="" id = "class--10.6">10.6</a>
+                            <a class="Acontent__sidebar__element__content__element" href="" id = "class--10.7">10.7</a>
+                            <a class="Acontent__sidebar__element__content__element" href="" id = "class--10.8">10.8</a>
+                            <a class="Acontent__sidebar__element__content__element" href="" id = "class--10.9">10.9</a>
+                            <a class="Acontent__sidebar__element__content__element" href="" id = "class--10.10">10.10</a>
+                            <a class="Acontent__sidebar__element__content__element" href="" id = "class--10.11">10.11</a>
+                            <a class="Acontent__sidebar__element__content__element" href="" id = "class--10.12">10.12</a>
+                        </div>
+                        <div onclick = "setHeight('group10', this)" class = "body-left2__sidebarBtn"><i class="fa-solid fa-chevron-up"></i> <span>ALL</span></div>
                     </div>
-                    <div class="body-left2__element" id = "class_rank">
-                        <h3>DANH SÁCH LỚP 11</h3>
-                        <ul class="body-left2__element--list">
-                            <a class="body-left2__element--list--obj" href="" id = "class--11.1">11.1</a>
-                            <a class="body-left2__element--list--obj" href="" id = "class--11.2">11.2</a>
-                            <a class="body-left2__element--list--obj" href="" id = "class--11.3">11.3</a>
-                            <a class="body-left2__element--list--obj" href="" id = "class--11.4">11.4</a>
-                            <a class="body-left2__element--list--obj" href="" id = "class--11.5">11.5</a>
-                            <a class="body-left2__element--list--obj" href="" id = "class--11.6">11.6</a>
-                            <a class="body-left2__element--list--obj" href="" id = "class--11.7">11.7</a>
-                            <a class="body-left2__element--list--obj" href="" id = "class--11.8">11.8</a>
-                            <a class="body-left2__element--list--obj" href="" id = "class--11.9">11.9</a>
-                            <a class="body-left2__element--list--obj" href="" id = "class--11.10">11.10</a>
-                            <a class="body-left2__element--list--obj" href="" id = "class--11.11">11.11</a>
-                            <a class="body-left2__element--list--obj" href="" id = "class--11.12">11.12</a>
-                        </ul>
+
+                    <div class="Acontent__sidebar__element">
+                        <p class="Acontent__sidebar__element__header">DANH SÁCH KHỐI 11</p>
+                        <div class="Acontent__sidebar__element__content" id = "group11">
+                            <a class="Acontent__sidebar__element__content__element" href="" id = "class--11.1">11.1</a>
+                            <a class="Acontent__sidebar__element__content__element" href="" id = "class--11.2">11.2</a>
+                            <a class="Acontent__sidebar__element__content__element" href="" id = "class--11.3">11.3</a>
+                            <a class="Acontent__sidebar__element__content__element" href="" id = "class--11.4">11.4</a>
+                            <a class="Acontent__sidebar__element__content__element" href="" id = "class--11.5">11.5</a>
+                            <a class="Acontent__sidebar__element__content__element" href="" id = "class--11.6">11.6</a>
+                            <a class="Acontent__sidebar__element__content__element" href="" id = "class--11.7">11.7</a>
+                            <a class="Acontent__sidebar__element__content__element" href="" id = "class--11.8">11.8</a>
+                            <a class="Acontent__sidebar__element__content__element" href="" id = "class--11.9">11.9</a>
+                            <a class="Acontent__sidebar__element__content__element" href="" id = "class--11.10">11.10</a>
+                            <a class="Acontent__sidebar__element__content__element" href="" id = "class--11.11">11.11</a>
+                            <a class="Acontent__sidebar__element__content__element" href="" id = "class--11.12">11.12</a>
+                        </div>
+                        <div onclick = "setHeight('group11', this)" class = "body-left2__sidebarBtn"><i class="fa-solid fa-chevron-up"></i> <span>ALL</span></div>
                     </div>
-                    <div class="body-left2__element" id = "student_rank">
-                        <h3>DANH SÁCH LỚP 12</h3>
-                        <ul class="body-left2__element--list">
-                            <a class="body-left2__element--list--obj" href="" id = "class--12.1">12.1</a>
-                            <a class="body-left2__element--list--obj" href="" id = "class--12.2">12.2</a>
-                            <a class="body-left2__element--list--obj" href="" id = "class--12.3">12.3</a>
-                            <a class="body-left2__element--list--obj" href="" id = "class--12.4">12.4</a>
-                            <a class="body-left2__element--list--obj" href="" id = "class--12.5">12.5</a>
-                            <a class="body-left2__element--list--obj" href="" id = "class--12.6">12.6</a>
-                            <a class="body-left2__element--list--obj" href="" id = "class--12.7">12.7</a>
-                            <a class="body-left2__element--list--obj" href="" id = "class--12.8">12.8</a>
-                            <a class="body-left2__element--list--obj" href="" id = "class--12.9">12.9</a>
-                            <a class="body-left2__element--list--obj" href="" id = "class--12.10">12.10</a>
-                            <a class="body-left2__element--list--obj" href="" id = "class--12.11">12.11</a>
-                            <a class="body-left2__element--list--obj" href="" id = "class--12.12">12.12</a>
-                        </ul>
+
+                    <div class="Acontent__sidebar__element">
+                        <p class="Acontent__sidebar__element__header">DANH SÁCH KHỐI 12</p>
+                        <div class="Acontent__sidebar__element__content" id = "group12">
+                            <a class="Acontent__sidebar__element__content__element" href="" id = "class--12.1">12.1</a>
+                            <a class="Acontent__sidebar__element__content__element" href="" id = "class--12.2">12.2</a>
+                            <a class="Acontent__sidebar__element__content__element" href="" id = "class--12.3">12.3</a>
+                            <a class="Acontent__sidebar__element__content__element" href="" id = "class--12.4">12.4</a>
+                            <a class="Acontent__sidebar__element__content__element" href="" id = "class--12.5">12.5</a>
+                            <a class="Acontent__sidebar__element__content__element" href="" id = "class--12.6">12.6</a>
+                            <a class="Acontent__sidebar__element__content__element" href="" id = "class--12.7">12.7</a>
+                            <a class="Acontent__sidebar__element__content__element" href="" id = "class--12.8">12.8</a>
+                            <a class="Acontent__sidebar__element__content__element" href="" id = "class--12.9">12.9</a>
+                            <a class="Acontent__sidebar__element__content__element" href="" id = "class--12.10">12.10</a>
+                            <a class="Acontent__sidebar__element__content__element" href="" id = "class--12.11">12.11</a>
+                            <a class="Acontent__sidebar__element__content__element" href="" id = "class--12.12">12.12</a>
+                        </div>
+                        <div onclick = "setHeight('group12', this)" class = "body-left2__sidebarBtn"><i class="fa-solid fa-chevron-up"></i> <span>ALL</span></div>
                     </div>
                     <div class="sideBar paddingBottom"><i class="fa-solid fa-circle-info"></i>Đã hết danh sách</div>
+                    
+                    <script>
+                        function setHeight(id, btn) {
+                          let element = document.getElementById(id);
+
+                          if (element.style.height == "max-content"){
+                            document.getElementById(id).style.height = 0;
+                            btn.getElementsByTagName("i")[0].style.transform = "rotate(180deg)";
+                            btn.getElementsByTagName("span")[0].textContent = " ALL";
+
+                          } else {
+                            document.getElementById(id).style.height = "max-content";
+                            btn.getElementsByTagName("i")[0].style.transform = "rotate(0deg)";
+                            btn.getElementsByTagName("span")[0].textContent = " HIDE";
+                          } 
+                        }
+                    </script>
+
                 </div>
                 <!-- GIỮA BODY -->
                 <div class="body-center2 body-part">

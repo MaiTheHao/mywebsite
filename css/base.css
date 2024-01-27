@@ -9,9 +9,9 @@
 }
 
 @media screen and (min-width: 1400px){
-    /* :root{
+    :root{
         --myfontsize: 30.8px;
-    } */
+    }
 }
 
 ::-webkit-scrollbar {
@@ -254,7 +254,7 @@ body{
 
 .paddingBottom{
     position: relative;
-    height: 95% !important;
+    height: 10% !important;
 
     display: flex;
     justify-content: center;
@@ -542,6 +542,58 @@ label + .updateInfoDiv__hideBlock__title{
     cursor: pointer;
 }
 
+#updateInfoDiv__hideBlock__footer{
+    margin: 0 25%;
+    margin-top: 5%;
+    display: grid;
+    grid-template-columns: 40% 60%;
+
+    font-size: 0.9em;
+}
+
+#updateInfoDiv__hideBlock__footer button{
+    border: 0;
+    border-radius: 1vw;
+
+    padding: 2% 3%;
+    color: white;
+
+    font-size: 1.3em;
+
+    transition: opacity 0.3s;
+    transition: transform 0.3s;
+}
+
+#updateInfoDiv__hideBlock__footer button:hover{
+    opacity: 0.8;
+    transform: scale(0.95);
+
+    cursor: pointer;
+}
+
+#updateInfoDiv__hideBlock__footer button:active{
+    transform: scale(0.90);
+
+    cursor: pointer;
+}
+
+#updateInfoDiv__hideBlock__footer--cancel{
+    background-color: rgb(255, 169, 64);
+}
+
+#updateInfoDiv__hideBlock__footer--submit{
+    background-color: rgb(115, 255, 81);
+    margin-left: 10%;
+}
+
+#updateInfoDiv__hideBlock__information{
+    display: none;
+}
+
+#updateInfoDiv__hideBlock__pic{
+    display: none;
+}
+
 /* CONTENT TABLE */
 .Acontent__table{
     position: relative;
@@ -584,13 +636,14 @@ label + .updateInfoDiv__hideBlock__title{
 .Acontent__table__contentText__element{
     display: flex;
     flex-wrap: nowrap;
+
 }
+
 
 .Acontent__table__contentText__element__title{
     width: 15%;
     min-width: max-content;
 
-    padding: 0.5% 1%;
     text-wrap: nowrap;
 
     font-size: 1.05em;
@@ -601,12 +654,89 @@ label + .updateInfoDiv__hideBlock__title{
 
     display: flex;
     align-items: center;
-
-    padding: 0.5% 1%;
 }
 
 .Acontent__table__contentText__element + .Acontent__table__contentText__element{
     margin-top: 1.3%;
+}
+
+.Acontent__table__contentList{
+    display: flex;
+    flex-direction: column;
+
+    font-size: 0.5em;
+}
+
+.Acontent__table__contentList__element{
+    display: grid;
+
+    padding: 0.5% 2%;
+
+    border: 0.1vw solid gray;
+    border-radius: 0.25vw;
+
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.Acontent__table__contentList__element:hover{
+    cursor: pointer;
+    transform: scale(1.02);
+    box-shadow: 0vw 0vw 1vw 0vw rgb(190, 190, 190);
+}
+
+.Acontent__table__contentList__element:hover{
+    cursor: pointer;
+    transform: scale(1.02);
+    box-shadow: 0vw 0vw 1vw 0vw rgb(190, 190, 190);
+}
+.Acontent__table__contentList__element:active{
+    cursor: pointer;
+    transform: scale(0.98);
+    box-shadow: 0vw 0vw 1vw 0vw rgb(160, 160, 160);
+}
+
+.Acontent__table__contentList__element + .Acontent__table__contentList__element{
+    margin-top: 0.5%;
+}
+
+.Acontent__table__contentList__element__part{
+    max-height: 5vw;
+
+    display: flex;
+    align-items: center;
+
+    padding-left: calc(var(--myfontsize)/2);
+}
+
+.Acontent__table__contentList__element__part div{
+    width: 20%;
+    height: 100%;
+
+    margin-right: calc(var(--myfontsize) / 3);
+}
+
+.Acontent__table__contentList__element__part div img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.Acontent__table__contentList__element__part + .Acontent__table__contentList__element__part{
+    border-left: 0.1vw solid gray;
+}
+
+.AcontentList--title{
+    background-color: rgb(37, 37, 37);
+}
+
+.AcontentList--title p{
+    color: white;
+}
+
+.Acontent__table__contentList__element__part{
+    color: rgb(37, 37, 37);
 }
 
 /* PROFILE AVATAR */
@@ -675,57 +805,4 @@ label + .updateInfoDiv__hideBlock__title{
     #avatar{
         border: 7px solid white;
     }
-}
-
-/* FOOTER */
-#updateInfoDiv__hideBlock__footer{
-    margin: 0 25%;
-    margin-top: 5%;
-    display: grid;
-    grid-template-columns: 40% 60%;
-
-    font-size: 0.9em;
-}
-
-#updateInfoDiv__hideBlock__footer button{
-    border: 0;
-    border-radius: 1vw;
-
-    padding: 2% 3%;
-    color: white;
-
-    font-size: 1.3em;
-
-    transition: opacity 0.3s;
-    transition: transform 0.3s;
-}
-
-#updateInfoDiv__hideBlock__footer button:hover{
-    opacity: 0.8;
-    transform: scale(0.95);
-
-    cursor: pointer;
-}
-
-#updateInfoDiv__hideBlock__footer button:active{
-    transform: scale(0.90);
-
-    cursor: pointer;
-}
-
-#updateInfoDiv__hideBlock__footer--cancel{
-    background-color: rgb(255, 169, 64);
-}
-
-#updateInfoDiv__hideBlock__footer--submit{
-    background-color: rgb(115, 255, 81);
-    margin-left: 10%;
-}
-
-#updateInfoDiv__hideBlock__information{
-    display: none;
-}
-
-#updateInfoDiv__hideBlock__pic{
-    display: none;
 }

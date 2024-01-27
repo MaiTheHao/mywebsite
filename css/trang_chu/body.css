@@ -39,18 +39,54 @@
 .body-left0__element--list--obj{
     position: relative;
 
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 30% 70%;
 
     padding: 3% 0;
     padding-left: 10%;
     color: rgb(37, 37, 37);
     font-size: 1em;
+
+    border: 0.15vw solid gray;
+    border-radius: 0.5vw;
+}
+
+.body-left0__element--list--obj + .body-left0__element--list--obj{
+    margin-top: 1%;
 }
 
 .body-left0__element--list--obj:hover{
     background-color: rgb(37, 37, 37);
     color: rgb(255, 255, 255);
+}
+
+.body-left0__element--list--obj span{
+    display: flex;
+    align-items: center;
+}
+
+.body-left0__element--list--obj.rank-1{
+
+}
+
+.body-left0__element--list--obj.rank-1 i{
+    color: yellow;
+}
+
+.body-left0__element--list--obj.rank-2{
+
+}
+
+.body-left0__element--list--obj.rank-3{
+
+}
+
+.body-left0__element--list--obj--rank{  
+    
+}
+
+.body-left0__element--list--obj--name{  
+
 }
 
 /* CENTER */
@@ -106,4 +142,40 @@
 
 .body-center0__content--listblock{
     border: 0.2vw solid rgb(56, 56, 56);
+}
+
+.body0-Acontent__table__header__changeTypeBtn{
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.body0-Acontent__table__header__changeTypeBtn:hover{
+    cursor: pointer;
+    opacity: 0.7;
+
+    transform: scale(1.1);
+}
+
+.body0-Acontent__table__header__changeTypeBtn:active{
+    cursor: pointer;
+    opacity: 0.7;
+
+    transform: scale(0.9);
+}
+
+#body0-Acontent__table__contentList--type0 .Acontent__table__contentList__element{
+    display: grid;
+    grid-template-columns: 10% 70% 20%;
+}
+
+#body0-Acontent__table__contentList--type1 .Acontent__table__contentList__element{
+    display: grid;
+    grid-template-columns: 10% 25% 30% 15% 20%;
+}
+
+#body0-Acontent__table__contentList--type0{
+    display: block;
+}
+
+#body0-Acontent__table__contentList--type1{
+    display: none;
 }

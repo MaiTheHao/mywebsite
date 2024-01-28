@@ -137,6 +137,11 @@ function createDate(){
     // Cập nhật số tuần, ngày
     document.getElementById('week-number').textContent = "Tuần "+weekNumber;
     document.getElementById('current-date').textContent = ", "+formattedDate;
+
+    let addWeekElement = document.getElementsByClassName('add__week-number');
+    for (let i = 0; i < addWeekElement.length; i++) {
+        addWeekElement[i].textContent = weekNumber;
+    }
 }   
 
 // Gọi hàm addHeader khi trang web được tải

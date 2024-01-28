@@ -127,8 +127,9 @@
 /* CENTER */
 
 /* AVT */
-#pictures-block{
+#body-center3__pictures-block{
     position: relative;
+    width: 40%;
     height: 20vw;
 
     display: flex;
@@ -138,7 +139,7 @@
     background-color: black;
 }
 
-#pictures--background{
+#body-center3__pictures-block #pictures--background{
     position: absolute;
     width: 100%;
     height: 100%;
@@ -149,7 +150,7 @@
     align-items: center;
 }
 
-#background{
+#body-center3__pictures-block #background{
     position: absolute;
     width: 95%;
     height: 90%;
@@ -158,14 +159,12 @@
     border-radius: 1.5vw;
 }
 
-#pictures--avatar{
+#body-center3__pictures-block #pictures--avatar{
     position: absolute;
-    width: 15vw;
-    height: 15vw;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;    
+    left: 0;
+    bottom: 0;
+    width: 10vw;
+    height: 10vw;
 
     background-color: aqua;
     border-radius: 50%;
@@ -176,7 +175,7 @@
     width: 100%;
     height: 100%;
 
-    border: 0.5vw solid white;
+    border: 0.1vw solid white;
     border-radius: 50%;
     object-fit: cover;
 }

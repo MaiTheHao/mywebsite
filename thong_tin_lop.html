@@ -27,9 +27,14 @@
                 <!-- TRÁI BODY -->
                 <div class="body-left2 body-part Acontent__sidebar AcontentSidebar--left set-scrollbar--x">
                     <!-- CÁC PHẦN TỬ CON -->
-                    <form class = "Acontent__sidebar__element body-left2__searchBlock" action="" for = "findClass">
-                        <i class = "fa-solid fa-magnifying-glass"></i><input type="text" id = "findClass" placeholder="Tìm Lớp">
-                    </form>
+                    <div class = "Acontent__sidebar__element body-left2__searchBlock">
+                        <form class = "body-left2-Acontent__sidebar__element__form" action="" for = "findClass">
+                            <i class = "fa-solid fa-magnifying-glass"></i>
+                            <input type="text" id = "findClass" placeholder="Tìm Lớp">
+                        </form>
+                        
+                        <div class = "body-left2__searchBlock--showYear" onclick="showListYears(this)"><span>2023-2024</span> <i class="fa-solid fa-chevron-up"></i></div>
+                    </div>
                     <!-- CÁC PHẦN TỬ CON -->
                     <div class="Acontent__sidebar__element">
                         <p class="Acontent__sidebar__element__header">DANH SÁCH KHỐI 10</p>
@@ -104,20 +109,72 @@
                             btn.getElementsByTagName("span")[0].textContent = " HIDE";
                           } 
                         }
+
+                        function showListYears(e){
+                            e.getElementsByTagName("i")
+                        }
                     </script>
 
                 </div>
                 <!-- GIỮA BODY -->
                 <div class="body-center2 body-part">
                     <!-- CÁC PHẦN TỬ CON -->
-                    <div class="Acontent__table" id="pictures-block">
-                        <div id="pictures--background">
+                    <div  class = "Acontent__table" id = "body-center2__header">
+                        <div id="body-center2__header__pics">
                             <img src = "pic/class_background.jpg"  alt = "background" id = "background">
                             <div id="pictures--avatar">
                                 <img src = "pic/class_avatar.jpg" alt = "avatar" id = "avatar">
                                 <i class="fa-regular fa-image" id = "addAvatar"></i>
+                           </div>
+                            <p id = "body-center2__header__pics__className">LỚP <span id = "class-name">10.7</span> <i class="fa-solid fa-bookmark" style="color: rgb(255, 204, 0)"></i></p>
+                        </div>      
+                        <div id="body-center2__header__rightSide">
+                            <div class = "body-center2__header__rightSide__element set-scrollbar--x" id="body-center2__header__rightSide__information">
+                                <h3 class="body-center2__header__rightSide__element__title">THÔNG TIN LỚP</h3>
+                                <div class="body-center2__header__rightSide__element__list">
+                                    <p class="body-center2__header__rightSide__element__list__element">
+                                        <span class = "body-center2__header__rightSide__element__list__element__title">GVCN</span>
+                                        <span class = "body-center2__header__rightSide__element__list__element__text">Nguyễn Thanh Trúc</span>
+                                    </p>
+                                    <p class="body-center2__header__rightSide__element__list__element">
+                                        <span class = "body-center2__header__rightSide__element__list__element__title">LỚP TRƯỞNG</span>
+                                        <span class = "body-center2__header__rightSide__element__list__element__text">Lê Văn Sở</span>
+                                    </p>
+                                    <p class="body-center2__header__rightSide__element__list__element">
+                                        <span class = "body-center2__header__rightSide__element__list__element__title">NĂM HỌC</span>
+                                        <span class = "body-center2__header__rightSide__element__list__element__text">2023-2024</span>
+                                    </p>
+                                    <p class="body-center2__header__rightSide__element__list__element">
+                                        <span class = "body-center2__header__rightSide__element__list__element__title">SỈ SỐ</span>
+                                        <span class = "body-center2__header__rightSide__element__list__element__text">31</span>
+                                    </p>
+                                </div>
                             </div>
-                        </div>                   
+                            <div class = "body-center2__header__rightSide__element set-scrollbar--x" id="body-center2__header__rightSide__list">
+                                <h3 class="body-center2__header__rightSide__element__title">THI ĐUA TUẦN <span class = "add__week-number" style="border-left: 0.1vw solid gray; padding: 0 2%"></span></h3>
+                                <div class="body-center2__header__rightSide__element__list">
+                                    <p class="body-center2__header__rightSide__element__list__element">
+                                        <span class = "body-center2__header__rightSide__element__list__element__title">HẠNG TRÊN</span>
+                                        <span class = "body-center2__header__rightSide__element__list__element__text">Top 1</span>
+                                        <span class = "body-center2__header__rightSide__element__list__element__text">Lớp 11.4</span>
+                                        <span class = "body-center2__header__rightSide__element__list__element__text">205 điểm</span>
+                                    </p>
+                                    <p class="body-center2__header__rightSide__element__list__element">
+                                        <span class = "body-center2__header__rightSide__element__list__element__title">HẠNG CỦA LỚP</span>
+                                        <span class = "body-center2__header__rightSide__element__list__element__text">Top 2</span>
+                                        <span class = "body-center2__header__rightSide__element__list__element__text">Lớp 10.7</span>
+                                        <span class = "body-center2__header__rightSide__element__list__element__text">200 điểm</span>
+                                    </p>
+                                    <p class="body-center2__header__rightSide__element__list__element">
+                                        <span class = "body-center2__header__rightSide__element__list__element__title">HẠNG DƯỚI</span>
+                                        <span class = "body-center2__header__rightSide__element__list__element__text">Top 3</span>
+                                        <span class = "body-center2__header__rightSide__element__list__element__text">Lớp 12.5</span>
+                                        <span class = "body-center2__header__rightSide__element__list__element__text">178 điểm</span>
+                                    </p>
+                                </div>
+                                <div class="paddingBottom"></div>
+                            </div>
+                        </div>            
                     </div>
                     <!-- CHỈNH SỬA -->
                     <div id="updateInfoDiv" class = "set-scrollbar--y" style="margin: 2%">
@@ -130,50 +187,16 @@
                     </div>
                     <!-- CHỈNH SỬA -->
                     <div class="Acontent__table">
-                        <p class="Acontent__table__header">THÔNG TIN LỚP</p>
-                        <div class="Acontent__table__contentText">
-                            <div class="Acontent__table__contentText__element">
-                                <span class="Acontent__table__contentText__element__title">LỚP</span>
-                                <span class="Acontent__table__contentText__element__main">10.07</span>
-                            </div>
-                            <div class="Acontent__table__contentText__element">
-                                <span class="Acontent__table__contentText__element__title">SỐ THÀNH VIÊN</span>
-                                <span class="Acontent__table__contentText__element__main">37</span>
-                            </div>
-                            <div class="Acontent__table__contentText__element">
-                                <span class="Acontent__table__contentText__element__title">CHỦ NHIỆM</span>
-                                <span class="Acontent__table__contentText__element__main">Mai Thanh Thảo</span>
-                            </div>
-                            <div class="Acontent__table__contentText__element">
-                                <span class="Acontent__table__contentText__element__title">LỚP TRƯỞNG</span>
-                                <span class="Acontent__table__contentText__element__main">Lê Văn Sở</span>
-                            </div>
-                            <div class="Acontent__table__contentText__element">
-                                <span class="Acontent__table__contentText__element__title">LỚP PHÓ</span>
-                                <span class="Acontent__table__contentText__element__main">Trần Thanh Tú</span>
-                            </div>
-                            <div class="Acontent__table__contentText__element">
-                                <span class="Acontent__table__contentText__element__title">XẾP HẠNG TUẦN</span>
-                                <span class="Acontent__table__contentText__element__main">Hạng 4</span>
-                            </div>
+                        <div class="body-center2__bodyTable__nav set-scrollbar--y">
+                            <div class="body-center2__bodyTable__nav__element">DS HỌC SINH</div>
+                            <div class="body-center2__bodyTable__nav__element">DS GIÁO VIÊN</div>
+                            <div class="body-center2__bodyTable__nav__element">LỊCH SỬ THI ĐUA</div>
+                            <div class="body-center2__bodyTable__nav__element">THÀNH TÍCH HỌC TẬP</div>
+                            <div class="body-center2__bodyTable__nav__element">THỜI KHÓA BIỂU</div>
+                            <div class="body-center2__bodyTable__nav__element">SƠ ĐỒ LỚP</div>
                         </div>
-                    </div>
+                        <div class="body-center2__bodyTable__body">
 
-                    <div class="Acontent__table">
-                        <p class="Acontent__table__header">THÔNG TIN LIÊN HỆ</p>
-                        <div class="Acontent__table__contentText">
-                            <div class="Acontent__table__contentText__element">
-                                <span class="Acontent__table__contentText__element__title">EMAIL</span>
-                                <span class="Acontent__table__contentText__element__main">107doanket@gmail.com</span>
-                            </div>
-                            <div class="Acontent__table__contentText__element">
-                                <span class="Acontent__table__contentText__element__title">FACEBOOK</span>
-                                <span class="Acontent__table__contentText__element__main">Không</span>
-                            </div>
-                            <div class="Acontent__table__contentText__element">
-                                <span class="Acontent__table__contentText__element__title">SĐT GVCN</span>
-                                <span class="Acontent__table__contentText__element__main">0986748256</span>
-                            </div>
                         </div>
                     </div>
                     

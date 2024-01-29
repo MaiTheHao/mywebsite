@@ -1,0 +1,220 @@
+.b6{
+    display: flex;
+    justify-content: center;
+}
+
+.body-center6{
+    position: relative;
+
+    width: 95%;
+
+    display: flex;
+    flex-direction: column;
+
+    font-size: var(--myfontsize);
+
+    padding: 0;
+    padding-top: 1%;
+}
+
+.Acontent__table__header{
+    font-size: 1em;
+}
+
+/* CONTENT BODY */
+    /* NAV BAR */
+    .bc6__nav{
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+
+        font-size: 1em;
+    }
+
+    .bc6__nav__element{
+        width: max-content;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        padding: 0.25% 0.5%;
+
+        font-size: 0.6em;
+
+        background-color: rgb(230, 230, 230);
+        text-wrap: nowrap;
+
+        transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    }
+
+    .bc6__nav__element + .bc6__nav__element{
+        margin-left: 0.5%;
+    }
+
+    .bc6__nav__element:hover{
+        cursor: pointer;
+        background-color: rgb(37, 37, 37);
+        color: white;
+
+        transform: scale(1.1);
+    }
+    
+    .bc6__nav__element:active{
+        transform: scale(0.95);
+    }
+
+    /* BODY */
+    .bc6__body{
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+        display: grid;
+        grid-template-columns: 20% 80%;
+    }
+
+    #bc6__body__sidebar{
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+
+        background-color: rgb(250, 250, 250);
+        border-right: 0.1vw solid gray;
+
+        font-size: var(--myfontsize);
+    }
+
+    #bc6__body__content{
+        position: relative;
+        background-color: rgb(255, 255, 255);
+
+        font-size: var(--myfontsize);
+    }
+
+    /* sidebar */
+        #bc6__body__sidebar__header{
+            display: flex;
+            justify-content: center;
+
+            font-size: var(--myfontsize);
+
+            background-color: rgb(218, 249, 255);
+
+            padding: 1% 0;
+
+            border-bottom: 0.1vw solid gray;
+        }
+
+        #bc6__body__sidebar__search{
+            width: 70%;
+
+            font-size: 0.5em;
+        }
+
+        #bc6__body__sidebar__search label{
+            display: flex;
+
+            padding: 2% 3%;
+
+            border-radius: 1vw;
+
+            font-size: 1em;
+
+            background-color: rgb(255, 255, 255);
+        }
+
+        #bc6-sidebar__search{
+            border: 0;
+            outline: 0;
+
+            font-size: 0.7em;
+
+            margin-left: 1%;
+
+            background-color: transparent;
+        }
+
+        #bc6__body__sidebar__filter{
+            width: max-content;
+
+            font-size: 0.5em;
+
+            margin-left: 1%;
+
+            background-color: transparent;
+
+            transition: transform 0.3s;
+        }
+
+        #bc6__body__sidebar__filter:hover{
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+
+        #bc6__body__sidebar__filter:active{
+            transform: scale(0.95);
+        }
+        /* BODY */
+            #bc6__body__sidebar__content{
+                position: relative;
+                width: 100%;
+                max-height: 100vh;
+
+                display: flex;
+                flex-direction: column;
+
+                background-color: red;
+            }
+
+        /* FILTER BLOCK (BODY) */
+            #bc6__body__sidebar__filterBlock{
+                position: absolute;
+                left: 0;
+                top: 0;
+
+                display: none;
+
+                height: max-content;
+                width: max-content;
+                background-color: white;
+
+                font-size: 0.5em;
+
+                padding: 1% 2%;
+            }
+
+            .filterBlock__element{
+                display: flex;
+            }
+
+            .filterBlock__element + .filterBlock__element{
+                margin-top: 5%;
+            }
+
+            .filterBlock__element:hover{
+                cursor: pointer;
+
+                color: rgb(0, 16, 122);
+
+                transform: scale(1.1);
+            }
+
+            .filterBlock__element:active{
+                transform: scale(0.95);
+            }
+
+            .filterBlock__element p{
+                margin-left: 5%;
+
+                text-wrap: nowrap;
+            }
+
+            .filterBlock__element input{
+                width: 10%;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }

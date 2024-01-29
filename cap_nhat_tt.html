@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- TOP CSS -->
+    <link rel="stylesheet" href="css/base.css">
+
+    <!-- BELOW CSS -->
+    <link rel="stylesheet" href="css/cap_nhat_tt/body.css">
+
+    <!-- JAVASCRIPT -->
+    <script src = "js/create_header.js"></script>
+    <script src = "js/main.js"></script>
+    <script src="https://kit.fontawesome.com/0afaeea3b6.js" crossorigin="anonymous"></script>
+    <title>LỚP</title>
+</head>
+<body>
+    <!-- BODY BODY BODY -->
+    <!-- KHỞI TẠO KHUNG THÂN -->
+    <div class="under-header">
+        <!-- KHỞI TẠO KHUNG BODY -->
+        <div class = "body grid">
+            <!-- KHUNG BODY -->
+            <div class="body__content b6">
+                <div class="Acontent__table body-center6">
+                    <h1 class="Acontent__table__header"><i class="fa-solid fa-pen-to-square" style="margin-right: 1%"></i>CẬP NHẬT THÔNG TIN <i style="font-size: 0.3em;">(Phân quyền)</i></h1>
+                    <div class="bc6__nav set-scrollbar--y">
+                        <p class = "bc6__nav__element">Thành viên</p>
+                        <p class = "bc6__nav__element">Đội nhóm</p>
+                        <p class = "bc6__nav__element">Lớp</p>
+                        <p class = "bc6__nav__element">Điểm số</p>
+                        <p class = "bc6__nav__element">Giải thưởng</p>
+                        <p class = "bc6__nav__element">Năm học</p>
+                        <p class = "bc6__nav__element">Tài liệu</p>
+                        <p class = "bc6__nav__element">Lĩnh vực</p>
+                        <p class = "bc6__nav__element">OTHER</p>
+                        <p class = "bc6__nav__element">OTHER</p>
+                        <p class = "bc6__nav__element">OTHER</p>
+                        <p class = "bc6__nav__element">OTHER</p>
+                        <p class = "bc6__nav__element">OTHER</p>
+                        <p class = "bc6__nav__element">OTHER</p>
+                        <p class = "bc6__nav__element">OTHER</p>
+                        <p class = "bc6__nav__element">OTHER</p>
+                        <p class = "bc6__nav__element">OTHER</p>
+                        <p class = "bc6__nav__element">OTHER</p>
+                        <p class = "bc6__nav__element">OTHER</p>
+                        <p class = "bc6__nav__element">OTHER</p>
+                        <p class = "bc6__nav__element">OTHER</p>
+                        <p class = "bc6__nav__element">OTHER</p>
+                        <p class = "bc6__nav__element">OTHER</p>
+                        <p class = "bc6__nav__element">OTHER</p>
+                        <p class = "bc6__nav__element">OTHER</p>
+                        <p class = "bc6__nav__element">OTHER</p>
+                        <p class = "bc6__nav__element">OTHER</p>
+                        <p class = "bc6__nav__element">OTHER</p>
+                    </div>
+                    <div class="bc6__body">
+                        <div id="bc6__body__sidebar">
+                            <div id="bc6__body__sidebar__header">
+                                <form id="bc6__body__sidebar__search">
+                                    <label for="bc6-sidebar__search">
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                        <input type="text" id = "bc6-sidebar__search" placeholder="Tìm Kiếm">
+                                    </label>
+                                </form>
+                                <div id="bc6__body__sidebar__filter" onclick = "setFilter()">
+                                    <i class="fa-solid fa-filter"></i>
+                                </div>
+                            </div>
+
+                            <div id="bc6__body__sidebar__content set-scrollbar--x">
+                                
+                            </div>
+                        </div>
+
+                        <div id="bc6__body__content">
+                            <form id="bc6__body__sidebar__filterBlock">
+                                <label for="option0" class = "filterBlock__element">
+                                    <input type = "checkbox" id = "option0">
+                                    <p>Option 0</p>
+                                </label>
+                                <label for="option1" class = "filterBlock__element">
+                                    <input type = "checkbox" id = "option1">
+                                    <p>Option 1</p>
+                                </label>
+                                <label for="option2" class = "filterBlock__element">
+                                    <input type = "checkbox" id = "option2">
+                                    <p>Option 2</p>
+                                </label>
+                                <label for="option3" class = "filterBlock__element">
+                                    <input type = "checkbox" id = "option3">
+                                    <p>Option 3</p>
+                                </label>
+
+                                <label for="option4" class = "filterBlock__element">
+                                    <input type = "checkbox" id = "option4">
+                                    <p>Option 4</p>
+                                </label>
+                                <label for="option5" class = "filterBlock__element">
+                                    <input type = "checkbox" id = "option5">
+                                    <p>Option 5</p>
+                                </label>
+                                <label for="option6" class = "filterBlock__element">
+                                    <input type = "checkbox" id = "option6">
+                                    <p>Option 6</p>
+                                </label>
+                                <label for="option7" class = "filterBlock__element">
+                                    <input type = "checkbox" id = "option7">
+                                    <p>Option 7</p>
+                                </label>
+                                <script>
+                                    function setFilter(){
+                                        let e = document.getElementById("bc6__body__sidebar__filterBlock")
+                                        if(e.style.display == "block"){
+                                            e.style.display = "none"
+                                        }else{
+                                            e.style.display = "block"
+                                        }
+                                    }
+                                </script>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </div>
+    <style>
+        #page6{
+            color: white !important;
+            background-color: rgb(60, 60, 60);
+            transition: opacity 0.3s ease-out;
+            transition: background-color 0.6s ease-out;
+            transition: color 0.7s ease-out;
+        }
+    </style>
+    <!-- FOOTER FOOTER FOOTER -->
+    <!-- PHẦN CHÂN KHUNG -->
+    <iframe class = "footer" src="html/footer.html" frameborder="0"></iframe>    
+
+    <!-- BLOCK CẬP NHẬT-->
+    <div class = "set-scrollbar--x" id = "updateInfoDiv__hideBlock">
+        <div id="updateInfoDiv__infomation__hideBlock">
+            <form class = "updateInfoDiv__hideBlock__part" id="updateInfoDiv__hideBlock__pic" action="" method="">
+                <div class="updateInfoDiv__hideBlock__title">
+                    <h3>Cập nhật ảnh đại diện</h3>
+                    <div id="updateInfoDiv__hideBlock__title--exit" onclick = show_updateInfoDiv()><i class="fa-solid fa-xmark"></i></div>
+                </div>
+                <label class = "updateInfoDiv__hideBlock__part__input--file" for="c-backgroundPic">  <!-- c = change -->
+                    <span>Background</span>
+                    <input class = "updateInfoInput" type="file" accept="image/png, image/jpeg" id = "c-backgroundPic" name = "n-backgroundPic"> <!-- n = new -->
+                </label>
+                <label class = "updateInfoDiv__hideBlock__part__input--file" for="c-avatar">  <!-- c = change -->
+                    <span>Avata</span>
+                    <input class = "updateInfoInput" type="file" accept="image/png, image/jpeg" id = "c-avatar" name = "n-avatar"> <!-- n = new -->
+                </label>
+                <div class = "updateInfoDiv__hideBlock__part" id="updateInfoDiv__hideBlock__footer">
+                    <button id="updateInfoDiv__hideBlock__footer--cancel" type="button" onclick = cancelUpdate(0)>ĐẶT LẠI</button>
+                    <button id="updateInfoDiv__hideBlock__footer--submit" type="submit">CẬP NHẬT</button>
+                </div>
+            </form>
+            <form class = "updateInfoDiv__hideBlock__part" id="updateInfoDiv__hideBlock__information" action="" method="">
+                <div class="updateInfoDiv__hideBlock__title">
+                    <h3>Cập nhật thông tin cơ bản</h3>
+                    <div id="updateInfoDiv__hideBlock__title--exit" onclick = show_updateInfoDiv()><i class="fa-solid fa-xmark"></i></div>
+                </div>
+                <label class = "updateInfoDiv__hideBlock__part__input--text" for="c-name">  <!-- c = change -->
+                    <span>Lớp</span>
+                    <input class = "updateInfoInput" type="text" id = "c-name" name = "n-name"> <!-- n = new -->
+                </label>
+                <label class = "updateInfoDiv__hideBlock__part__input--text" for="c-members">
+                    <span>Số thành viên</span>
+                    <input class = "updateInfoInput" type="number" id = "c-members" name = "n-members">
+                </label>
+                <label class = "updateInfoDiv__hideBlock__part__input--text" for="c-teacher">
+                    <span>Chủ nhiệm</span>
+                    <input class = "updateInfoInput" type="text" id = "c-teacher" name = "n-teacher">
+                </label>
+                <label class = "updateInfoDiv__hideBlock__part__input--text" for="c-monitor">
+                    <span>Lớp trưởng</span>
+                    <input class = "updateInfoInput" type="text" id = "c-monitor" name = "n-monitor">
+                </label>
+                <label class = "updateInfoDiv__hideBlock__part__input--text" for="c-viceMonitor">
+                    <span>Lớp phó</span>
+                    <input class = "updateInfoInput" type="text" id = "c-viceMonitor" name = "n-viceMonitor">
+                </label>
+                <div class="updateInfoDiv__hideBlock__title">
+                    <h3>Cập nhật thông tin liên hệ</h3>
+                </div>
+                <label class = "updateInfoDiv__hideBlock__part__input--text" for="c-email">
+                    <span>Email</span>
+                    <input class = "updateInfoInput" type="text" id = "c-email" name = "n-email">
+                </label>
+                <label class = "updateInfoDiv__hideBlock__part__input--text" for="c-facebook">
+                    <span>Facebook</span>
+                    <input class = "updateInfoInput" type="text" id = "c-facebook" name = "n-facebook">
+                </label>
+                <label class = "updateInfoDiv__hideBlock__part__input--text" for="c-teacherPhone">
+                    <span>SĐT GVCN</span>
+                    <input class = "updateInfoInput" type="text" id = "c-teacherPhone" name = "n-teacherPhone">
+                </label>
+                <div class = "updateInfoDiv__hideBlock__part" id="updateInfoDiv__hideBlock__footer">
+                    <button id="updateInfoDiv__hideBlock__footer--cancel" type="button" onclick = cancelUpdate(1)>ĐẶT LẠI</button>
+                    <button id="updateInfoDiv__hideBlock__footer--submit" type="submit">CẬP NHẬT</button>
+                </div>
+            </form>
+        </div>
+        <div class="sideBar paddingBottom" style="color: rgb(0, 0, 0)"></div>
+    </div>
+    <!-- BLOCK CẬP NHẬT-->
+</body>
+</html> 

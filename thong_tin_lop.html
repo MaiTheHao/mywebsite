@@ -28,13 +28,32 @@
                 <div class="body-left2 body-part Acontent__sidebar AcontentSidebar--left set-scrollbar--x">
                     <!-- CÁC PHẦN TỬ CON -->
                     <div class = "Acontent__sidebar__element body-left2__searchBlock">
-                        <form class = "body-left2-Acontent__sidebar__element__form" action="" for = "findClass">
+                        <form class = "body-left2-Acontent__sidebar__element__form" action="">
                             <i class = "fa-solid fa-magnifying-glass"></i>
                             <input type="text" id = "findClass" placeholder="Tìm Lớp">
                         </form>
                         
-                        <div class = "body-left2__searchBlock--showYear" onclick="showListYears(this)"><span>2023-2024</span> <i class="fa-solid fa-chevron-up"></i></div>
-                    </div>
+                        <div id = "body-left2__listYear">
+                            <select name="year" id="selectYear">
+                                <option value="1999">1999</option>
+                                <option value="2000">2000</option>
+                                <option value="2001">2001</option>
+                                <option value="2002">2002</option>
+                                <option value="2003">2003</option>
+                                <option value="2004">2004</option>
+                                <option value="2005">2005</option>
+                                <option value="2006">2006</option>
+                                <option value="2007">2007</option>
+                                <option value="2008">2008</option>
+                                <option value="2009">2009</option>
+                                <option value="2010">2010</option>
+                                <option value="2011">2011</option>
+                                <option value="2012">2012</option>
+                            </select> 
+                            <label for="selectYear" id = "icon-selectYear"><i class="fa-solid fa-calendar-days"></i></label>
+                        </div>
+
+                    </div>                       
                     <!-- CÁC PHẦN TỬ CON -->
                     <div class="Acontent__sidebar__element">
                         <p class="Acontent__sidebar__element__header">DANH SÁCH KHỐI 10</p>
@@ -154,7 +173,7 @@
                                 <h3 class="body-center2__header__rightSide__element__title">THI ĐUA TUẦN <span class = "add__week-number" style="border-left: 0.1vw solid gray; padding: 0 2%"></span></h3>
                                 <div class="body-center2__header__rightSide__element__list">
                                     <p class="body-center2__header__rightSide__element__list__element">
-                                        <span class = "body-center2__header__rightSide__element__list__element__title">HẠNG TRÊN</span>
+                                        <span class = "body-center2__header__rightSide__element__list__element__title">TOP TRÊN</span>
                                         <span class = "body-center2__header__rightSide__element__list__element__text">Top 1</span>
                                         <span class = "body-center2__header__rightSide__element__list__element__text">Lớp 11.4</span>
                                         <span class = "body-center2__header__rightSide__element__list__element__text">205 điểm</span>
@@ -166,7 +185,7 @@
                                         <span class = "body-center2__header__rightSide__element__list__element__text">200 điểm</span>
                                     </p>
                                     <p class="body-center2__header__rightSide__element__list__element">
-                                        <span class = "body-center2__header__rightSide__element__list__element__title">HẠNG DƯỚI</span>
+                                        <span class = "body-center2__header__rightSide__element__list__element__title">TOP DƯỚI</span>
                                         <span class = "body-center2__header__rightSide__element__list__element__text">Top 3</span>
                                         <span class = "body-center2__header__rightSide__element__list__element__text">Lớp 12.5</span>
                                         <span class = "body-center2__header__rightSide__element__list__element__text">178 điểm</span>
@@ -188,15 +207,100 @@
                     <!-- CHỈNH SỬA -->
                     <div class="Acontent__table">
                         <div class="body-center2__bodyTable__nav set-scrollbar--y">
-                            <div class="body-center2__bodyTable__nav__element">DS HỌC SINH</div>
-                            <div class="body-center2__bodyTable__nav__element">DS GIÁO VIÊN</div>
-                            <div class="body-center2__bodyTable__nav__element">LỊCH SỬ THI ĐUA</div>
-                            <div class="body-center2__bodyTable__nav__element">THÀNH TÍCH HỌC TẬP</div>
-                            <div class="body-center2__bodyTable__nav__element">THỜI KHÓA BIỂU</div>
-                            <div class="body-center2__bodyTable__nav__element">SƠ ĐỒ LỚP</div>
+                            <div class="body-center2__bodyTable__nav__element bc2_nav-active">DS HỌC SINH</div>
+                            <div class="body-center2__bodyTable__nav__element bc2_nav-normal">LỊCH SỬ THI ĐUA</div>
+                            <div class="body-center2__bodyTable__nav__element bc2_nav-normal">THÀNH TÍCH HỌC TẬP</div>
+                            <div class="body-center2__bodyTable__nav__element bc2_nav-normal">THỜI KHÓA BIỂU</div>
+                            <div class="body-center2__bodyTable__nav__element bc2_nav-normal">SƠ ĐỒ LỚP</div>
+                            <div class="body-center2__bodyTable__nav__element bc2_nav-normal">TEST ELEMENT</div>
                         </div>
-                        <div class="body-center2__bodyTable__body">
+                        <script>
+                            document.addEventListener('DOMContentLoaded', function() {
+                                var elements = document.querySelectorAll('.body-center2__bodyTable__nav__element');
+                                elements.forEach(function(element) {
+                                    element.addEventListener('click', function() {
+                                        elements.forEach(function(el) {
+                                            el.classList.remove('bc2_nav-active');
+                                            el.classList.add('bc2_nav-normal');
+                                        });
+                                        this.classList.remove('bc2_nav-normal');
+                                        this.classList.add('bc2_nav-active');
+                                    });
+                                });
+                            });                            
+                        </script>
+                        <div class="body-center2__bodyTable__body" id="body-center2__DS">
+                            <div id="body-center2__DSHS bc2_body-show">
+                                <div class="body-center2__DSHS__element DSHS__head">
+                                    <p>Tên</p>
+                                    <p>Giới tính</p>
+                                    <p>Ngày sinh</p>
+                                    <p>Đoàn viên</p>
+                                    <p>Tổ</p>
+                                    <p>Chức vụ</p>
+                                </div>
+                                <div class="body-center2__DSHS__element DSHS__body">
+                                    <p>Nguyễn Lan Anh</p>
+                                    <p>Nữ</p>
+                                    <p>02/12/2008</p>
+                                    <p>Không</p>
+                                    <p>3</p>
+                                    <p>Tổ phó</p>
+                                </div>
+                                <div class="body-center2__DSHS__element DSHS__body">
+                                    <p>Lê Ngọc Bảo</p>
+                                    <p>Nam</p>
+                                    <p>30/04/2008</p>
+                                    <p>Có</p>
+                                    <p>3</p>
+                                    <p>Tổ viên</p>
+                                </div>
+                                <div class="body-center2__DSHS__element DSHS__body">
+                                    <p>Mai Ngọc Chi</p>
+                                    <p>Nữ</p>
+                                    <p>12/01/2008</p>
+                                    <p>Có</p>
+                                    <p>2</p>
+                                    <p>Tổ trưởng</p>
+                                </div>
+                            </div>
 
+                            <!-- <div id="body-center2__DSTD bc2_body-none">
+                                <div class="body-center2__DSTD__element DSTD__head">
+                                    <p>Tuần</p>
+                                    <p>Hạng</p>
+                                    <p>Điểm</p>
+                                    <p>Đường liên kết</p>
+                                </div>
+
+                                <div class="body-center2__DSTD__element DSTD__body">
+                                    <p>22</p>
+                                    <p>2</p>
+                                    <p>200</p>
+                                    <p><a href="" class = "DS__link">Link chi tiết tại đây</a></p>
+                                </div>
+
+                                <div class="body-center2__DSTD__element DSTD__body">
+                                    <p>21</p>
+                                    <p>1</p>
+                                    <p>397</p>
+                                    <p><a href="" class = "DS__link">Link chi tiết tại đây</a></p>
+                                </div>
+
+                                <div class="body-center2__DSTD__element DSTD__body">
+                                    <p>20</p>
+                                    <p>4</p>
+                                    <p>145</p>
+                                    <p><a href="" class = "DS__link">Link chi tiết tại đây</a></p>
+                                </div>
+
+                                <div class="body-center2__DSTD__element DSTD__body">
+                                    <p>19</p>
+                                    <p>1</p>
+                                    <p>558</p>
+                                    <p><a href="" class = "DS__link">Link chi tiết tại đây</a></p>
+                                </div>
+                            </div> -->
                         </div>
                     </div>
                     

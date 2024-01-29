@@ -14,13 +14,13 @@
 /* SEARCH */
 .body-left2__searchBlock{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
 
     font-size: var(--myfontsize);
 }
 
 .body-left2-Acontent__sidebar__element__form{
-    width: 50%;
+    width: 60%;
 
     display: flex;
 
@@ -56,44 +56,62 @@
     background-color: transparent;
 }
 
-.body-left2__searchBlock--showYear{
-    width: max-content;
-    max-width: 50%;
+#body-left2__listYear{
+    position: relative;
+    width: 35%;
+
+    display: flex;
+    justify-content: center;
+
+    border-radius: 0.5vw;
+    margin-left: 1%;
+
+    background-color: rgb(194, 194, 194);
+
+    transition: transform 0.3s, background-color 0.3s, color 0.3s;
+}
+
+#body-left2__listYear:hover{
+    cursor: pointer;
+
+    transform: scale(1.05);
+    background-color: rgb(37, 37, 37);
+    color: white;
+}
+
+#body-left2__listYear:active{
+    transform: scale(0.95);
+}
+
+
+#selectYear:hover{
+    cursor: pointer;
+    background-color: rgb(37, 37, 37);
+}
+
+#selectYear{
+    border: 0;
+    outline: 0;
+    
+    width: 70%;
+
+    color: inherit;
+
+    font-size: calc(var(--myfontsize)/2.5);
+
+    background-color: transparent;
+
+    text-align: center;
+    -webkit-appearance: none;
+
+}
+
+#icon-selectYear{
+    font-size: calc(var(--myfontsize)/2.5);
 
     display: flex;
     justify-content: center;
     align-items: center;
-
-    font-size: 0.4em;
-
-    overflow-x: hidden;
-    text-wrap: nowrap;
-
-    padding: 1% 2%;
-    margin-left: 5%;
-
-    background-color: rgb(106, 106, 106);
-    color: white;
-    border-radius: 0.3vw;
-
-    transition: transform 0.3s, color 0.3s, background-color 0.3s;
-}
-
-.body-left2__searchBlock--showYear i{
-    margin-left: 5%;
-
-    transform: rotate(180deg);
-}
-
-.body-left2__searchBlock--showYear:hover{
-    cursor: pointer;
-    transform: scale(1.05);
-    color: rgb(37, 37, 37);
-    background-color: rgb(220, 220, 220);
-}
-
-.body-left2__searchBlock--showYear:active{
-    transform: scale(0.95);
 }
 
 /* LEFT CONTENT*/
@@ -231,7 +249,7 @@
 
             border-radius: 0.5vw;
 
-            font-size: 0.6em;
+            font-size: 0.5em;
             padding: 0 2%;
 
             border: 0.15vw solid gray;
@@ -301,6 +319,7 @@
         padding: 0.5% 2%;
 
         text-wrap: nowrap;
+        border-left: 0.15vw solid gray;
 
         transition: background-color 0.3s, color 0.3s, transform 0.3s;
     }
@@ -309,13 +328,112 @@
         margin-left: 1%;
     }
 
-    .body-center2__bodyTable__nav__element:hover{
+    .bc2_nav-normal:hover{
         cursor: pointer;
         background-color: rgb(37, 37, 37);
         color: white;
         transform: scale(1.05);
     }
 
-    .body-center2__bodyTable__nav__element:active{
+    .bc2_nav-normal:active{
         transform: scale(0.95);
     }
+
+    .bc2_nav-active{
+        background-color: rgb(37, 37, 37);
+        color: white;
+    }
+
+    /* BODY */
+    .body-center2__bodyTable__body{
+        width: 100%;
+        height: max-content;
+
+        display: flex;
+        flex-direction: column;
+
+        background-image:   linear-gradient(0deg, rgb(246, 254, 255), rgb(199, 234, 255));
+    }
+
+    /* DANH SACH */
+        /* HỌC SINH */
+        #body-center2__DSHS{
+            display: flex;
+            flex-direction: column;
+
+            font-size: var(--myfontsize);
+        }
+
+        .body-center2__DSHS__element{
+            display: grid;
+            grid-template-columns: 25% 15% 20% 15% 10% 15%;
+
+            font-size: 0.5em;
+
+            border-right: 0.2vw solid gray;
+        }
+
+        .DSHS__head{
+            background-color: rgb(80, 80, 80);
+            color: white;
+        }
+
+        .body-center2__DSHS__element p{
+            border-left: 0.2vw solid gray;
+            border-bottom: 0.1vw solid gray;
+
+            padding: 1% 0;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* THI ĐƯA */
+        #body-center2__DSTD{
+            display: flex;
+            flex-direction: column;
+
+            font-size: var(--myfontsize);
+        }
+
+        .body-center2__DSTD__element{
+            display: grid;
+            grid-template-columns: 20% 20% 25% 35%;
+
+            font-size: 0.5em;
+
+            border-right: 0.2vw solid gray;
+        }
+
+        .DSTD__head{
+            background-color: rgb(80, 80, 80);
+            color: white;
+        }
+
+        .body-center2__DSTD__element p{
+            border-left: 0.2vw solid gray;
+            border-bottom: 0.1vw solid gray;
+
+            padding: 1% 0;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            transition: font-size 0.3s, color 0.3s;
+        }
+
+        .DS__link{
+            color: inherit;
+        }
+
+        .DS__link:hover{
+            cursor: pointer;
+            color: rgb(67, 173, 255);
+            font-size: 1.05em;
+        }
+
+        .DS__link:active{
+            transform: scale(0.95);
+        }

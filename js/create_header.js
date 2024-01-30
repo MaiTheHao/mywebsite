@@ -81,8 +81,8 @@ function addHeader() {
                     <a href="thu_vien.html" class="header-nav__menu--element navbutton" id = "page4">THƯ VIỆN</a>
                     <a href="gioi_thieu.html" class="header-nav__menu--element navbutton" id = "page5">GIỚI THIỆU</a>
                     <a href="cap_nhat_tt.html" class="header-nav__menu--element navbutton" id = "page6">CẬP NHẬT THÔNG TIN</a>
-                    <a href="dang_nhap.html" class="header-nav__menu--element navbutton" style = "color: gray">ĐĂNG NHẬP - TEST</a>
-                    <a href="dang_nhap.html" class="header-nav__menu--element navbutton" style = "color: gray">TEST ELEMENT</a>
+                    <a href="thi_dua.html" class="header-nav__menu--element navbutton" id = "page7">THI ĐUA</a>
+                    <a href="dang_nhap.html" class="header-nav__menu--element navbutton" style = "color: gray">ĐĂNG NHẬP-TEST</a>
                     <a href="dang_nhap.html" class="header-nav__menu--element navbutton" style = "color: gray">TEST ELEMENT</a>
                     <a href="dang_nhap.html" class="header-nav__menu--element navbutton" style = "color: gray">TEST ELEMENT</a>
                     <a href="dang_nhap.html" class="header-nav__menu--element navbutton" style = "color: gray">TEST ELEMENT</a>
@@ -123,15 +123,15 @@ function createDate(){
     }
 
     // Lấy ngày hiện tại
-    const _currentDate = new Date();
+    var _currentDate = new Date();
 
     // Tính số tuần kể từ ngày bắt đầu
-    const weekNumber = Math.floor((_currentDate - startDate) / (7 * 24 * 60 * 60 * 1000)) + 1;
+    var weekNumber = Math.floor((_currentDate - startDate) / (7 * 24 * 60 * 60 * 1000)) + 1;
 
     // Định dạng kiểu DD/MM/YYYY
-    let day = _currentDate.getDate();
-    let month = _currentDate.getMonth() + 1;
-    let year = _currentDate.getFullYear();
+    var day = _currentDate.getDate();
+    var month = _currentDate.getMonth() + 1;
+    var year = _currentDate.getFullYear();
     const formattedDate = `${(day < 10) ? `0${day}` : day}/${(month < 10) ? `0${month}` : month}/${year}`
 
     // Cập nhật số tuần, ngày
@@ -141,6 +141,11 @@ function createDate(){
     let addWeekElement = document.getElementsByClassName('add__week-number');
     for (let i = 0; i < addWeekElement.length; i++) {
         addWeekElement[i].textContent = weekNumber;
+    }
+
+    let addYearElement = document.getElementsByClassName('add__year-number');
+    for (let i = 0; i < addYearElement.length; i++) {
+        addYearElement[i].textContent = year;
     }
 }   
 

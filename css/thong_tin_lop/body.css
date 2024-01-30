@@ -4,7 +4,8 @@
     top: 0;
     bottom: 0;
     width: 75%;
-    height: max-content;
+    height: 100vh;
+    min-height: max-content;
 
     margin-left: 3vw;
     background-color: rgb(240, 240, 240);

@@ -178,8 +178,21 @@
         #body-center2__header__pics #background{
             position: relative;
             width: 95%;
-            height: max-content;
+            height: 100%;
 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background-color: rgb(37, 37, 37);
+        }
+
+        #body-center2__header__pics #background img{
+            position: relative;
+            width: 96%;
+            height: 95%;
+
+            border-radius: inherit;
             object-fit: cover;
         }
 
@@ -195,9 +208,19 @@
         }
 
         #body-center2__header__pics__className{
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            margin-right: 10%;
             color: rgb(37, 37, 37);
             padding: 1% 0;
             font-size: calc(var(--myfontsize)/1.2);
+        }
+
+        #body-center2__header__pics__className span#class-name{
+            max-width: 40%;
         }
 
         #avatar{
@@ -297,6 +320,7 @@
         .body-center2__header__rightSide__element__list__element__title{
             width: 100%;
             font-size: 1.1em;
+            font-weight: bold;
 
             border-bottom: 0.1vw solid rgb(37, 37, 37);
         }

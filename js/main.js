@@ -83,3 +83,29 @@ function cancelUpdate(type){ //Hàm reset
         }
     }
 }
+
+window.onload = function(){
+    addHeader();
+    createDate();
+    // let links = [
+    //     "css/base.css",
+    //     "css/header.css",
+    //     "css/dang_nhap/body.css",
+    //     "css/gioi_thieu/body.css",
+    //     "css/thong_tin_lop/body.css",
+    //     "css/thong_tin_nhom/body.css",
+    //     "css/thong_tin_thanh_vien/body.css",
+    //     "css/thu_vien/body.css",
+    //     "css/thu_vien/sidebar.css",
+    //     "css/trang_chu/body.css",
+    //     "css/cap_nhat_tt/body.css",
+    //     "css/thi_dua/body.css"
+    // ];
+    
+    // for (let i = 0; i < links.length; i++) {
+    //     let link = document.createElement('link');
+    //     link.rel = 'stylesheet';
+    //     link.href = links[i];
+    //     document.head.appendChild(link);
+    // }
+}

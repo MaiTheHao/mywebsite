@@ -80,7 +80,7 @@ function addHeader() {
                     <a href="thong_tin_nhom.html" class="header-nav__menu--element navbutton" id = "page3">NHÓM</a>
                     <a href="thu_vien.html" class="header-nav__menu--element navbutton" id = "page4">THƯ VIỆN</a>
                     <a href="gioi_thieu.html" class="header-nav__menu--element navbutton" id = "page5">GIỚI THIỆU</a>
-                    <a href="cap_nhat_tt.html" class="header-nav__menu--element navbutton" id = "page6" target = "__blank">CẬP NHẬT THÔNG TIN</a>
+                    <a href="cap_nhat_tt.html" class="header-nav__menu--element navbutton" id = "page6" target = "_blank">CẬP NHẬT THÔNG TIN</a>
                     <a href="thi_dua.html" class="header-nav__menu--element navbutton" id = "page7">THI ĐUA</a>
                     <a href="dang_nhap.html" class="header-nav__menu--element navbutton" style = "color: gray">ĐĂNG NHẬP-TEST</a>
                     <a href="dang_nhap.html" class="header-nav__menu--element navbutton" style = "color: gray">TEST ELEMENT</a>

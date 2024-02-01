@@ -751,6 +751,10 @@ label + .updateInfoDiv__hideBlock__title{
     }
 
     .Acontent__sidebar__element__header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
         font-size: 0.7em;
 
         border-bottom: 0.15vw solid gray;

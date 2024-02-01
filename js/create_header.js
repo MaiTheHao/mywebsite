@@ -50,7 +50,7 @@ function addHeader() {
                         </div>
                         <!-- AVT, TÊN USER VÀ THANH TÙY CHỈNH-->
                         <div class="header__user header-title--right-buttons--elements">
-                            <a href = "thong_tin_thanh_vien.html" title = "Link to Profile" target = "_self" id="header__user--name">USER NAME</a>
+                            <a href = "thanh_vien.html" title = "Link to Profile" target = "_self" id="header__user--name">USER NAME</a>
                             <img src="pic/user_avatar.jpg" title = "USER AVATAR" alt="USER AVATAR" id="header__user--avatar">
                             <button class = "fa-solid fa-bars" id = "header__sidebar__button" onclick = set_side_bar()></button>
                             <div id = "header__hideSidebar">
@@ -75,30 +75,30 @@ function addHeader() {
                 <div class="header-nav__menu">
                     <div id = "header__clock"><span id="week-number"></span><span id="current-date"></span></div>  
                     <a href="index.html" class="header-nav__menu--element navbutton" id = "page0">TRANG CHỦ</a>
-                    <a href="thong_tin_thanh_vien.html" class="header-nav__menu--element navbutton" id = "page1">THÀNH VIÊN</a>
-                    <a href="thong_tin_lop.html" class="header-nav__menu--element navbutton" id = "page2">LỚP</a>
-                    <a href="thong_tin_nhom.html" class="header-nav__menu--element navbutton" id = "page3">NHÓM</a>
+                    <a href="thanh_vien.html" class="header-nav__menu--element navbutton" id = "page1">THÀNH VIÊN</a>
+                    <a href="lop.html" class="header-nav__menu--element navbutton" id = "page2">LỚP</a>
+                    <a href="nhom.html" class="header-nav__menu--element navbutton" id = "page3">NHÓM</a>
                     <a href="thu_vien.html" class="header-nav__menu--element navbutton" id = "page4">THƯ VIỆN</a>
                     <a href="gioi_thieu.html" class="header-nav__menu--element navbutton" id = "page5">GIỚI THIỆU</a>
-                    <a href="cap_nhat_tt.html" class="header-nav__menu--element navbutton" id = "page6" target = "_blank">CẬP NHẬT THÔNG TIN</a>
+                    <a href="cap_nhat.html" class="header-nav__menu--element navbutton" id = "page6" target = "_blank">CẬP NHẬT THÔNG TIN</a>
                     <a href="thi_dua.html" class="header-nav__menu--element navbutton" id = "page7">THI ĐUA</a>
-                    <a href="dang_nhap.html" class="header-nav__menu--element navbutton" style = "color: gray">ĐĂNG NHẬP-TEST</a>
-                    <a href="dang_nhap.html" class="header-nav__menu--element navbutton" style = "color: gray">TEST ELEMENT</a>
-                    <a href="dang_nhap.html" class="header-nav__menu--element navbutton" style = "color: gray">TEST ELEMENT</a>
-                    <a href="dang_nhap.html" class="header-nav__menu--element navbutton" style = "color: gray">TEST ELEMENT</a>
-                    <a href="dang_nhap.html" class="header-nav__menu--element navbutton" style = "color: gray">TEST ELEMENT</a>
-                    <a href="dang_nhap.html" class="header-nav__menu--element navbutton" style = "color: gray">TEST ELEMENT</a>
-                    <a href="dang_nhap.html" class="header-nav__menu--element navbutton" style = "color: gray">TEST ELEMENT</a>
-                    <a href="dang_nhap.html" class="header-nav__menu--element navbutton" style = "color: gray">TEST ELEMENT</a>
-                    <a href="dang_nhap.html" class="header-nav__menu--element navbutton" style = "color: gray">TEST ELEMENT</a>
-                    <a href="dang_nhap.html" class="header-nav__menu--element navbutton" style = "color: gray">TEST ELEMENT</a>
-                    <a href="dang_nhap.html" class="header-nav__menu--element navbutton" style = "color: gray">TEST ELEMENT</a>
-                    <a href="dang_nhap.html" class="header-nav__menu--element navbutton" style = "color: gray">TEST ELEMENT</a>
-                    <a href="dang_nhap.html" class="header-nav__menu--element navbutton" style = "color: gray">TEST ELEMENT</a>
-                    <a href="dang_nhap.html" class="header-nav__menu--element navbutton" style = "color: gray">TEST ELEMENT</a>
-                    <a href="dang_nhap.html" class="header-nav__menu--element navbutton" style = "color: gray">TEST ELEMENT</a>
-                    <a href="dang_nhap.html" class="header-nav__menu--element navbutton" style = "color: gray">TEST ELEMENT</a>
-                    <a href="dang_nhap.html" class="header-nav__menu--element navbutton" style = "color: gray">TEST ELEMENT</a>
+                    <a href="login.html" class="header-nav__menu--element navbutton" style = "color: gray">ĐĂNG NHẬP-TEST</a>
+                    <a href="login.html" class="header-nav__menu--element navbutton" style = "color: gray">TEST ELEMENT</a>
+                    <a href="login.html" class="header-nav__menu--element navbutton" style = "color: gray">TEST ELEMENT</a>
+                    <a href="login.html" class="header-nav__menu--element navbutton" style = "color: gray">TEST ELEMENT</a>
+                    <a href="login.html" class="header-nav__menu--element navbutton" style = "color: gray">TEST ELEMENT</a>
+                    <a href="login.html" class="header-nav__menu--element navbutton" style = "color: gray">TEST ELEMENT</a>
+                    <a href="login.html" class="header-nav__menu--element navbutton" style = "color: gray">TEST ELEMENT</a>
+                    <a href="login.html" class="header-nav__menu--element navbutton" style = "color: gray">TEST ELEMENT</a>
+                    <a href="login.html" class="header-nav__menu--element navbutton" style = "color: gray">TEST ELEMENT</a>
+                    <a href="login.html" class="header-nav__menu--element navbutton" style = "color: gray">TEST ELEMENT</a>
+                    <a href="login.html" class="header-nav__menu--element navbutton" style = "color: gray">TEST ELEMENT</a>
+                    <a href="login.html" class="header-nav__menu--element navbutton" style = "color: gray">TEST ELEMENT</a>
+                    <a href="login.html" class="header-nav__menu--element navbutton" style = "color: gray">TEST ELEMENT</a>
+                    <a href="login.html" class="header-nav__menu--element navbutton" style = "color: gray">TEST ELEMENT</a>
+                    <a href="login.html" class="header-nav__menu--element navbutton" style = "color: gray">TEST ELEMENT</a>
+                    <a href="login.html" class="header-nav__menu--element navbutton" style = "color: gray">TEST ELEMENT</a>
+                    <a href="login.html" class="header-nav__menu--element navbutton" style = "color: gray">TEST ELEMENT</a>
                 </div>
             </div>
         <div class = "paddingRight"></div>

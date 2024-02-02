@@ -17,17 +17,18 @@
     }
 }
 
+* {
+    box-sizing: inherit;
+    margin: 0;
+}
+
 ::-webkit-scrollbar {
-    width: 0; /* Độ rộng của thanh cuộn */
+    width: 0;
+
 }
 
 ::-webkit-scrollbar-thumb{
     border-radius: 1vw;
-}
-
-* {
-    box-sizing: inherit;
-    margin: 0;
 }
 
 body::-webkit-scrollbar {
@@ -122,7 +123,6 @@ body{
     right: 0;
     top: var(--headerheight);
     min-width: 310px;
-
 }
 
 
@@ -150,8 +150,9 @@ body{
 }
 
 .body-part{
-    display: inline-block;
-    min-height: 300px;
+    position: relative;
+    min-height: 100vh;
+    height: max-content;
 }
 
 .set-scrollbar--x{
@@ -728,7 +729,7 @@ label + .updateInfoDiv__hideBlock__title{
         position: absolute;
         left: 0;
         top: 0;
-        bottom: 0;
+        height: 100%;
         width: 20%;
 
         overflow-y: scroll;
@@ -785,7 +786,81 @@ label + .updateInfoDiv__hideBlock__title{
         transform: scale(0.95);
     }
 
-    /* SPECIAL TYPE */
+    /* TABLE */
+    .Acontent__gridTable{
+        position: relative;
+        width: 100%;
+        height: max-content;
+
+        font-size: var(--myfontsize);
+    }
+
+    .Acontent__gridTable__element{
+        position: relative;
+        height: max-content;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    .Acontent__gridTable__element__part{
+        position: relative;
+        height: max-content;
+
+        display: grid;
+
+        font-size: 0.4em;
+
+        border-right: 0.2vw solid gray;
+    }
+
+    .DS__head{
+        font-size: 0.5em;
+        background-color: rgb(0, 168, 79);
+        color: white;
+    }
+
+    .DS__body{
+        background-color: rgb(242, 252, 255);
+    }
+
+    .Acontent__gridTable__element__part p{
+        position: relative;
+        
+        border-left: 0.2vw solid gray;
+        border-bottom: 0.1vw solid gray;
+
+        padding: 1.5% 0;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Acontent__gridTable__element__part p::-webkit-scrollbar{
+        width: auto;
+        height: 0.2vw;
+        background-color: rgb(208, 208, 208);
+    }
+
+    .Acontent__gridTable__element__part p::-webkit-scrollbar-thumb{
+        height: 10px;
+        background-color: rgb(128, 128, 128);
+    }
+
+    .Acontent__gridTable__element__part a{
+        color: inherit;
+    }
+
+    .Acontent__gridTable__element__part a:hover{
+        cursor: pointer;
+        color: rgb(67, 173, 255);
+        font-size: 1.05em;
+    }
+
+    .Acontent__gridTable__element__part a:active{
+        transform: scale(0.95);
+    }
     
 
 /* PROFILE AVATAR */

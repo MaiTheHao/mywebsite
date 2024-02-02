@@ -4,8 +4,6 @@
     top: 0;
     bottom: 0;
     width: 75%;
-    height: 100vh;
-    min-height: max-content;
 
     margin-left: 3vw;
     background-color: rgb(240, 240, 240);
@@ -370,95 +368,28 @@
     }
 
     /* BODY */
-    .body-center2__bodyTable__body{
-        width: 100%;
-        height: max-content;
-
-        display: flex;
-        flex-direction: column;
-
-        background-color: aliceblue;
-    }
 
     /* DANH SACH */
         /* HỌC SINH */
-        #body-center2__DSHS{
-            display: flex;
-            flex-direction: column;
-
-            font-size: var(--myfontsize);
-        }
-
-        .body-center2__DSHS__element{
-            display: grid;
+        #body-center2__DSHS .Acontent__gridTable__element__part{
             grid-template-columns: 25% 15% 20% 15% 10% 15%;
-
-            font-size: 0.5em;
-
-            border-right: 0.2vw solid gray;
         }
 
-        .DSHS__head{
-            background-color: rgb(80, 80, 80);
-            color: white;
-        }
 
-        .body-center2__DSHS__element p{
-            border-left: 0.2vw solid gray;
-            border-bottom: 0.1vw solid gray;
-
-            padding: 1% 0;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        /* THI ĐƯA */
+        /* THI ĐUA */
         #body-center2__DSTD{
-            display: flex;
-            flex-direction: column;
-
-            font-size: var(--myfontsize);
+            display: none;
         }
-
-        .body-center2__DSTD__element{
-            display: grid;
+        
+        #body-center2__DSTD .Acontent__gridTable__element__part{
             grid-template-columns: 20% 20% 25% 35%;
-
-            font-size: 0.5em;
-
-            border-right: 0.2vw solid gray;
         }
 
-        .DSTD__head{
-            background-color: rgb(80, 80, 80);
-            color: white;
-        }
-
-        .body-center2__DSTD__element p{
-            border-left: 0.2vw solid gray;
-            border-bottom: 0.1vw solid gray;
-
-            padding: 1% 0;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            transition: font-size 0.3s, color 0.3s;
-        }
-
-        .DS__link{
-            color: inherit;
-        }
-
-        .DS__link:hover{
-            cursor: pointer;
-            color: rgb(67, 173, 255);
-            font-size: 1.05em;
-        }
-
-        .DS__link:active{
-            transform: scale(0.95);
+        /* UPDATE LATER */
+        #body-center2__UPDATELATER{
+            display: none;
+            font-size: calc(var(--myfontsize)/2);
+            color: rgb(0, 0, 0);
+            background-color: white;
+            margin-left: 1%;
         }

@@ -134,7 +134,8 @@
                     <!-- CHỈNH SỬA -->
                     <div class="Acontent__table">
                         <div class="body-center3__bodyTable__nav set-scrollbar--y">
-                            <div class="body-center3__bodyTable__nav__element bc3_nav-active">DS THÀNH VIÊN</div>
+                            <div class="body-center3__bodyTable__nav__element bc3_nav-active" onclick = "showTable('body-center3__DSTV')">DS THÀNH VIÊN</div>
+                            <div class="body-center3__bodyTable__nav__element bc3_nav-normal" onclick = "showTable('body-center3__DSHD')">HOẠT ĐỘNG</div>
                         </div>
                         <script>
                             document.addEventListener('DOMContentLoaded', function() {
@@ -149,48 +150,86 @@
                                         this.classList.add('bc3_nav-active');
                                     });
                                 });
-                            });                            
+                            });  
+                            
+                            function showTable(id){
+                                document.querySelectorAll(".Acontent__gridTable__element").forEach(function(element){
+                                    element.style.display = "none";
+                                });
+
+                                document.getElementById(id).style.display = "flex";
+                            }
                         </script>
-                        <div class="body-center3__bodyTable__body" id="body-center3__DS">
-                            <div id="body-center3__DSHS bc3_body-show">
-                                <div class="body-center3__DSHS__element DSHS__head">
+                        <div class="Acontent__gridTable" id = "body-center3__DS">
+                            <div class = "Acontent__gridTable__element" id="body-center3__DSTV">
+                                <div class="Acontent__gridTable__element__part DS__head">
                                     <p>Tên</p>
-                                    <p>Giới tính</p>
-                                    <p>Ngày sinh</p>
-                                    <p>Đoàn viên</p>
                                     <p>Lớp</p>
-                                    <p>Tổ</p>
-                                    <p>Chức vụ</p>
+                                    <p>Ngày tham gia</p>
+                                    <p>Vai trò</p>
                                 </div>
-                                <div class="body-center3__DSHS__element DSHS__body">
-                                    <p>Nguyễn Lan Anh</p>
-                                    <p>Nữ</p>
-                                    <p>02/12/2008</p>
-                                    <p>Không</p>
-                                    <p>11.2</p>
-                                    <p>3</p>
+                                <div class="Acontent__gridTable__element__part DS__body">
+                                    <p>Nguyễn Trung Kiên</p>
+                                    <p>12.2</p>
+                                    <p>12/02/2023</p>
                                     <p>update later</p>
                                 </div>
-                                <div class="body-center3__DSHS__element DSHS__body">
-                                    <p>Lê Ngọc Bảo</p>
-                                    <p>Nam</p>
-                                    <p>30/04/2008</p>
-                                    <p>Có</p>
-                                    <p>12.6</p>
-                                    <p>3</p>
+                                <div class="Acontent__gridTable__element__part DS__body">
+                                    <p>Lê Ngọc Thịnh</p>
+                                    <p>11.6</p>
+                                    <p>05/01/2024</p>
                                     <p>update later</p>
                                 </div>
-                                <div class="body-center3__DSHS__element DSHS__body">
+                                <div class="Acontent__gridTable__element__part DS__body">
                                     <p>Mai Ngọc Chi</p>
-                                    <p>Nữ</p>
-                                    <p>12/01/2008</p>
-                                    <p>Có</p>
-                                    <p>12.7</p>
-                                    <p>2</p>
+                                    <p>11.2</p>
+                                    <p>28/02/2023</p>
                                     <p>update later</p>
                                 </div>
                             </div>
+                            
+                            <div class = "Acontent__gridTable__element" id="body-center3__DSHD">
+                                <div class="Acontent__gridTable__element__part DS__head">
+                                    <p>Hoạt động</p>
+                                    <p>Thời gian</p>
+                                    <p>Thành viên tham gia</p>
+                                    <p>Trạng thái</p>
+                                    <p>Đường liên kết</p>
+                                </div>
+                                <div class="Acontent__gridTable__element__part DS__body">
+                                    <p>Dọn vệ sinh trường</p>
+                                    <p>01/02/2024 - 02/02/2024</p>
+                                    <p>Member1, Member2, Member 3, ... </p>
+                                    <p>Kết thúc</p>
+                                    <p><a href="">Link chi tiết</a></p>
+                                </div>
+                                <div class="Acontent__gridTable__element__part DS__body">
+                                    <p>Tổ chức gặp gỡ giữa các thành viên</p>
+                                    <p>01/02/2024</p>
+                                    <p>Member1, Member2, Member 3, ... </p>
+                                    <p>Kết thúc</p>
+                                    <p><a href="">Link chi tiết</a></p>
+                                </div>
+                                <div class="Acontent__gridTable__element__part DS__body">
+                                    <p>Tổ chức học nhóm</p>
+                                    <p>15/01/2024 - Thi THPTQG</p>
+                                    <p>Member1, Member2, Member 3, ... </p>
+                                    <p>Đang diễn ra</p>
+                                    <p><a href="">Link chi tiết</a></p>
+                                </div>
+                                <div class="Acontent__gridTable__element__part DS__body">
+                                    <p>Chiêu mộ thành viên</p>
+                                    <p>...</p>
+                                    <p>Member1, Member2, Member 3, ... </p>
+                                    <p>Đang diễn ra</p>
+                                    <p><a href="">Link chi tiết</a></p>
+                                </div>
+                            </div>
 
+                            
+                            <div class = "Acontent__gridTable__element" id="body-center3__UPDATELATER">
+                                <p>UPDATE LATER...</p>
+                            </div>
                         </div>
                     </div>
                     

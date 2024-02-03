@@ -835,6 +835,8 @@ label + .updateInfoDiv__hideBlock__title{
         display: flex;
         justify-content: center;
         align-items: center;
+
+        border-radius: inherit;
     }
 
     .Acontent__gridTable__element__part p::-webkit-scrollbar{

@@ -133,7 +133,9 @@
                     <!-- CHỈNH SỬA -->
                     <div class="Acontent__table">
                         <div class="body-center1__bodyTable__nav set-scrollbar--y">
-                            <div class="body-center1__bodyTable__nav__element bc1_nav-normal">TEST ELEMENT</div>
+                            <div class="body-center1__bodyTable__nav__element bc1_nav-active" onclick = "showTable('body-center1__DSHD')">HOẠT ĐỘNG</div>
+                            <div class="body-center1__bodyTable__nav__element bc1_nav-normal" onclick = "showTable('body-center1__DSNhom')">NHÓM CỦA BẠN</div>
+                            <div class="body-center1__bodyTable__nav__element bc1_nav-normal" onclick = "showTable('body-center1__DSTL')">TÀI LIỆU</div>
                         </div>
                         <script>
                             document.addEventListener('DOMContentLoaded', function() {
@@ -148,9 +150,97 @@
                                         this.classList.add('bc1_nav-active');
                                     });
                                 });
-                            });                            
+                            });        
+                            
+                            function showTable(id = "body-center1__UPDATELATER"){
+                                document.querySelectorAll(".Acontent__gridTable__element").forEach(function(element){
+                                    element.style.display = "none";
+                                });
+
+                                document.getElementById(id).style.display = "flex";
+                            }
                         </script>
-                        <div class="body-center1__bodyTable__body" id="body-center1__DS">
+                        <div class="Acontent__gridTable" id = "body-center1__DS">
+                            <div class = "Acontent__gridTable__element" id="body-center1__DSHD">
+                                <div class="Acontent__gridTable__element__part DS__head">
+                                    <p>STT</p>
+                                    <p>Hoạt động</p>
+                                    <p>Ngày tham gia</p>
+                                    <p>Vai trò</p>
+                                </div>
+                                <div class="Acontent__gridTable__element__part DS__body">
+                                    <p>0</p>
+                                    <p>Tuyên truyền phòng chống HIV/AIDS</p>
+                                    <p>DD/MM/YYYY</p>
+                                    <p>update later</p>
+                                </div>
+                                <div class="Acontent__gridTable__element__part DS__body">
+                                    <p>1</p>
+                                    <p>Lao động vệ sinh trường lớp</p>
+                                    <p>DD/MM/YYYY</p>
+                                    <p>update later</p>
+                                </div>
+                                <div class="Acontent__gridTable__element__part DS__body">
+                                    <p>2</p>
+                                    <p>Học tập, tìm hiểu lịch sử dân tộc</p>
+                                    <p>DD/MM/YYYY</p>
+                                    <p>update later</p>
+                                </div>
+                            </div>
+
+                            <div class = "Acontent__gridTable__element" id="body-center1__DSNhom">
+                                <div class="Acontent__gridTable__element__part DS__head">
+                                    <p>STT</p>
+                                    <p>Tên nhóm</p>
+                                    <p>Ngày tham gia</p>
+                                    <p>Vai trò</p>
+                                </div>
+                                <div class="Acontent__gridTable__element__part DS__body">
+                                    <p>0</p>
+                                    <p>Yêu Sử Việt</p>
+                                    <p>DD/MM/YYYY</p>
+                                    <p>update later</p>
+                                </div>
+                                <div class="Acontent__gridTable__element__part DS__body">
+                                    <p>1</p>
+                                    <p>Con Rồng Cháu Tiên</p>
+                                    <p>DD/MM/YYYY</p>
+                                    <p>update later</p>
+                                </div>
+                                <div class="Acontent__gridTable__element__part DS__body">
+                                    <p>2</p>
+                                    <p>Hội Dancer HVN</p>
+                                    <p>DD/MM/YYYY</p>
+                                    <p>update later</p>
+                                </div>
+                            </div>
+
+                            <div class = "Acontent__gridTable__element" id="body-center1__DSTL">
+                                <div class="Acontent__gridTable__element__part DS__head">
+                                    <p class = "body-center1__DSTL__STT">STT</p>
+                                    <p class = "body-center1__DSTL__name">Tài liệu</p>
+                                    <p class = "body-center1__DSTL__type">Lĩnh vực</p>
+                                </div>
+                                <div class="Acontent__gridTable__element__part DS__body">
+                                    <p class = "body-center1__DSTL__STT">0</p>
+                                    <p class = "body-center1__DSTL__name">update later</p>
+                                    <p class = "body-center1__DSTL__type">update later</p>
+                                </div>
+                                <div class="Acontent__gridTable__element__part DS__body">
+                                    <p class = "body-center1__DSTL__STT">1</p>
+                                    <p class = "body-center1__DSTL__name">update later</p>
+                                    <p class = "body-center1__DSTL__type">update later</p>
+                                </div>
+                                <div class="Acontent__gridTable__element__part DS__body">
+                                    <p class = "body-center1__DSTL__STT">2</p>
+                                    <p class = "body-center1__DSTL__name">update later</p>
+                                    <p class = "body-center1__DSTL__type">update later</p>
+                                </div>
+                            </div>
+                            
+                            <div class = "Acontent__gridTable__element" id="body-center1__UPDATELATER">
+                                <p>UPDATE LATER...</p>
+                            </div>
                         </div>
                     </div>
                     

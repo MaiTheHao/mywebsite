@@ -4,7 +4,6 @@
     top: 0;
     bottom: 0;
     width: 75%;
-    height: 100vh;
     min-height: max-content;
 
     margin-left: 3vw;
@@ -381,84 +380,72 @@
     }
 
     /* DANH SACH */
-        /* HỌC SINH */
-        #body-center1__DSHS{
-            display: flex;
-            flex-direction: column;
-
-            font-size: var(--myfontsize);
+        /* HOẠT ĐỘNG */
+        #body-center1__DSHD .Acontent__gridTable__element__part{
+            grid-template-columns: 10% 40% 15% 35%;
         }
 
-        .body-center1__DSHS__element{
-            display: grid;
-            grid-template-columns: 25% 15% 20% 15% 10% 15%;
-
-            font-size: 0.5em;
-
-            border-right: 0.2vw solid gray;
+        /* NHÓM */
+        #body-center1__DSNhom{
+            display: none;
         }
 
-        .DSHS__head{
-            background-color: rgb(80, 80, 80);
-            color: white;
+        #body-center1__DSNhom .Acontent__gridTable__element__part{
+            grid-template-columns: 10% 40% 15% 35%;
         }
 
-        .body-center1__DSHS__element p{
-            border-left: 0.2vw solid gray;
-            border-bottom: 0.1vw solid gray;
-
-            padding: 1% 0;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        /* TÀI LIỆU */
+        #body-center1__DSTL{
+            display: none;
         }
 
-        /* THI ĐƯA */
-        #body-center1__DSTD{
-            display: flex;
-            flex-direction: column;
+        #body-center1__DSTL .Acontent__gridTable__element__part{
+            grid-template-columns: 10% 55% 35%;
 
-            font-size: var(--myfontsize);
+            margin-top: 1%;
+            border-radius: 0.5vw;
+            border: 0.1vw solid gray;
         }
 
-        .body-center1__DSTD__element{
-            display: grid;
-            grid-template-columns: 20% 20% 25% 35%;
-
-            font-size: 0.5em;
-
-            border-right: 0.2vw solid gray;
+        #body-center1__DSTL .Acontent__gridTable__element p{
+            border: 0;
         }
 
-        .DSTD__head{
-            background-color: rgb(80, 80, 80);
-            color: white;
+        #body-center1__DSTL .DS__head .body-center1__DSTL__STT{
+            background-color: rgb(48, 48, 48);
+            border-radius: 0.4vw 0 0 0.4vw;
         }
 
-        .body-center1__DSTD__element p{
-            border-left: 0.2vw solid gray;
-            border-bottom: 0.1vw solid gray;
-
-            padding: 1% 0;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            transition: font-size 0.3s, color 0.3s;
+        #body-center1__DSTL .DS__head .body-center1__DSTL__name{
+            background-color: rgb(79, 79, 79);
+            border-radius: 0;
         }
 
-        .DS__link{
-            color: inherit;
+        #body-center1__DSTL .DS__head .body-center1__DSTL__type{
+            background-color: rgb(48, 48, 48);
+            border-radius: 0 0.4vw 0.4vw 0;
         }
 
-        .DS__link:hover{
-            cursor: pointer;
-            color: rgb(67, 173, 255);
-            font-size: 1.05em;
+        #body-center1__DSTL .DS__body .body-center1__DSTL__STT{
+            background-color: rgb(105, 178, 255);
+            border-radius: 0.4vw 0 0 0.4vw;
         }
 
-        .DS__link:active{
-            transform: scale(0.95);
+        #body-center1__DSTL .DS__body .body-center1__DSTL__name{
+            background-color: rgb(212, 244, 255);
+            border-radius: 0;
+        }
+
+        #body-center1__DSTL .DS__body .body-center1__DSTL__type{
+            background-color: rgb(105, 178, 255);
+            border-radius: 0 0.4vw 0.4vw 0;
+        }
+        
+        /* UPDATE LATER */
+        #body-center1__UPDATELATER{
+            display: none;
+            font-size: calc(var(--myfontsize)/2);
+            color: rgb(0, 0, 0);
+            background-color: white;
+            margin-left: 1%;
         }

@@ -867,69 +867,84 @@ label + .updateInfoDiv__hideBlock__title{
 
 /* PROFILE AVATAR */
 
-#pictures-block{
-    position: relative;
-    height: 20vw;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+        #profile__pic{
+            position: absolute;
 
-    background-color: black;
-}
+            width: 97%;
+            height: 90%;
 
-#pictures--background{
-    position: absolute;
-    width: 100%;
-    height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+            object-fit: cover;
+            border-radius: 1.5vw;
+        }
 
-#background{
-    position: absolute;
+        #profile__avatar{
+            position: absolute;
+            width: 8.5vw;
+            height: 8.5vw;
 
-    width: 97%;
-    height: 90%;
+            border: 0.25vw solid white;
+            border-radius: 50%;
+            object-fit: cover;
+        }
 
-    object-fit: cover;
-    border-radius: 1.5vw;
-}
+        @media screen and (max-width: 310px){
+            #profile__avatar{
+                border: 0.775px solid white;
+            }
+        }
 
-#pictures--avatar{
-    position: absolute;
-    width: 15vw;
-    height: 15vw;
+        @media screen and (min-width: 1400px){
+            #profile__avatar{
+                border: 3.5px solid white;
+            }
+        }
 
-    display: flex;
-    justify-content: center;
-    align-items: center;    
+        #body-center__header__pics{
+            position: relative;
+            width: 40%;
+            height: 100%;
 
-    background-color: aqua;
-    border-radius: 50%;
-}
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
 
-#avatar{
-    position: absolute;
-    width: 100%;
-    height: 100%;
+            background-color: transparent;
+        }
 
-    border: 0.5vw solid white;
-    border-radius: 50%;
-    object-fit: cover;
-}
+        #body-center__header__pics #profile__pic{
+            position: relative;
+            width: 95%;
+            height: 85%;
 
-@media screen and (max-width: 310px){
-    #avatar{
-        border: 1.55px solid white;
-    }
-}
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
-@media screen and (min-width: 1400px){
-    #avatar{
-        border: 7px solid white;
-    }
-}
+            background-color: rgb(37, 37, 37);
+        }
+
+        #body-center__header__pics #profile__pic #profile__background{
+            position: relative;
+            width: 96%;
+            height: 95%;
+
+            border-radius: inherit;
+            object-fit: cover;
+        }
+
+        #body-center__header__pics__className{
+            width: 95%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            color: rgb(37, 37, 37);
+            padding: 1% 0;
+            font-size: calc(var(--myfontsize)/1.2);
+        }

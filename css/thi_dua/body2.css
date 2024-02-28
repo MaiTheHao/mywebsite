@@ -1,0 +1,156 @@
+#content__body{
+    display: flex;
+    justify-content: center;
+}
+#mainBoard{
+    position: relative;
+    width: 90%;
+    min-height: 100vh;
+    height: max-content;
+    background-color: rgb(202, 202, 202);
+    padding: 1% 2%;
+    margin-bottom: 1%;
+
+    border-radius: 0.5vw;
+    border: 0.25vw solid rgb(186, 186, 186);
+}
+
+#bc7__center{
+    position: relative;
+    width: 100%;
+    height: max-content;
+
+    font-size: var(--myfontsize);
+}
+#content__header{
+    position: relative;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 1% 0;
+    background-color: transparent;
+
+    font-size: 0.7em;
+}
+.inputBlock{
+    position: relative;
+    width: 40%;
+
+    display: grid;
+    grid-template-columns: 40% 60%;
+
+    padding: 0.25% 1%;;
+
+    background-color: rgb(161, 161, 161);
+    color: rgb(255, 255, 255);
+    border-radius: 1vw;
+
+    font-size: 0.5em;
+}
+
+#inputFile{
+    background-color: rgb(85, 224, 83);
+}
+
+#inputTime{
+    background-color: rgb(73, 93, 206);
+}
+
+#inputTime div{
+    position: relative;
+    width: 60%;
+    
+    display: flex;
+    justify-content: space-between;
+}
+
+.inputBlock + .inputBlock{
+    margin-top: 1%;
+}
+
+.inputBlock span{
+    display: flex;
+    align-items: center;
+
+    text-wrap: nowrap;
+    font-weight: bold;
+}
+
+.inputBlock .btnIP{
+    position: relative;
+    width: max-content;
+    height: max-content;
+
+    padding: 1% 5%;
+
+    font-size: 1.1em;
+
+    border: 0;
+    outline: 0;
+    border-radius: 0.5vw;
+
+    background-color: rgb(255, 255, 255);
+    color: rgb(37, 37, 37);
+}
+
+.inputBlock .btnIP:hover{
+    cursor: pointer;
+    
+}
+
+button#exitInput{
+    position: absolute;
+    top: 1vw;
+    right: 2vw;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    border: 0;
+    outline: 0;
+    background-color: rgb(255, 140, 0);
+    border-radius: 0.5vw;
+
+    padding: 0.2% 1%;
+    color: white;
+
+    font-size: 0.6em;
+
+    transition: transform 0.3s;
+}
+
+button#exitInput:hover{
+    cursor: pointer;
+
+    transform: scale(1.1);
+}
+
+button#exitInput:active{
+    transform: scale(0.95);
+}
+
+#submitButton{
+    position: relative;
+    border: 0;
+    outline: 0;
+
+    margin-top: 2%;
+    background-color: rgb(21, 255, 0);
+    color: white;
+
+    border-radius: 0.5vw;
+
+    font-size: 0.7em;
+
+    transition: opacity 0.2s;
+}
+
+#submitButton:hover{
+    cursor: pointer;
+    opacity: 0.5;
+}

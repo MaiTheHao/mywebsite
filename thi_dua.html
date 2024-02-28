@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,395 +12,830 @@
     <!-- IN FUNCTION -->
 
     <!-- JAVASCRIPT -->
-    <script src = "js/create_header.js"></script>
-    <script src = "js/main.js"></script>
+    <script src="js/create_header.js"></script>
+    <script src="js/main.js"></script>
     <script src="https://kit.fontawesome.com/0afaeea3b6.js" crossorigin="anonymous"></script>
     <title>TRANG THI ĐUA</title>
 </head>
+
 <body>
     <!-- BODY BODY BODY -->
     <!-- KHỞI TẠO KHUNG THÂN -->
     <div class="under-header">
         <!-- KHỞI TẠO KHUNG BODY -->
-        <div class = "body grid">
+        <div class="body grid">
             <!-- KHUNG BODY -->
             <div class="body__content bc7">
                 <!-- TRÁI BODY -->
                 <div id="bc7__center">
-                    <div id="content__header">
-                        <div id="inputFile">
-                            <form action="">
-                                <label for="input_link">
-                                    <input type="file" name="inputLink" id="input_link">
-                                </label>
-                            </form>
-                        </div>
-                        <div id="inputTime">
-                            <form action="">
-                                <select name="inputYear" id="selectYear">
-                                    <option value="">2024</option>
-                                    <option value="1999">1999</option>
-                                    <option value="2000">2000</option>
-                                    <option value="2001">2001</option>
-                                    <option value="2002">2002</option>
-                                    <option value="2003">2003</option>
-                                    <option value="2004">2004</option>
-                                    <option value="2005">2005</option>
-                                    <option value="2006">2006</option>
-                                    <option value="2007">2007</option>
-                                    <option value="2008">2008</option>
-                                    <option value="2009">2009</option>
-                                    <option value="2010">2010</option>
-                                    <option value="2011">2011</option>
-                                    <option value="2012">2012</option>
-                                </select> 
-                                <select name="inputWeek" id="selectWeek">
-                                    <option value="">NUMBER</option>
-                                </select>
-                            </form>
-                        </div>
-                    </div>
-                    <div id="content__body"></div>
                 </div>
-            </div> 
+            </div>
         </div>
     </div>
     <style>
-        #page7{
+        #page7 {
             color: white !important;
             background-color: rgb(60, 60, 60);
             transition: opacity 0.3s ease-out;
             transition: background-color 0.6s ease-out;
             transition: color 0.7s ease-out;
         }
+
+        /* BODY */
+        #bc7__center__boyd1 {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* ELEMENT */
+        .bc7__center__b1__element {
+            margin: 0 1%;
+            margin-top: 2%;
+            padding: 1% 2%;
+
+            display: flex;
+
+            border-radius: 0.5vw 0.5vw 0 0;
+            background-color: rgb(250, 250, 250);
+
+            box-shadow: 0vw 0vw 0.5vw 0vw rgb(101, 101, 101);
+        }
+
+        .bc7__center__b1__element__element {
+            min-width: 20%;
+
+            display: flex;
+            flex-direction: column;
+
+            background-color: rgb(255, 255, 255);
+            box-shadow: 0vw 0vw 0.5vw 0vw rgb(158, 158, 158);
+
+            padding: 0.5%;
+            border-radius: 0.5vw;
+
+            font-size: var(--myfontsize);
+        }
+
+        .bc7__center__b1__element__element+.bc7__center__b1__element__element {
+            margin-left: 2%;
+        }
+
+        .bc7__cB1__2e__name {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 0.6em;
+            color: rgb(37, 37, 37);
+            font-weight: bold;
+
+            border-radius: 0.5vw 0.5vw 0 0;
+
+            background-color: rgb(94, 217, 255);
+        }
+
+        .bc7__cB1__2e__table {
+            display: flex;
+            flex-direction: column;
+
+            margin-top: 2%;
+            margin-bottom: 2%;
+
+            font-size: 0.4em;
+        }
+
+        .hc7__cB1__2e__table__element {
+            display: grid;
+            grid-template-columns: 32% 32% 32%;
+
+            border-right: 0.1vw solid rgb(230, 230, 230);
+            border-bottom: 0.1vw solid rgb(230, 230, 230);
+        }
+
+        .hc7__cB1__2e__table__element p {
+            border-left: 0.1vw solid rgb(230, 230, 230);
+        }
+
+        .hc7__cB1__2e__table__head {
+            border-top: 0.1vw solid rgb(230, 230, 230);
+
+            padding: 1% 0;
+
+            background-color: rgb(213, 255, 252);
+            color: rgb(37, 37, 37);
+
+            font-weight: bold;
+        }
+
+        .hc7__cB1__2e__table__head p {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-weight: bold;
+        }
+
+        .hc7__cB1__2e__table__body {
+            padding: 4% 0;
+
+            background-color: rgb(255, 243, 220);
+            color: rgb(37, 37, 37);
+        }
+
+        .hc7__cB1__2e__table__body p {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .bc7__cB1__2e__rank {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 0.5em;
+            font-weight: bold;
+
+            background-color: white;
+            color: rgb(37, 37, 37);
+
+            padding: 1% 0;
+
+            border-radius: 0 0 0.5vw 0.5vw;
+        }
     </style>
 
     <script>
         const page = [
+            `
+            <link rel="stylesheet" href="css/thi_dua/body1.css">
+            <div id="bc7__center__header1">
+                <div id="bc7__center__h1__time">
+                    <p id="bc7__center__h1__time__year" class = "bc7__center__h1__time__element">Năm Học 2023-2024</p>
+                    <p id="bc7__center__h1__time__week" class = "bc7__center__h1__time__element">Tuần <span class="add__week-number"></span></p>
+                </div>
+                <button id="bc7__center__h1__updateBtn" onclick = "setState()" style = "border: 0; outline: 0; background-color: transparent">
+                    <p>CẬP NHẬT <i class="fa-solid fa-plus" style="margin-left: 2%"></i></p>
+                </button>
+            </div>
+            <div id="bc7__center__body1">
+                <div class="bc7__center__b1__element set-scrollbar--y">
+                    <div class="bc7__center__b1__element__element">
+                        <p class = "bc7__cB1__2e__name">10.1</p>
+                        <div class = "bc7__cB1__2e__table"> <!-- body center7 element__element table-->
+                            <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__head">
+                                <p>Cộng</p>
+                                <p>Trừ</p>
+                                <p>Tổng</p>
+                            </div>
+                            <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__body">
+                                <p><span>+</span><span>Number</span></p>
+                                <p><span>-</span><span>Number</span></p>
+                                <p>Number</p>
+                            </div>
+                        </div>
+                        <p class = "bc7__cB1__2e__rank">HẠNG:<span style="margin-left: 1%;"><i style = "font-size: 0.5em">update later</i></span></p>
+                    </div>
+                    <div class="bc7__center__b1__element__element">
+                        <p class = "bc7__cB1__2e__name">10.2</p>
+                        <div class = "bc7__cB1__2e__table"> <!-- body center7 element__element table-->
+                            <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__head">
+                                <p>Cộng</p>
+                                <p>Trừ</p>
+                                <p>Tổng</p>
+                            </div>
+                            <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__body">
+                                <p><span>+</span><span>Number</span></p>
+                                <p><span>-</span><span>Number</span></p>
+                                <p>Number</p>
+                            </div>
+                        </div>
+                        <p class = "bc7__cB1__2e__rank">HẠNG:<span style="margin-left: 1%;"><i style = "font-size: 0.5em">update later</i></span></p>
+                    </div>
+                    <div class="bc7__center__b1__element__element">
+                        <p class = "bc7__cB1__2e__name">10.3</p>
+                        <div class = "bc7__cB1__2e__table"> <!-- body center7 element__element table-->
+                            <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__head">
+                                <p>Cộng</p>
+                                <p>Trừ</p>
+                                <p>Tổng</p>
+                            </div>
+                            <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__body">
+                                <p><span>+</span><span>Number</span></p>
+                                <p><span>-</span><span>Number</span></p>
+                                <p>Number</p>
+                            </div>
+                        </div>
+                        <p class = "bc7__cB1__2e__rank">HẠNG:<span style="margin-left: 1%;"><i style = "font-size: 0.5em">update later</i></span></p>
+                    </div>
+                    <div class="bc7__center__b1__element__element">
+                        <p class = "bc7__cB1__2e__name">10.4</p>
+                        <div class = "bc7__cB1__2e__table"> <!-- body center7 element__element table-->
+                            <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__head">
+                                <p>Cộng</p>
+                                <p>Trừ</p>
+                                <p>Tổng</p>
+                            </div>
+                            <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__body">
+                                <p><span>+</span><span>Number</span></p>
+                                <p><span>-</span><span>Number</span></p>
+                                <p>Number</p>
+                            </div>
+                        </div>
+                        <p class = "bc7__cB1__2e__rank">HẠNG:<span style="margin-left: 1%;"><i style = "font-size: 0.5em">update later</i></span></p>
+                    </div>
+                    <div class="bc7__center__b1__element__element">
+                        <p class = "bc7__cB1__2e__name">10.5</p>
+                        <div class = "bc7__cB1__2e__table"> <!-- body center7 element__element table-->
+                            <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__head">
+                                <p>Cộng</p>
+                                <p>Trừ</p>
+                                <p>Tổng</p>
+                            </div>
+                            <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__body">
+                                <p><span>+</span><span>Number</span></p>
+                                <p><span>-</span><span>Number</span></p>
+                                <p>Number</p>
+                            </div>
+                        </div>
+                        <p class = "bc7__cB1__2e__rank">HẠNG:<span style="margin-left: 1%;"><i style = "font-size: 0.5em">update later</i></span></p>
+                    </div>
+                    <div class="bc7__center__b1__element__element">
+                        <p class = "bc7__cB1__2e__name">10.6</p>
+                        <div class = "bc7__cB1__2e__table"> <!-- body center7 element__element table-->
+                            <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__head">
+                                <p>Cộng</p>
+                                <p>Trừ</p>
+                                <p>Tổng</p>
+                            </div>
+                            <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__body">
+                                <p><span>+</span><span>Number</span></p>
+                                <p><span>-</span><span>Number</span></p>
+                                <p>Number</p>
+                            </div>
+                        </div>
+                        <p class = "bc7__cB1__2e__rank">HẠNG:<span style="margin-left: 1%;"><i style = "font-size: 0.5em">update later</i></span></p>
+                    </div>
+                </div>
+            
+                <div class="bc7__center__b1__element set-scrollbar--y">
+                    <div class="bc7__center__b1__element__element">
+                        <p class = "bc7__cB1__2e__name">11.1</p>
+                        <div class = "bc7__cB1__2e__table"> <!-- body center7 element__element table-->
+                            <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__head">
+                                <p>Cộng</p>
+                                <p>Trừ</p>
+                                <p>Tổng</p>
+                            </div>
+                            <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__body">
+                                <p><span>+</span><span>Number</span></p>
+                                <p><span>-</span><span>Number</span></p>
+                                <p>Number</p>
+                            </div>
+                        </div>
+                        <p class = "bc7__cB1__2e__rank">HẠNG:<span style="margin-left: 1%;"><i style = "font-size: 0.5em">update later</i></span></p>
+                    </div>
+                    <div class="bc7__center__b1__element__element">
+                        <p class = "bc7__cB1__2e__name">11.2</p>
+                        <div class = "bc7__cB1__2e__table"> <!-- body center7 element__element table-->
+                            <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__head">
+                                <p>Cộng</p>
+                                <p>Trừ</p>
+                                <p>Tổng</p>
+                            </div>
+                            <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__body">
+                                <p><span>+</span><span>Number</span></p>
+                                <p><span>-</span><span>Number</span></p>
+                                <p>Number</p>
+                            </div>
+                        </div>
+                        <p class = "bc7__cB1__2e__rank">HẠNG:<span style="margin-left: 1%;"><i style = "font-size: 0.5em">update later</i></span></p>
+                    </div>
+                    <div class="bc7__center__b1__element__element">
+                        <p class = "bc7__cB1__2e__name">11.3</p>
+                        <div class = "bc7__cB1__2e__table"> <!-- body center7 element__element table-->
+                            <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__head">
+                                <p>Cộng</p>
+                                <p>Trừ</p>
+                                <p>Tổng</p>
+                            </div>
+                            <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__body">
+                                <p><span>+</span><span>Number</span></p>
+                                <p><span>-</span><span>Number</span></p>
+                                <p>Number</p>
+                            </div>
+                        </div>
+                        <p class = "bc7__cB1__2e__rank">HẠNG:<span style="margin-left: 1%;"><i style = "font-size: 0.5em">update later</i></span></p>
+                    </div>
+                    <div class="bc7__center__b1__element__element">
+                        <p class = "bc7__cB1__2e__name">11.4</p>
+                        <div class = "bc7__cB1__2e__table"> <!-- body center7 element__element table-->
+                            <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__head">
+                                <p>Cộng</p>
+                                <p>Trừ</p>
+                                <p>Tổng</p>
+                            </div>
+                            <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__body">
+                                <p><span>+</span><span>Number</span></p>
+                                <p><span>-</span><span>Number</span></p>
+                                <p>Number</p>
+                            </div>
+                        </div>
+                        <p class = "bc7__cB1__2e__rank">HẠNG:<span style="margin-left: 1%;"><i style = "font-size: 0.5em">update later</i></span></p>
+                    </div>
+                    <div class="bc7__center__b1__element__element">
+                        <p class = "bc7__cB1__2e__name">11.5</p>
+                        <div class = "bc7__cB1__2e__table"> <!-- body center7 element__element table-->
+                            <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__head">
+                                <p>Cộng</p>
+                                <p>Trừ</p>
+                                <p>Tổng</p>
+                            </div>
+                            <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__body">
+                                <p><span>+</span><span>Number</span></p>
+                                <p><span>-</span><span>Number</span></p>
+                                <p>Number</p>
+                            </div>
+                        </div>
+                        <p class = "bc7__cB1__2e__rank">HẠNG:<span style="margin-left: 1%;"><i style = "font-size: 0.5em">update later</i></span></p>
+                    </div>
+                    <div class="bc7__center__b1__element__element">
+                        <p class = "bc7__cB1__2e__name">11.6</p>
+                        <div class = "bc7__cB1__2e__table"> <!-- body center7 element__element table-->
+                            <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__head">
+                                <p>Cộng</p>
+                                <p>Trừ</p>
+                                <p>Tổng</p>
+                            </div>
+                            <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__body">
+                                <p><span>+</span><span>Number</span></p>
+                                <p><span>-</span><span>Number</span></p>
+                                <p>Number</p>
+                            </div>
+                        </div>
+                        <p class = "bc7__cB1__2e__rank">HẠNG:<span style="margin-left: 1%;"><i style = "font-size: 0.5em">update later</i></span></p>
+                    </div>
+                </div>
+            
+                <div class="bc7__center__b1__element set-scrollbar--y">
+                    <div class="bc7__center__b1__element__element">
+                        <p class = "bc7__cB1__2e__name">12.1</p>
+                        <div class = "bc7__cB1__2e__table"> <!-- body center7 element__element table-->
+                            <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__head">
+                                <p>Cộng</p>
+                                <p>Trừ</p>
+                                <p>Tổng</p>
+                            </div>
+                            <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__body">
+                                <p><span>+</span><span>Number</span></p>
+                                <p><span>-</span><span>Number</span></p>
+                                <p>Number</p>
+                            </div>
+                        </div>
+                        <p class = "bc7__cB1__2e__rank">HẠNG:<span style="margin-left: 1%;"><i style = "font-size: 0.5em">update later</i></span></p>
+                    </div>
+                    <div class="bc7__center__b1__element__element">
+                        <p class = "bc7__cB1__2e__name">12.2</p>
+                        <div class = "bc7__cB1__2e__table"> <!-- body center7 element__element table-->
+                            <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__head">
+                                <p>Cộng</p>
+                                <p>Trừ</p>
+                                <p>Tổng</p>
+                            </div>
+                            <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__body">
+                                <p><span>+</span><span>Number</span></p>
+                                <p><span>-</span><span>Number</span></p>
+                                <p>Number</p>
+                            </div>
+                        </div>
+                        <p class = "bc7__cB1__2e__rank">HẠNG:<span style="margin-left: 1%;"><i style = "font-size: 0.5em">update later</i></span></p>
+                    </div>
+                    <div class="bc7__center__b1__element__element">
+                        <p class = "bc7__cB1__2e__name">12.3</p>
+                        <div class = "bc7__cB1__2e__table"> <!-- body center7 element__element table-->
+                            <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__head">
+                                <p>Cộng</p>
+                                <p>Trừ</p>
+                                <p>Tổng</p>
+                            </div>
+                            <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__body">
+                                <p><span>+</span><span>Number</span></p>
+                                <p><span>-</span><span>Number</span></p>
+                                <p>Number</p>
+                            </div>
+                        </div>
+                        <p class = "bc7__cB1__2e__rank">HẠNG:<span style="margin-left: 1%;"><i style = "font-size: 0.5em">update later</i></span></p>
+                    </div>
+                    <div class="bc7__center__b1__element__element">
+                        <p class = "bc7__cB1__2e__name">12.4</p>
+                        <div class = "bc7__cB1__2e__table"> <!-- body center7 element__element table-->
+                            <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__head">
+                                <p>Cộng</p>
+                                <p>Trừ</p>
+                                <p>Tổng</p>
+                            </div>
+                            <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__body">
+                                <p><span>+</span><span>Number</span></p>
+                                <p><span>-</span><span>Number</span></p>
+                                <p>Number</p>
+                            </div>
+                        </div>
+                        <p class = "bc7__cB1__2e__rank">HẠNG:<span style="margin-left: 1%;"><i style = "font-size: 0.5em">update later</i></span></p>
+                    </div>
+                    <div class="bc7__center__b1__element__element">
+                        <p class = "bc7__cB1__2e__name">12.5</p>
+                        <div class = "bc7__cB1__2e__table"> <!-- body center7 element__element table-->
+                            <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__head">
+                                <p>Cộng</p>
+                                <p>Trừ</p>
+                                <p>Tổng</p>
+                            </div>
+                            <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__body">
+                                <p><span>+</span><span>Number</span></p>
+                                <p><span>-</span><span>Number</span></p>
+                                <p>Number</p>
+                            </div>
+                        </div>
+                        <p class = "bc7__cB1__2e__rank">HẠNG:<span style="margin-left: 1%;"><i style = "font-size: 0.5em">update later</i></span></p>
+                    </div>
+                    <div class="bc7__center__b1__element__element">
+                        <p class = "bc7__cB1__2e__name">12.6</p>
+                        <div class = "bc7__cB1__2e__table"> <!-- body center7 element__element table-->
+                            <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__head">
+                                <p>Cộng</p>
+                                <p>Trừ</p>
+                                <p>Tổng</p>
+                            </div>
+                            <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__body">
+                                <p><span>+</span><span>Number</span></p>
+                                <p><span>-</span><span>Number</span></p>
+                                <p>Number</p>
+                            </div>
+                        </div>
+                        <p class = "bc7__cB1__2e__rank">HẠNG:<span style="margin-left: 1%;"><i style = "font-size: 0.5em">update later</i></span></p>
+                    </div>
+                </div>
+            </div>
         `
-        <link rel="stylesheet" href="css/thi_dua/body1.css">
-        <div id="bc7__center__header1">
-            <div id="bc7__center__h1__time">
-                <p id="bc7__center__h1__time__year" class = "bc7__center__h1__time__element">Năm Học 2023-2024</p>
-                <p id="bc7__center__h1__time__week" class = "bc7__center__h1__time__element">Tuần <span class="add__week-number"></span></p>
-            </div>
-            <div id="bc7__center__h1__updateBtn">
-                <p>CẬP NHẬT <i class="fa-solid fa-plus" style="margin-left: 2%"></i></p>
-            </div>
-        </div>
-        <div id="bc7__center__body1">
-            <div class="bc7__center__b1__element set-scrollbar--y">
-                <div class="bc7__center__b1__element__element">
-                    <p class = "bc7__cB1__2e__name">10.1</p>
-                    <div class = "bc7__cB1__2e__table"> <!-- body center7 element__element table-->
-                        <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__head">
-                            <p>Cộng</p>
-                            <p>Trừ</p>
-                            <p>Tổng</p>
-                        </div>
-                        <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__body">
-                            <p><span>+</span><span>Number</span></p>
-                            <p><span>-</span><span>Number</span></p>
-                            <p>Number</p>
-                        </div>
-                    </div>
-                    <p class = "bc7__cB1__2e__rank">HẠNG:<span style="margin-left: 1%;"><i style = "font-size: 0.5em">update later</i></span></p>
-                </div>
-                <div class="bc7__center__b1__element__element">
-                    <p class = "bc7__cB1__2e__name">10.2</p>
-                    <div class = "bc7__cB1__2e__table"> <!-- body center7 element__element table-->
-                        <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__head">
-                            <p>Cộng</p>
-                            <p>Trừ</p>
-                            <p>Tổng</p>
-                        </div>
-                        <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__body">
-                            <p><span>+</span><span>Number</span></p>
-                            <p><span>-</span><span>Number</span></p>
-                            <p>Number</p>
-                        </div>
-                    </div>
-                    <p class = "bc7__cB1__2e__rank">HẠNG:<span style="margin-left: 1%;"><i style = "font-size: 0.5em">update later</i></span></p>
-                </div>
-                <div class="bc7__center__b1__element__element">
-                    <p class = "bc7__cB1__2e__name">10.3</p>
-                    <div class = "bc7__cB1__2e__table"> <!-- body center7 element__element table-->
-                        <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__head">
-                            <p>Cộng</p>
-                            <p>Trừ</p>
-                            <p>Tổng</p>
-                        </div>
-                        <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__body">
-                            <p><span>+</span><span>Number</span></p>
-                            <p><span>-</span><span>Number</span></p>
-                            <p>Number</p>
-                        </div>
-                    </div>
-                    <p class = "bc7__cB1__2e__rank">HẠNG:<span style="margin-left: 1%;"><i style = "font-size: 0.5em">update later</i></span></p>
-                </div>
-                <div class="bc7__center__b1__element__element">
-                    <p class = "bc7__cB1__2e__name">10.4</p>
-                    <div class = "bc7__cB1__2e__table"> <!-- body center7 element__element table-->
-                        <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__head">
-                            <p>Cộng</p>
-                            <p>Trừ</p>
-                            <p>Tổng</p>
-                        </div>
-                        <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__body">
-                            <p><span>+</span><span>Number</span></p>
-                            <p><span>-</span><span>Number</span></p>
-                            <p>Number</p>
-                        </div>
-                    </div>
-                    <p class = "bc7__cB1__2e__rank">HẠNG:<span style="margin-left: 1%;"><i style = "font-size: 0.5em">update later</i></span></p>
-                </div>
-                <div class="bc7__center__b1__element__element">
-                    <p class = "bc7__cB1__2e__name">10.5</p>
-                    <div class = "bc7__cB1__2e__table"> <!-- body center7 element__element table-->
-                        <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__head">
-                            <p>Cộng</p>
-                            <p>Trừ</p>
-                            <p>Tổng</p>
-                        </div>
-                        <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__body">
-                            <p><span>+</span><span>Number</span></p>
-                            <p><span>-</span><span>Number</span></p>
-                            <p>Number</p>
-                        </div>
-                    </div>
-                    <p class = "bc7__cB1__2e__rank">HẠNG:<span style="margin-left: 1%;"><i style = "font-size: 0.5em">update later</i></span></p>
-                </div>
-                <div class="bc7__center__b1__element__element">
-                    <p class = "bc7__cB1__2e__name">10.6</p>
-                    <div class = "bc7__cB1__2e__table"> <!-- body center7 element__element table-->
-                        <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__head">
-                            <p>Cộng</p>
-                            <p>Trừ</p>
-                            <p>Tổng</p>
-                        </div>
-                        <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__body">
-                            <p><span>+</span><span>Number</span></p>
-                            <p><span>-</span><span>Number</span></p>
-                            <p>Number</p>
-                        </div>
-                    </div>
-                    <p class = "bc7__cB1__2e__rank">HẠNG:<span style="margin-left: 1%;"><i style = "font-size: 0.5em">update later</i></span></p>
-                </div>
-            </div>
-        
-            <div class="bc7__center__b1__element set-scrollbar--y">
-                <div class="bc7__center__b1__element__element">
-                    <p class = "bc7__cB1__2e__name">11.1</p>
-                    <div class = "bc7__cB1__2e__table"> <!-- body center7 element__element table-->
-                        <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__head">
-                            <p>Cộng</p>
-                            <p>Trừ</p>
-                            <p>Tổng</p>
-                        </div>
-                        <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__body">
-                            <p><span>+</span><span>Number</span></p>
-                            <p><span>-</span><span>Number</span></p>
-                            <p>Number</p>
-                        </div>
-                    </div>
-                    <p class = "bc7__cB1__2e__rank">HẠNG:<span style="margin-left: 1%;"><i style = "font-size: 0.5em">update later</i></span></p>
-                </div>
-                <div class="bc7__center__b1__element__element">
-                    <p class = "bc7__cB1__2e__name">11.2</p>
-                    <div class = "bc7__cB1__2e__table"> <!-- body center7 element__element table-->
-                        <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__head">
-                            <p>Cộng</p>
-                            <p>Trừ</p>
-                            <p>Tổng</p>
-                        </div>
-                        <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__body">
-                            <p><span>+</span><span>Number</span></p>
-                            <p><span>-</span><span>Number</span></p>
-                            <p>Number</p>
-                        </div>
-                    </div>
-                    <p class = "bc7__cB1__2e__rank">HẠNG:<span style="margin-left: 1%;"><i style = "font-size: 0.5em">update later</i></span></p>
-                </div>
-                <div class="bc7__center__b1__element__element">
-                    <p class = "bc7__cB1__2e__name">11.3</p>
-                    <div class = "bc7__cB1__2e__table"> <!-- body center7 element__element table-->
-                        <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__head">
-                            <p>Cộng</p>
-                            <p>Trừ</p>
-                            <p>Tổng</p>
-                        </div>
-                        <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__body">
-                            <p><span>+</span><span>Number</span></p>
-                            <p><span>-</span><span>Number</span></p>
-                            <p>Number</p>
-                        </div>
-                    </div>
-                    <p class = "bc7__cB1__2e__rank">HẠNG:<span style="margin-left: 1%;"><i style = "font-size: 0.5em">update later</i></span></p>
-                </div>
-                <div class="bc7__center__b1__element__element">
-                    <p class = "bc7__cB1__2e__name">11.4</p>
-                    <div class = "bc7__cB1__2e__table"> <!-- body center7 element__element table-->
-                        <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__head">
-                            <p>Cộng</p>
-                            <p>Trừ</p>
-                            <p>Tổng</p>
-                        </div>
-                        <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__body">
-                            <p><span>+</span><span>Number</span></p>
-                            <p><span>-</span><span>Number</span></p>
-                            <p>Number</p>
-                        </div>
-                    </div>
-                    <p class = "bc7__cB1__2e__rank">HẠNG:<span style="margin-left: 1%;"><i style = "font-size: 0.5em">update later</i></span></p>
-                </div>
-                <div class="bc7__center__b1__element__element">
-                    <p class = "bc7__cB1__2e__name">11.5</p>
-                    <div class = "bc7__cB1__2e__table"> <!-- body center7 element__element table-->
-                        <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__head">
-                            <p>Cộng</p>
-                            <p>Trừ</p>
-                            <p>Tổng</p>
-                        </div>
-                        <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__body">
-                            <p><span>+</span><span>Number</span></p>
-                            <p><span>-</span><span>Number</span></p>
-                            <p>Number</p>
-                        </div>
-                    </div>
-                    <p class = "bc7__cB1__2e__rank">HẠNG:<span style="margin-left: 1%;"><i style = "font-size: 0.5em">update later</i></span></p>
-                </div>
-                <div class="bc7__center__b1__element__element">
-                    <p class = "bc7__cB1__2e__name">11.6</p>
-                    <div class = "bc7__cB1__2e__table"> <!-- body center7 element__element table-->
-                        <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__head">
-                            <p>Cộng</p>
-                            <p>Trừ</p>
-                            <p>Tổng</p>
-                        </div>
-                        <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__body">
-                            <p><span>+</span><span>Number</span></p>
-                            <p><span>-</span><span>Number</span></p>
-                            <p>Number</p>
-                        </div>
-                    </div>
-                    <p class = "bc7__cB1__2e__rank">HẠNG:<span style="margin-left: 1%;"><i style = "font-size: 0.5em">update later</i></span></p>
-                </div>
-            </div>
-        
-            <div class="bc7__center__b1__element set-scrollbar--y">
-                <div class="bc7__center__b1__element__element">
-                    <p class = "bc7__cB1__2e__name">12.1</p>
-                    <div class = "bc7__cB1__2e__table"> <!-- body center7 element__element table-->
-                        <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__head">
-                            <p>Cộng</p>
-                            <p>Trừ</p>
-                            <p>Tổng</p>
-                        </div>
-                        <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__body">
-                            <p><span>+</span><span>Number</span></p>
-                            <p><span>-</span><span>Number</span></p>
-                            <p>Number</p>
-                        </div>
-                    </div>
-                    <p class = "bc7__cB1__2e__rank">HẠNG:<span style="margin-left: 1%;"><i style = "font-size: 0.5em">update later</i></span></p>
-                </div>
-                <div class="bc7__center__b1__element__element">
-                    <p class = "bc7__cB1__2e__name">12.2</p>
-                    <div class = "bc7__cB1__2e__table"> <!-- body center7 element__element table-->
-                        <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__head">
-                            <p>Cộng</p>
-                            <p>Trừ</p>
-                            <p>Tổng</p>
-                        </div>
-                        <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__body">
-                            <p><span>+</span><span>Number</span></p>
-                            <p><span>-</span><span>Number</span></p>
-                            <p>Number</p>
-                        </div>
-                    </div>
-                    <p class = "bc7__cB1__2e__rank">HẠNG:<span style="margin-left: 1%;"><i style = "font-size: 0.5em">update later</i></span></p>
-                </div>
-                <div class="bc7__center__b1__element__element">
-                    <p class = "bc7__cB1__2e__name">12.3</p>
-                    <div class = "bc7__cB1__2e__table"> <!-- body center7 element__element table-->
-                        <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__head">
-                            <p>Cộng</p>
-                            <p>Trừ</p>
-                            <p>Tổng</p>
-                        </div>
-                        <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__body">
-                            <p><span>+</span><span>Number</span></p>
-                            <p><span>-</span><span>Number</span></p>
-                            <p>Number</p>
-                        </div>
-                    </div>
-                    <p class = "bc7__cB1__2e__rank">HẠNG:<span style="margin-left: 1%;"><i style = "font-size: 0.5em">update later</i></span></p>
-                </div>
-                <div class="bc7__center__b1__element__element">
-                    <p class = "bc7__cB1__2e__name">12.4</p>
-                    <div class = "bc7__cB1__2e__table"> <!-- body center7 element__element table-->
-                        <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__head">
-                            <p>Cộng</p>
-                            <p>Trừ</p>
-                            <p>Tổng</p>
-                        </div>
-                        <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__body">
-                            <p><span>+</span><span>Number</span></p>
-                            <p><span>-</span><span>Number</span></p>
-                            <p>Number</p>
-                        </div>
-                    </div>
-                    <p class = "bc7__cB1__2e__rank">HẠNG:<span style="margin-left: 1%;"><i style = "font-size: 0.5em">update later</i></span></p>
-                </div>
-                <div class="bc7__center__b1__element__element">
-                    <p class = "bc7__cB1__2e__name">12.5</p>
-                    <div class = "bc7__cB1__2e__table"> <!-- body center7 element__element table-->
-                        <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__head">
-                            <p>Cộng</p>
-                            <p>Trừ</p>
-                            <p>Tổng</p>
-                        </div>
-                        <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__body">
-                            <p><span>+</span><span>Number</span></p>
-                            <p><span>-</span><span>Number</span></p>
-                            <p>Number</p>
-                        </div>
-                    </div>
-                    <p class = "bc7__cB1__2e__rank">HẠNG:<span style="margin-left: 1%;"><i style = "font-size: 0.5em">update later</i></span></p>
-                </div>
-                <div class="bc7__center__b1__element__element">
-                    <p class = "bc7__cB1__2e__name">12.6</p>
-                    <div class = "bc7__cB1__2e__table"> <!-- body center7 element__element table-->
-                        <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__head">
-                            <p>Cộng</p>
-                            <p>Trừ</p>
-                            <p>Tổng</p>
-                        </div>
-                        <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__body">
-                            <p><span>+</span><span>Number</span></p>
-                            <p><span>-</span><span>Number</span></p>
-                            <p>Number</p>
-                        </div>
-                    </div>
-                    <p class = "bc7__cB1__2e__rank">HẠNG:<span style="margin-left: 1%;"><i style = "font-size: 0.5em">update later</i></span></p>
-                </div>
-            </div>
-        </div>
+            ,
         `
-        ]
-        const root = document.getElementById("bc7__center");
-        var state = 0
+            <link rel="stylesheet" href="css/thi_dua/body2.css">
+            <form id="content__header">
+                <div id="inputFile" class = "inputBlock">
+                    <span>Nhập file điểm tại đây</span>
+                    <input type="file" name="inputLink" id="input_link" style="display: none">
+                    <label for="input_link" class = "btnIP" title = "Chọn file excel">NHẬP FILE EXCEL <i class="fa-solid fa-table"></i></label>
+                </div>
+                <div id="inputTime" class = "inputBlock">
+                    <span>Chọn mốc thời gian</span>
+                    <div>
+                        <select name="inputYear" id="selectYear" class = "btnIP"></select>
+                        <select name="inputWeek" id="selectWeek" class = "btnIP" style="margin-left: 2%;"></select>
+                    </div>
+                </div>
 
-        function set(add = 1){
-            state += add;
-            root.innerHTML = page[state];
-        }
+                <button type = "submit" id = "submitButton">
+                    <span>Đọc dữ liệu</span>
+                </button>
+            </form>
+            <button id="exitInput" onclick = "setState()">
+                <span>ĐÓNG </span><i class="fa-solid fa-right-from-bracket" style="margin-left: 5%;"></i>
+            </button>
+            <div id="content__body">
+                <div id="mainBoard">
+                    <div id="bc7__center__body1">
+                        <div class="bc7__center__b1__element set-scrollbar--y">
+                            <div class="bc7__center__b1__element__element">
+                                <p class = "bc7__cB1__2e__name">10.1</p>
+                                <div class = "bc7__cB1__2e__table"> <!-- body center7 element__element table-->
+                                    <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__head">
+                                        <p>Cộng</p>
+                                        <p>Trừ</p>
+                                        <p>Tổng</p>
+                                    </div>
+                                    <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__body">
+                                        <p><span>+</span><span>Number</span></p>
+                                        <p><span>-</span><span>Number</span></p>
+                                        <p>Number</p>
+                                    </div>
+                                </div>
+                                <p class = "bc7__cB1__2e__rank">HẠNG:<span style="margin-left: 1%;"><i style = "font-size: 0.5em">update later</i></span></p>
+                            </div>
+                            <div class="bc7__center__b1__element__element">
+                                <p class = "bc7__cB1__2e__name">10.2</p>
+                                <div class = "bc7__cB1__2e__table"> <!-- body center7 element__element table-->
+                                    <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__head">
+                                        <p>Cộng</p>
+                                        <p>Trừ</p>
+                                        <p>Tổng</p>
+                                    </div>
+                                    <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__body">
+                                        <p><span>+</span><span>Number</span></p>
+                                        <p><span>-</span><span>Number</span></p>
+                                        <p>Number</p>
+                                    </div>
+                                </div>
+                                <p class = "bc7__cB1__2e__rank">HẠNG:<span style="margin-left: 1%;"><i style = "font-size: 0.5em">update later</i></span></p>
+                            </div>
+                            <div class="bc7__center__b1__element__element">
+                                <p class = "bc7__cB1__2e__name">10.3</p>
+                                <div class = "bc7__cB1__2e__table"> <!-- body center7 element__element table-->
+                                    <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__head">
+                                        <p>Cộng</p>
+                                        <p>Trừ</p>
+                                        <p>Tổng</p>
+                                    </div>
+                                    <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__body">
+                                        <p><span>+</span><span>Number</span></p>
+                                        <p><span>-</span><span>Number</span></p>
+                                        <p>Number</p>
+                                    </div>
+                                </div>
+                                <p class = "bc7__cB1__2e__rank">HẠNG:<span style="margin-left: 1%;"><i style = "font-size: 0.5em">update later</i></span></p>
+                            </div>
+                            <div class="bc7__center__b1__element__element">
+                                <p class = "bc7__cB1__2e__name">10.4</p>
+                                <div class = "bc7__cB1__2e__table"> <!-- body center7 element__element table-->
+                                    <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__head">
+                                        <p>Cộng</p>
+                                        <p>Trừ</p>
+                                        <p>Tổng</p>
+                                    </div>
+                                    <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__body">
+                                        <p><span>+</span><span>Number</span></p>
+                                        <p><span>-</span><span>Number</span></p>
+                                        <p>Number</p>
+                                    </div>
+                                </div>
+                                <p class = "bc7__cB1__2e__rank">HẠNG:<span style="margin-left: 1%;"><i style = "font-size: 0.5em">update later</i></span></p>
+                            </div>
+                            <div class="bc7__center__b1__element__element">
+                                <p class = "bc7__cB1__2e__name">10.5</p>
+                                <div class = "bc7__cB1__2e__table"> <!-- body center7 element__element table-->
+                                    <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__head">
+                                        <p>Cộng</p>
+                                        <p>Trừ</p>
+                                        <p>Tổng</p>
+                                    </div>
+                                    <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__body">
+                                        <p><span>+</span><span>Number</span></p>
+                                        <p><span>-</span><span>Number</span></p>
+                                        <p>Number</p>
+                                    </div>
+                                </div>
+                                <p class = "bc7__cB1__2e__rank">HẠNG:<span style="margin-left: 1%;"><i style = "font-size: 0.5em">update later</i></span></p>
+                            </div>
+                            <div class="bc7__center__b1__element__element">
+                                <p class = "bc7__cB1__2e__name">10.6</p>
+                                <div class = "bc7__cB1__2e__table"> <!-- body center7 element__element table-->
+                                    <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__head">
+                                        <p>Cộng</p>
+                                        <p>Trừ</p>
+                                        <p>Tổng</p>
+                                    </div>
+                                    <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__body">
+                                        <p><span>+</span><span>Number</span></p>
+                                        <p><span>-</span><span>Number</span></p>
+                                        <p>Number</p>
+                                    </div>
+                                </div>
+                                <p class = "bc7__cB1__2e__rank">HẠNG:<span style="margin-left: 1%;"><i style = "font-size: 0.5em">update later</i></span></p>
+                            </div>
+                        </div>
 
-        
+                        <div class="bc7__center__b1__element set-scrollbar--y">
+                            <div class="bc7__center__b1__element__element">
+                                <p class = "bc7__cB1__2e__name">11.1</p>
+                                <div class = "bc7__cB1__2e__table"> <!-- body center7 element__element table-->
+                                    <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__head">
+                                        <p>Cộng</p>
+                                        <p>Trừ</p>
+                                        <p>Tổng</p>
+                                    </div>
+                                    <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__body">
+                                        <p><span>+</span><span>Number</span></p>
+                                        <p><span>-</span><span>Number</span></p>
+                                        <p>Number</p>
+                                    </div>
+                                </div>
+                                <p class = "bc7__cB1__2e__rank">HẠNG:<span style="margin-left: 1%;"><i style = "font-size: 0.5em">update later</i></span></p>
+                            </div>
+                            <div class="bc7__center__b1__element__element">
+                                <p class = "bc7__cB1__2e__name">11.2</p>
+                                <div class = "bc7__cB1__2e__table"> <!-- body center7 element__element table-->
+                                    <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__head">
+                                        <p>Cộng</p>
+                                        <p>Trừ</p>
+                                        <p>Tổng</p>
+                                    </div>
+                                    <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__body">
+                                        <p><span>+</span><span>Number</span></p>
+                                        <p><span>-</span><span>Number</span></p>
+                                        <p>Number</p>
+                                    </div>
+                                </div>
+                                <p class = "bc7__cB1__2e__rank">HẠNG:<span style="margin-left: 1%;"><i style = "font-size: 0.5em">update later</i></span></p>
+                            </div>
+                            <div class="bc7__center__b1__element__element">
+                                <p class = "bc7__cB1__2e__name">11.3</p>
+                                <div class = "bc7__cB1__2e__table"> <!-- body center7 element__element table-->
+                                    <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__head">
+                                        <p>Cộng</p>
+                                        <p>Trừ</p>
+                                        <p>Tổng</p>
+                                    </div>
+                                    <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__body">
+                                        <p><span>+</span><span>Number</span></p>
+                                        <p><span>-</span><span>Number</span></p>
+                                        <p>Number</p>
+                                    </div>
+                                </div>
+                                <p class = "bc7__cB1__2e__rank">HẠNG:<span style="margin-left: 1%;"><i style = "font-size: 0.5em">update later</i></span></p>
+                            </div>
+                            <div class="bc7__center__b1__element__element">
+                                <p class = "bc7__cB1__2e__name">11.4</p>
+                                <div class = "bc7__cB1__2e__table"> <!-- body center7 element__element table-->
+                                    <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__head">
+                                        <p>Cộng</p>
+                                        <p>Trừ</p>
+                                        <p>Tổng</p>
+                                    </div>
+                                    <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__body">
+                                        <p><span>+</span><span>Number</span></p>
+                                        <p><span>-</span><span>Number</span></p>
+                                        <p>Number</p>
+                                    </div>
+                                </div>
+                                <p class = "bc7__cB1__2e__rank">HẠNG:<span style="margin-left: 1%;"><i style = "font-size: 0.5em">update later</i></span></p>
+                            </div>
+                            <div class="bc7__center__b1__element__element">
+                                <p class = "bc7__cB1__2e__name">11.5</p>
+                                <div class = "bc7__cB1__2e__table"> <!-- body center7 element__element table-->
+                                    <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__head">
+                                        <p>Cộng</p>
+                                        <p>Trừ</p>
+                                        <p>Tổng</p>
+                                    </div>
+                                    <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__body">
+                                        <p><span>+</span><span>Number</span></p>
+                                        <p><span>-</span><span>Number</span></p>
+                                        <p>Number</p>
+                                    </div>
+                                </div>
+                                <p class = "bc7__cB1__2e__rank">HẠNG:<span style="margin-left: 1%;"><i style = "font-size: 0.5em">update later</i></span></p>
+                            </div>
+                            <div class="bc7__center__b1__element__element">
+                                <p class = "bc7__cB1__2e__name">11.6</p>
+                                <div class = "bc7__cB1__2e__table"> <!-- body center7 element__element table-->
+                                    <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__head">
+                                        <p>Cộng</p>
+                                        <p>Trừ</p>
+                                        <p>Tổng</p>
+                                    </div>
+                                    <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__body">
+                                        <p><span>+</span><span>Number</span></p>
+                                        <p><span>-</span><span>Number</span></p>
+                                        <p>Number</p>
+                                    </div>
+                                </div>
+                                <p class = "bc7__cB1__2e__rank">HẠNG:<span style="margin-left: 1%;"><i style = "font-size: 0.5em">update later</i></span></p>
+                            </div>
+                        </div>
+
+                        <div class="bc7__center__b1__element set-scrollbar--y">
+                            <div class="bc7__center__b1__element__element">
+                                <p class = "bc7__cB1__2e__name">12.1</p>
+                                <div class = "bc7__cB1__2e__table"> <!-- body center7 element__element table-->
+                                    <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__head">
+                                        <p>Cộng</p>
+                                        <p>Trừ</p>
+                                        <p>Tổng</p>
+                                    </div>
+                                    <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__body">
+                                        <p><span>+</span><span>Number</span></p>
+                                        <p><span>-</span><span>Number</span></p>
+                                        <p>Number</p>
+                                    </div>
+                                </div>
+                                <p class = "bc7__cB1__2e__rank">HẠNG:<span style="margin-left: 1%;"><i style = "font-size: 0.5em">update later</i></span></p>
+                            </div>
+                            <div class="bc7__center__b1__element__element">
+                                <p class = "bc7__cB1__2e__name">12.2</p>
+                                <div class = "bc7__cB1__2e__table"> <!-- body center7 element__element table-->
+                                    <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__head">
+                                        <p>Cộng</p>
+                                        <p>Trừ</p>
+                                        <p>Tổng</p>
+                                    </div>
+                                    <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__body">
+                                        <p><span>+</span><span>Number</span></p>
+                                        <p><span>-</span><span>Number</span></p>
+                                        <p>Number</p>
+                                    </div>
+                                </div>
+                                <p class = "bc7__cB1__2e__rank">HẠNG:<span style="margin-left: 1%;"><i style = "font-size: 0.5em">update later</i></span></p>
+                            </div>
+                            <div class="bc7__center__b1__element__element">
+                                <p class = "bc7__cB1__2e__name">12.3</p>
+                                <div class = "bc7__cB1__2e__table"> <!-- body center7 element__element table-->
+                                    <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__head">
+                                        <p>Cộng</p>
+                                        <p>Trừ</p>
+                                        <p>Tổng</p>
+                                    </div>
+                                    <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__body">
+                                        <p><span>+</span><span>Number</span></p>
+                                        <p><span>-</span><span>Number</span></p>
+                                        <p>Number</p>
+                                    </div>
+                                </div>
+                                <p class = "bc7__cB1__2e__rank">HẠNG:<span style="margin-left: 1%;"><i style = "font-size: 0.5em">update later</i></span></p>
+                            </div>
+                            <div class="bc7__center__b1__element__element">
+                                <p class = "bc7__cB1__2e__name">12.4</p>
+                                <div class = "bc7__cB1__2e__table"> <!-- body center7 element__element table-->
+                                    <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__head">
+                                        <p>Cộng</p>
+                                        <p>Trừ</p>
+                                        <p>Tổng</p>
+                                    </div>
+                                    <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__body">
+                                        <p><span>+</span><span>Number</span></p>
+                                        <p><span>-</span><span>Number</span></p>
+                                        <p>Number</p>
+                                    </div>
+                                </div>
+                                <p class = "bc7__cB1__2e__rank">HẠNG:<span style="margin-left: 1%;"><i style = "font-size: 0.5em">update later</i></span></p>
+                            </div>
+                            <div class="bc7__center__b1__element__element">
+                                <p class = "bc7__cB1__2e__name">12.5</p>
+                                <div class = "bc7__cB1__2e__table"> <!-- body center7 element__element table-->
+                                    <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__head">
+                                        <p>Cộng</p>
+                                        <p>Trừ</p>
+                                        <p>Tổng</p>
+                                    </div>
+                                    <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__body">
+                                        <p><span>+</span><span>Number</span></p>
+                                        <p><span>-</span><span>Number</span></p>
+                                        <p>Number</p>
+                                    </div>
+                                </div>
+                                <p class = "bc7__cB1__2e__rank">HẠNG:<span style="margin-left: 1%;"><i style = "font-size: 0.5em">update later</i></span></p>
+                            </div>
+                            <div class="bc7__center__b1__element__element">
+                                <p class = "bc7__cB1__2e__name">12.6</p>
+                                <div class = "bc7__cB1__2e__table"> <!-- body center7 element__element table-->
+                                    <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__head">
+                                        <p>Cộng</p>
+                                        <p>Trừ</p>
+                                        <p>Tổng</p>
+                                    </div>
+                                    <div class="hc7__cB1__2e__table__element hc7__cB1__2e__table__body">
+                                        <p><span>+</span><span>Number</span></p>
+                                        <p><span>-</span><span>Number</span></p>
+                                        <p>Number</p>
+                                    </div>
+                                </div>
+                                <p class = "bc7__cB1__2e__rank">HẠNG:<span style="margin-left: 1%;"><i style = "font-size: 0.5em">update later</i></span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    `
+    ]
+    const root = document.getElementById("bc7__center");
+    var state = 0
+
+    function set(){
+        root.innerHTML = page[state];
+        state == 1 ? setOption() : null;
+    }
+
+    function setState(){
+        state = (state == 0) ? 1 : 0;
+
+        return set(state);
+    }
+
+    const year = [2017, 2018, 2019, 2020, 2021, 2022];
+    const week = [...Array(6).keys()];
+    function setOption(){
+        let test1 = document.getElementById("selectYear");
+        let test2 = document.getElementById("selectWeek");
+
+        test1.innerHTML = year.map(y => `<option value="${y}">${y}-${y + 1}</option>`).join("");
+        test2.innerHTML = week.map(w => `<option value="${w + 1}">Tuần ${w + 1}</option>`).join("");
+    }
+
+    set()
     </script>
 
     <!-- FOOTER FOOTER FOOTER -->
     <!-- PHẦN CHÂN KHUNG -->
-    <iframe class = "footer" src="html/footer.html" frameborder="0"></iframe>    
+    <iframe class="footer" src="html/footer.html" frameborder="0"></iframe>
 </body>
-</html> 
+
+</html>

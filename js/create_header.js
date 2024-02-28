@@ -124,15 +124,15 @@ function createDate(){
     }
 
     // Lấy ngày hiện tại
-    var _currentDate = new Date();
+    const _currentDate = new Date();
 
     // Tính số tuần kể từ ngày bắt đầu
-    var weekNumber = Math.floor((_currentDate - startDate) / (7 * 24 * 60 * 60 * 1000)) + 1;
+    const weekNumber = Math.floor((_currentDate - startDate) / (7 * 24 * 60 * 60 * 1000)) + 1;
 
     // Định dạng kiểu DD/MM/YYYY
-    var day = _currentDate.getDate();
-    var month = _currentDate.getMonth() + 1;
-    var year = _currentDate.getFullYear();
+    const day = _currentDate.getDate();
+    const month = _currentDate.getMonth() + 1;
+    const year = _currentDate.getFullYear();
     const formattedDate = `${(day < 10) ? `0${day}` : day}/${(month < 10) ? `0${month}` : month}/${year}`
 
     // Cập nhật số tuần, ngày
@@ -148,7 +148,7 @@ function createDate(){
     for (let i = 0; i < addYearElement.length; i++) {
         addYearElement[i].textContent = year;
     }
-}   
+}  
 
 // Gọi hàm addHeader khi trang web được tải
 window.onload = function(){

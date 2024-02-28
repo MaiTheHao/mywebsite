@@ -104,7 +104,7 @@ function addHeader() {
         <div class = "paddingRight"></div>
         </div>
     </div>
-    <h1 id = "webNote"; style = "position: fixed; left: 0; bottom: 0; background-color:white; z-index: 1; color: gray; padding: 0.25% 1%; border-radius: 0 0.5vw 0 0;font-size: calc(var(--myfontsize)/3)">Đây chỉ là mô hình, dữ liệu chỉ là mô phỏng</h1>
+    <h1 id = "webNote"; style = "position: fixed; left: 0; bottom: 0; background-color:rgb(37, 37, 37); z-index: 1; color: white; padding: 0.25% 1%; border-radius: 0 0.5vw 0 0;font-size: calc(var(--myfontsize)/3)">Đây chỉ là mô hình, dữ liệu chỉ là mô phỏng</h1>
     `;
     // Thêm header vào phần đầu của body
     document.body.insertAdjacentHTML('afterbegin', headerHTML);

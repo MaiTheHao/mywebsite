@@ -195,19 +195,21 @@
         /* FILTER BLOCK (BODY) */
             #bc6__body__sidebar__filterBlock{
                 position: absolute;
-                left: 0;
+                right: -50%;
                 top: 0;
 
                 display: none;
 
                 height: max-content;
-                width: max-content;
+                width: 50%;
                 background-color: rgb(255, 242, 222);
                 color: black;
 
                 font-size: 0.5em;
 
                 padding: 1% 2%;
+
+                z-index: 1;
             }
 
             .filterBlock__element{

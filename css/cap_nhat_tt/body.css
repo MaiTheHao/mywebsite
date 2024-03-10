@@ -56,12 +56,22 @@
 
         transition: background-color 0.3s, color 0.3s, transform 0.3s;
     }
+    
+    .bc6__nav__element.normal{
+        color: rgb(37, 37, 37);
+        background-color: transparent;
+    }
+
+    .bc6__nav__element.active{
+        color: rgb(255, 255, 255);
+        background-color: rgb(100, 100, 100);
+    }
 
     .bc6__nav__element + .bc6__nav__element{
         margin-left: 0.5%;
     }
 
-    .bc6__nav__element:hover{
+    .bc6__nav__element.normal:hover{
         cursor: pointer;
         background-color: rgb(37, 37, 37);
         color: white;
@@ -69,7 +79,7 @@
         transform: scale(1.1);
     }
     
-    .bc6__nav__element:active{
+    .bc6__nav__element.normal:active{
         transform: scale(0.95);
     }
 
@@ -131,6 +141,49 @@
             border-bottom: 0.1vw solid gray;
         }
 
+        #bc6__body__sidebar__body{
+            position: relative;
+            max-height: 100vh;
+
+            font-size: 0.8em;
+        }
+
+        #bc6__body__sidebar__body h6{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(235, 235, 235);
+            color: rgb(122, 122, 122);
+            padding: 2% 0;
+        }
+
+        #bc6__body__sidebar__body ul{
+            position: relative;
+            padding: 0;
+            height: 100vh;
+            margin-left: 4%;
+            padding-bottom: 100%;
+
+            text-align: left;
+        }
+
+        .search__result{
+            position: relative;
+            width: 100%;
+            list-style: none !important;
+            font-size: 0.7em;
+        }
+
+        .search__result a{
+            color: rgb(46, 86, 135) !important;
+            opacity: 1 !important;
+        }
+
+        .search__result p{
+            font-size: 0.7em;
+        }
+
         #bc6__body__sidebar__search{
             width: 70%;
 
@@ -160,88 +213,34 @@
             background-color: transparent;
         }
 
-        #bc6__body__sidebar__filter{
-            width: max-content;
 
-            font-size: 0.5em;
-
-            margin-left: 1%;
-
-            background-color: transparent;
-
-            transition: transform 0.3s;
-        }
-
-        #bc6__body__sidebar__filter:hover{
-            transform: scale(1.1);
-            cursor: pointer;
-        }
-
-        #bc6__body__sidebar__filter:active{
-            transform: scale(0.95);
-        }
-        /* BODY */
-            #bc6__body__sidebar__content{
-                position: relative;
-                width: 100%;
-                max-height: 100vh;
-
-                display: flex;
-                flex-direction: column;
-
-                background-color: red;
-            }
-
-        /* FILTER BLOCK (BODY) */
-            #bc6__body__sidebar__filterBlock{
-                position: absolute;
-                right: -50%;
-                top: 0;
-
-                display: none;
-
-                height: max-content;
-                width: 50%;
-                background-color: rgb(255, 242, 222);
-                color: black;
-
-                font-size: 0.5em;
-
-                padding: 1% 2%;
-
-                z-index: 1;
-            }
-
-            .filterBlock__element{
-                display: flex;
-            }
-
-            .filterBlock__element + .filterBlock__element{
-                margin-top: 5%;
-            }
-
-            .filterBlock__element:hover{
-                cursor: pointer;
-
-                color: rgb(0, 16, 122);
-
-                transform: scale(1.1);
-            }
-
-            .filterBlock__element:active{
-                transform: scale(0.95);
-            }
-
-            .filterBlock__element p{
-                margin-left: 5%;
-
-                text-wrap: nowrap;
-            }
-
-            .filterBlock__element input{
-                width: 10%;
-
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
+#page6{
+    color: white !important;
+    background-color: rgb(60, 60, 60);
+    transition: opacity 0.3s ease-out;
+    transition: background-color 0.6s ease-out;
+    transition: color 0.7s ease-out;
+}
+#searchContent{
+    position: relative;
+    background-color: red;
+}
+.contentList__option{
+    color: rgb(37, 37, 37);
+}
+.contentList__option li{
+    color: inherit;
+    opacity: 0.7;
+    list-style: disc;
+}
+.contentList__option li a{
+    color: inherit;
+    opacity: inherit;
+}
+.contentList__option li:hover{
+    cursor: pointer;
+    opacity: 1;
+}
+.contentList__option li:active{
+    color: rgb(59, 9, 185);
+}

@@ -12,6 +12,7 @@
 
     <!-- JAVASCRIPT -->
     <script src="https://kit.fontawesome.com/0afaeea3b6.js" crossorigin="anonymous"></script>
+    <script defer src="js/cap_nhat_thong_tin.js"></script>
     <title>CẬP NHẬT THÔNG TIN</title>
 </head>
 <body>
@@ -29,123 +30,45 @@
                         <i class="fa-solid fa-gears" style="margin-left: 1%;"></i>
                     </div>
                     <div class="bc6__nav set-scrollbar--y" id = "list_page">
-                        <p class = "bc6__nav__element" id="0">Thành viên</p>
-                        <p class = "bc6__nav__element" id="1">Đội nhóm</p>
-                        <p class = "bc6__nav__element" id="2">Lớp</p>
-                        <p class = "bc6__nav__element" id="3">Điểm số</p>
-                        <p class = "bc6__nav__element" id="4">Giải thưởng</p>
-                        <p class = "bc6__nav__element" id="5">Năm học</p>
-                        <p class = "bc6__nav__element" id="6">Tài liệu</p>
-                        <p class = "bc6__nav__element" id="7">Lĩnh vực</p>
-                        <p class = "bc6__nav__element">Update later...</p>
+                        <p class = "bc6__nav__element active" id="members">Thành viên</p>
+                        <p class = "bc6__nav__element normal" id="groups">Đội nhóm</p>
+                        <p class = "bc6__nav__element normal" id="classes">Lớp</p>
+                        <p class = "bc6__nav__element normal" id="scoreboards">Điểm số</p>
+                        <p class = "bc6__nav__element normal" id="achievements">Giải thưởng</p>
+                        <p class = "bc6__nav__element normal" id="year">Năm học</p>
+                        <p class = "bc6__nav__element normal" id="documents">Tài liệu</p>
+                        <p class = "bc6__nav__element normal" id="categories">Lĩnh vực</p>
+                        <p class = "bc6__nav__element normal">Update later...</p>
                     </div>
                     <div class="bc6__body">
                         <div id="bc6__body__sidebar">
                             <div id="bc6__body__sidebar__header">
-                                <form id="bc6__body__sidebar__search">
+                                <div id="bc6__body__sidebar__search">
                                     <label for="bc6-sidebar__search">
                                         <i class="fa-solid fa-magnifying-glass"></i>
-                                        <input type="text" id = "bc6-sidebar__search" placeholder="Tìm Kiếm">
+                                        <input type="text" id = "bc6-sidebar__search" placeholder="Tìm Kiếm" value="">
                                     </label>
-                                </form>
-                                <div id="bc6__body__sidebar__filter" onclick = "setFilter()">
-                                    <i class="fa-solid fa-filter"></i>
                                 </div>
                             </div>
-
-                            <div id="bc6__body__sidebar__content set-scrollbar--x">
-                                
+                            <div id="bc6__body__sidebar__body">
+                                <h6>Kết quả tìm kiếm</h6>
+                                <ul class="contentList__option set-scrollbar--x" id = "searchResult">
+                                    <li class = "search__result" style="font-size: 0.4em; color: green">chức năng tìm kiếm có thể sử dụng với 3 đối tượng đầu</li>
+                                </ul>
                             </div>
-                            <form id="bc6__body__sidebar__filterBlock">
-                                <label for="option0" class = "filterBlock__element">
-                                    <input type = "checkbox" id = "option0">
-                                    <p>Option 0</p>
-                                </label>
-                                <label for="option1" class = "filterBlock__element">
-                                    <input type = "checkbox" id = "option1">
-                                    <p>Option 1</p>
-                                </label>
-                                <label for="option2" class = "filterBlock__element">
-                                    <input type = "checkbox" id = "option2">
-                                    <p>Option 2</p>
-                                </label>
-                                <label for="option3" class = "filterBlock__element">
-                                    <input type = "checkbox" id = "option3">
-                                    <p>Option 3</p>
-                                </label>
-
-                                <label for="option4" class = "filterBlock__element">
-                                    <input type = "checkbox" id = "option4">
-                                    <p>Option 4</p>
-                                </label>
-                                <label for="option5" class = "filterBlock__element">
-                                    <input type = "checkbox" id = "option5">
-                                    <p>Option 5</p>
-                                </label>
-                                <label for="option6" class = "filterBlock__element">
-                                    <input type = "checkbox" id = "option6">
-                                    <p>Option 6</p>
-                                </label>
-                                <label for="option7" class = "filterBlock__element">
-                                    <input type = "checkbox" id = "option7">
-                                    <p>Option 7</p>
-                                </label>
-                                <script>
-                                    function setFilter(){
-                                        let e = document.getElementById("bc6__body__sidebar__filterBlock")
-                                        if(e.style.display == "block"){
-                                            e.style.display = "none"
-                                        }else{
-                                            e.style.display = "block"
-                                        }
-                                    }
-                                </script>
-                            </form>
                         </div>
         
-                        <div id="bc6__body__content">
+                        <div id="bc6__body__content" aria-label="Khung cập nhật thông tin">
+                            <div id="content">
+                                <ul class="contentList__option" id = "page_options">
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div> 
         </div>
     </div>
-    <style>
-        #page6{
-            color: white !important;
-            background-color: rgb(60, 60, 60);
-            transition: opacity 0.3s ease-out;
-            transition: background-color 0.6s ease-out;
-            transition: color 0.7s ease-out;
-        }
-    </style>
-    <script>
-        const controllers = [...document.getElementById("list_page").getElementsByClassName("bc6__nav__element")];
-        const root = document.getElementById("bc6__body__content")
-        const pages = [
-        `<h1>PAGE 1<h1/>`,
-        `<h1>PAGE 2<h1/>`,
-        `<h1>PAGE 3<h1/>`,
-        `<h1>PAGE 4<h1/>`,
-        `<h1>PAGE 5<h1/>`,
-        `<h1>PAGE 6<h1/>`,
-        `<h1>PAGE 7<h1/>`,
-        ]
-
-        controllers.forEach(page => {
-            page.addEventListener("click", () => {
-                controllers.forEach(page => {
-                    page.style.backgroundColor = "transparent";
-                    page.style.color = "black";
-                });
-
-                page.style.backgroundColor = "rgb(85, 85, 85)"
-                page.style.color = "white"
-
-                root.innerHTML = pages[page.id]
-            });
-        });
-    </script>
     <!-- FOOTER FOOTER FOOTER -->
     <!-- PHẦN CHÂN KHUNG -->
     <iframe class = "footer" style = "top: 0;" src="html/footer.html" frameborder="0"></iframe>    

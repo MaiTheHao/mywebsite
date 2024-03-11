@@ -207,8 +207,8 @@ function addHeader() {
                     <a href="gioi_thieu.html" class="header-nav__menu--element navbutton" id = "page5">GIỚI THIỆU</a>
                     <a href="cap_nhat.html" class="header-nav__menu--element navbutton" id = "page6" target = "_blank">CẬP NHẬT THÔNG TIN</a>
                     <a href="thi_dua.html" class="header-nav__menu--element navbutton" id = "page7">THI ĐUA</a>
-                    <a href="login.html" class="header-nav__menu--element navbutton" style = "color: gray">ĐĂNG NHẬP-TEST</a>
-                    <a href="login.html" class="header-nav__menu--element navbutton" style = "color: gray">TEST ELEMENT</a>
+                    <a href="login.html" class="header-nav__menu--element navbutton">ĐĂNG NHẬP-TEST</a>
+                    <a target="_blank" href="https://stealth-leo-c2e.notion.site/M-T-S-N-PH-M-D-N-SCHOOL-WEB-532aa687a4ca4a7fb94f0f37424c9085?pvs=4" class="header-nav__menu--element navbutton">LINK MÔ TẢ SẢN PHẨM</a>
                     <a href="login.html" class="header-nav__menu--element navbutton" style = "color: gray">TEST ELEMENT</a>
                     <a href="login.html" class="header-nav__menu--element navbutton" style = "color: gray">TEST ELEMENT</a>
                     <a href="login.html" class="header-nav__menu--element navbutton" style = "color: gray">TEST ELEMENT</a>
@@ -229,7 +229,7 @@ function addHeader() {
         <div class = "paddingRight"></div>
         </div>
     </div>
-    <h1 id = "webNote"; style = "position: fixed; left: 0; bottom: 0; background-color:rgb(37, 37, 37); z-index: 1; color: white; padding: 0.25% 1%; border-radius: 0 0.5vw 0 0;font-size: calc(var(--myfontsize)/3)">Đây chỉ là mô hình, dữ liệu chỉ là mô phỏng.</h1>
+    <h1 id = "webNote"; style = "position: fixed; left: 0; bottom: 0; background-color:rgb(37, 37, 37); z-index: 1; color: white; padding: 0.25% 1%; border-radius: 0 0.5vw 0 0;font-size: calc(var(--myfontsize)/3)">Đây chỉ là mô hình, dữ liệu chỉ là mô phỏng. <a style="color:yellow;font-size:0.7em" target="_blank" href="https://stealth-leo-c2e.notion.site/M-T-S-N-PH-M-D-N-SCHOOL-WEB-532aa687a4ca4a7fb94f0f37424c9085?pvs=4"><i>link to workspace here</i></a></h1>
     `;
     // Thêm header vào phần đầu của body
     document.body.insertAdjacentHTML('afterbegin', headerHTML);

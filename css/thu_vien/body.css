@@ -14,149 +14,250 @@
     }
 }
 
-/* CENTER */
-.body-center4{
+#body__content{
     position: relative;
-    width: 80%;
+    width: 100%;
     height: max-content;
-
-    padding: 3% 3%;
-    margin-left: 10%;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    border-radius: 2vw;
-    background-color: rgb(240, 240, 240);
-    box-shadow: 0px 0px 1.5vw 1vw rgb(210, 210, 210);
-
+    min-height: 95vh;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    font-size: var(--font-size);
+
+    background-color: rgb(255, 255, 255);
 }
 
-/* CENTER ELEMENT */
-#body-center4--title{
+.content__block{
     position: relative;
-    left: 0;
-    right: 0;
+    width: 90%;
+    height: max-content;
+    font-size: 1em;
 
+    margin: 1% 0 2% 0;
+    padding: 1% 2%;
+    border-radius: 0.5vw;
+}
+
+#field{
+    position: relative;
+    display: grid;
+    grid-template-columns: calc(100%/3) calc(100%/3) calc(100%/3);
+
+    background-image: linear-gradient(90deg, rgb(17, 16, 96),rgb(63, 89, 205))
+}
+
+#field .field__column{
+    font-size: 1em;
+}
+
+#field .field__column{
+    margin: 0 2.5%;
+}
+
+#field .field__column__element{
+    position: relative;
+    height: 5.6vw;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    font-size: 1em;
+    background-color: rgba(169, 179, 213, 0.534);
+
+    border-radius: 0.5vw;
+    transition: opacity 0.2s, transform 0.2s;
+}
+
+#field .field__column__element:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+#field .field__column__element:active{
+    opacity: 1;
+    transform: scale(1.02);
+}
+
+#field .field__column__element + .field__column__element{
+    margin-top: 5%;
+}
+
+#field .fElement__pic{
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-
-    color: rgb(37, 37, 37)
+    background-color: rgb(62, 62, 62);
+    border-radius: 0.5vw 0 0 0.5vw;
 }
 
-/* LIST */
-.body-center4-list{
+#field .fElement__pic .element__pic{
     position: relative;
-    left: 0;
-    right: 0;
-
-    height: max-content;
-
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.body-center4-list__element{
-    position: relative;
-    height: 35vw;
-
-    flex-basis: calc((100%/3) - 3%);
-    margin: 1.5%;
-    border-radius: 0.5vw;
-
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0px 0px 1vw 1vw rgb(210, 210, 210);
-
-    transition: transform 0.3s, opacity 0.3s;
-}
-
-.body-center4-list__element:hover{
-    transform: scale(1.03);
-    opacity: 0.8;
-
-    cursor: pointer;
-}
-
-.body-center4-list__element:active{
-    transform: scale(0.95);
-    opacity: 1;
-
-    cursor: pointer;
-}
-
-.body-center4-list__element-box{
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-
-    display: grid;
-    grid-template-rows: 60% 40%;
-    border-radius: 0.5vw;
-
-    margin: 3%;
-}
-
-.body-center4-list__element-img{
-    position: relative;
-
-    display: flex;
-    justify-content: center;
-}
-
-.body-center4-list__element-img img{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 0.5vw;
-
+    height: 5.6vw;
     object-fit: cover;
+    border-radius: 0.5vw 0 0 0.5vw;
 }
 
-.body-center4-list__element-content{
-    position: relative;
+#field .fElement__des{
+    max-height: 5.6vw;
+    font-size: 1em;
+    margin-left: 2%;
 
-    display: flex;
+    overflow-y: auto;
+}
+
+#field .fElement__des .element__title{
+    font-size: 1.7em;
+
+    overflow-x: hidden;
+    text-wrap: nowrap;
+}
+
+#field .fElement__des .element__des{
+    font-size: 1em;
+}
+
+#documents{
+    position: relative;
+    height: 75vh;
+    display: none; 
+    /* flex */
     flex-direction: column;
-
-    font-size: var(--font-size);
-
-    color: rgb(37, 37, 37);
+    padding: 1% 2%;
+    background-image: linear-gradient(90deg, rgb(57, 55, 144),rgb(94, 115, 212));
+    font-size: 1em;
 }
 
-.content4__title{
+#blockTitle{
     position: relative;
-    height: 40%;
-
+    height: max-content;
     display: flex;
-    flex-direction: column;
-    
-    font-size: 0.9em;
+    align-items: center;
 
-    padding: 1% 0;
-
-    margin-top: 3%;
+    padding: 0.5% 2%;
+    font-size: 1.7em;
+    border-radius: 1vw 1vw 0 0;
+    margin-bottom: 1%;
+    background-color: rgb(88, 88, 88);
 }
 
-.content4__title--name{
-    
-    font-size: 1.2em;
-}
-
-.content4__title--uploader{
+#fieldName{
     position: relative;
-    
-    display: flex;
-    justify-content: flex-end;
+    width: 90%;
+    height: max-content;
+    font-size: 1.3em;
 
-    color: rgb(255, 167, 72);
+}
+
+#returntotablefields{
+    position: relative;
+    width: max-content;
+    height: max-content;
+    background-color: rgb(255, 164, 46);
+    color: rgb(74, 74, 74);
+    border: 0;
+    outline: 0;
+    border-radius: 1vw;
+
+    font-size: 0.5em;
+    padding: 0.5% 2%;
+
+    transition: opacity 0.2s, transform 0.2s;
+}
+
+#returntotablefields:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+#returntotablefields:active{
+    transform: scale(1.01);
+}
+
+#blockContent{
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.Blockdocument{
+    position: relative;
+    width: 100%;
+    height: 4vw;
+    display: grid;
+    grid-template-columns: 5% 95%;
+
+    background-color: rgb(38, 62, 128);
+
+    transition: opacity 0.2s, transform 0.2s;
+}
+
+.Blockdocument:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.Blockdocument:active{
+    opacity: 0.6;
+}
+
+.Blockdocument + .Blockdocument{
     margin-top: 2%;
 }
 
-.content4__description{
+.document__pic{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(46, 0, 121);
+}
+
+.document__pic__pic{
+    height: 4vw;
+    object-fit: contain;
+}
+
+.documentTitle{
     position: relative;
     width: 100%;
-    height: max-content;
+}
+
+.document__des{
+    position: relative;
+    font-size: 1em;
+
+    overflow-y: auto;
+}
+
+.documentTitle{
+    position: relative;
+    width: 100%;
+    text-decoration: underline;
+    padding: 0.5% 0;
+
+    overflow-x: hidden;
+    text-wrap: nowrap;
+}
+
+.documentDescription{
+    font-size: 0.9em;
+    padding-bottom: 0.5%;
+}
+
+.document__des__des{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    padding-left: 1%;
+}
+
+.description-right{ 
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: rgb(31, 33, 99);
+
+    padding: 2% 5%;
 }

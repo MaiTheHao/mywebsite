@@ -122,6 +122,7 @@ const pages = {
 const root = document.getElementById("content");
 
 const searchInput = document.getElementById("bc6-sidebar__search");
+const searchRoot = document.getElementById("searchResult");
 
 const navPage = document.getElementsByClassName("bc6__nav__element")
 

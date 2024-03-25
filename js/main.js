@@ -1,19 +1,19 @@
 var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 var height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
 
-window.onresize = function x(){
+window.onresize = function x() {
     width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
     height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
 };
-console.log("HELLO WWW: width ", width, " height",height);
+console.log("HELLO WWW: width ", width, " height", height);
 
 // CLICK -> SUMMON SIDE BAR
-function set_side_bar(){
+function set_side_bar() {
     let sidebar = document.getElementById("header__hideSidebar");
     let button = document.getElementById("header__sidebar__button");
     let attr = sidebar.style.visibility;
 
-    if(attr != "visible"){
+    if (attr != "visible") {
         document.getElementById("header__hideSidebar").style.visibility = "visible";
         button.style.opacity = "0.5"
     } else {
@@ -23,32 +23,32 @@ function set_side_bar(){
 }
 
 // SEARCH_BAR
-function set_search_bar(){
+function set_search_bar() {
     let search_bar = document.getElementById("search--bar");
     let style = window.getComputedStyle(search_bar);
     let animation = style.animationName;
     search_bar.style.display = "flex";
 
-    if(animation == "fade-out"){
+    if (animation == "fade-out") {
         search_bar.style.animationName = "fade-in";
-    } else if (animation == "fade-in"){
+    } else if (animation == "fade-in") {
         search_bar.style.animationName = "fade-out";
     } else {
         search_bar.style.animationName = "fade-in";
     };
-    
+
 }
 
 // CHỈNH SỬA THÔNG TIN
-function show_updateInfoDiv(type){ //Hàm tạo bảng
+function show_updateInfoDiv(type) { //Hàm tạo bảng
     let e = document.getElementById("updateInfoDiv__hideBlock")
     let block = null
-    if (e.style.display == "none"){
+    if (e.style.display == "none") {
         e.style.display = "flex"
     } else {
-        if(e.style.display == "flex"){
+        if (e.style.display == "flex") {
             e.style.display = "none"
-        }else{
+        } else {
             e.style.display = "flex"
         }
     }
@@ -56,27 +56,27 @@ function show_updateInfoDiv(type){ //Hàm tạo bảng
     let block1 = document.getElementById("updateInfoDiv__hideBlock__pic")
     let block2 = document.getElementById("updateInfoDiv__hideBlock__information")
 
-    if(type == 0){
+    if (type == 0) {
         block1.style.display = "block"
         block2.style.display = "none"
-        
+
     } else {
         block1.style.display = "none"
         block2.style.display = "block"
 
-    }   
+    }
 }
 
-function cancelUpdate(type){ //Hàm reset
-    if(type == 0){
+function cancelUpdate(type) { //Hàm reset
+    if (type == 0) {
         var formBlock = document.getElementById("updateInfoDiv__hideBlock__pic")
     } else {
         var formBlock = document.getElementById("updateInfoDiv__hideBlock__information")
-    }   
+    }
 
     let listInput = formBlock.getElementsByClassName("updateInfoInput")
-    for(let i = 0; i < listInput.length; i++){
-        if(listInput[i].type != "checkbox"){
+    for (let i = 0; i < listInput.length; i++) {
+        if (listInput[i].type != "checkbox") {
             listInput[i].value = '';
         } else {
             listInput[i].checked = false;
@@ -84,15 +84,15 @@ function cancelUpdate(type){ //Hàm reset
     }
 }
 
-function createDate(){
+function createDate() {
     // Đặt ngày bắt đầu YYYY-MM-DD
     let input = '2023-08-28';
-    const startDate = new Date(input); 
+    const startDate = new Date(input);
     let dayInWeek = startDate.getDay();
-    if ( dayInWeek > 1){
+    if (dayInWeek > 1) {
         startDate.setDate(startDate.getDate() - (startDate.getDay() - 1))
     } else {
-        if (dayInWeek == 0){
+        if (dayInWeek == 0) {
             startDate.setDate(startDate.getDate() - (startDate.getDay() - 7))
         }
     }
@@ -110,8 +110,8 @@ function createDate(){
     const formattedDate = `${(day < 10) ? `0${day}` : day}/${(month < 10) ? `0${month}` : month}/${year}`
 
     // Cập nhật số tuần, ngày
-    document.getElementById('week-number').textContent = "Tuần "+weekNumber;
-    document.getElementById('current-date').textContent = ", "+formattedDate;
+    document.getElementById('week-number').textContent = "Tuần " + weekNumber;
+    document.getElementById('current-date').textContent = ", " + formattedDate;
 
     let addWeekElement = document.getElementsByClassName('add__week-number');
     for (let i = 0; i < addWeekElement.length; i++) {
@@ -122,7 +122,7 @@ function createDate(){
     for (let i = 0; i < addYearElement.length; i++) {
         addYearElement[i].textContent = year;
     }
-}  
+}
 
 function addHeader() {
     // Mã HTML của header
@@ -178,10 +178,18 @@ function addHeader() {
                             <a href = "thanh_vien.html" title = "Link to Profile" target = "_self" id="header__user--name">USER NAME</a>
                             <img src="pic/user_avatar.jpg" title = "USER AVATAR" alt="USER AVATAR" id="header__user--avatar">
                             <button class = "fa-solid fa-bars" id = "header__sidebar__button" onclick = set_side_bar()></button>
-                            <div id = "header__hideSidebar">
-                                <a href="" class="hideSidebar__option" id = "logOut"><i class="fa-solid fa-right-to-bracket"></i><span>Đăng xuất</span></a>
-                                <a href="" class="hideSidebar__option" id = "none"><i class="fa-solid fa-gears"></i><span>Đang hoàn thiện ...</span></a>
+                            <div id="header__hideSidebar">
+                            <a href="" class="hideSidebar__option" id="logOut"><i class="fa-solid fa-right-to-bracket"></i><span>Đăng xuất</span></a>
+                            <div href="" class="hideSidebar__option" id="utilities">
+                              <div id="utilities__title"><p><i class="fa-solid fa-star"></i><span>Tiện ích</span></p><i style="font-size: 0.7em;" class="fa-solid fa-angle-down"></i></div>
+                              <div id="utilities__element">
+                                  <a href="" class="hideSidebar__option" id=""><i class="fa-solid fa-bomb"></i><span>Tiện ích 1</span></a>
+                                  <a href="" class="hideSidebar__option" id=""><i class="fa-solid fa-wand-magic-sparkles"></i><span>Tiện ích 2</span></a>
+                                  <a href="" class="hideSidebar__option" id=""><i class="fa-solid fa-heart"></i><span>Tiện ích 3</span></a>
+                                  <a href="" class="hideSidebar__option" id=""><i class="fa-solid fa-hippo"></i><span>Tiện ích 4</span></a>
+                              </div>
                             </div>
+                          </div>
                         </div>
                     </div>
                 </div>
@@ -207,6 +215,7 @@ function addHeader() {
                     <a href="gioi_thieu.html" class="header-nav__menu--element navbutton" id = "page5">GIỚI THIỆU</a>
                     <a href="cap_nhat.html" class="header-nav__menu--element navbutton" id = "page6" target = "_blank">CẬP NHẬT THÔNG TIN</a>
                     <a href="thi_dua.html" class="header-nav__menu--element navbutton" id = "page7">THI ĐUA</a>
+                    <a href="elearning.html" class="header-nav__menu--element navbutton" id = "page8">E-LEARNING</a>
                     <a href="login.html" class="header-nav__menu--element navbutton">ĐĂNG NHẬP-TEST</a>
                     <a target="_blank" href="https://stealth-leo-c2e.notion.site/M-T-S-N-PH-M-D-N-SCHOOL-WEB-532aa687a4ca4a7fb94f0f37424c9085?pvs=4" class="header-nav__menu--element navbutton">LINK MÔ TẢ SẢN PHẨM</a>
                     <a href="login.html" class="header-nav__menu--element navbutton" style = "color: gray">TEST ELEMENT</a>
@@ -238,9 +247,10 @@ function addHeader() {
     document.body.insertAdjacentHTML('afterbegin', headerHTML);
 }
 
-window.onload = function(){
+window.onload = function () {
     addHeader();
     createDate();
+
 }
 
 // MAI THẾ HÀO - Frontend + Logic + WriteJS + Idea; NGUYỄN MINH TRÍ - Backend + Algorithm + Data + Idea

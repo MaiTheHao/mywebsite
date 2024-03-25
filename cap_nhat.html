@@ -63,10 +63,235 @@
                         </div>
         
                         <div id="bc6__body__content" aria-label="Khung cập nhật thông tin">
-                            <div id="content">
-                                <ul class="contentList__option" id = "page_options">
-                                </ul>
+                            <div id="typeInteract">
+                                <div id="interact__mout"><i class="fa-solid fa-angle-right"></i></div>
+                                <div id="interact__listTypes">
+                                    <div class="interact__type" id="interact__add" onclick = "setInteractGui('addForm', 'addFormType')">
+                                        <i class="fa-solid fa-circle-plus"></i>
+                                        <p>Thêm</p>
+                                    </div>
+                                    <div class="interact__type" id="interact__change" onclick = "setInteractGui('changeForm', 'changeFormType')">
+                                        <i class="fa-solid fa-pencil"></i>
+                                        <p>Sửa</p>
+                                    </div>
+                                    <div class="interact__type" id="interact__remove" onclick = "setInteractGui('removeForm', 'removeFormType')">
+                                        <i class="fa-solid fa-trash"></i>
+                                        <p>Xóa</p>
+                                    </div>
+                                </div>
                             </div>
+                            <div id="interactGui">
+                                <div class="interact__form" id="addForm">
+                                    <h2>THÊM MỚI</h2>
+                                    <form id="addForm__members" class = "addFormType" action="#" method="post" enctype="multipart/form-data">
+                                        <div class="form-row">
+                                            <div class="form-column">
+                                                <label for="name">Tên thành viên:</label>
+                                                <input type="text" id="name" name="name" required>
+                                            </div>
+                                            <div class="form-column">
+                                                <label for="dob">Ngày sinh:</label>
+                                                <input type="date" id="dob" name="dob" required>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-column">
+                                                <label for="position">Chức vụ:</label>
+                                                <input type="text" id="position" name="position">
+                                            </div>
+                                            <div class="form-column">
+                                                <label >Đoàn viên:</label>
+                                                <select id="is_member" name="is_member">
+                                                  <option value="true">Có</option>
+                                                  <option value="false">Không</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-column">
+                                                <label for="phone">Số điện thoại:</label>
+                                            <input type="text" id="phone" name="phone" required>
+                                            </div>
+                                            <div class="form-column">
+                                                <label for="email">Email:</label>
+                                                <input type="email" id="email" name="email" required>
+                                            </div>
+                                        </div>
+                                        <label for="note">Nhật ký (100 ký tự):</label>
+                                        <textarea id="note" name="note" maxlength="100"></textarea>
+                                        <button type="submit">THÊM</button>
+                                    </form>
+                                    <form id="addForm__classes" class = "addFormType" action="#" method="post" enctype="multipart/form-data">
+                                        <div class="form-row">
+                                            <div class="form-column">
+                                                <label for="class">Lớp:</label>
+                                                <input type="text" id="class" name="class" required>
+                                            </div>
+                                            <div class="form-column">
+                                                <label for="number_of_students">Sĩ số:</label>
+                                                <input type="text" id="number_of_students" name="number_of_students" required>
+                                            </div>
+                                        </div>
+                                        <label for="teacher">Giáo viên chủ nhiệm:</label>
+                                        <input type="text" id="teacher" name="teacher" required>
+                                        <label for="head_student">Lớp trưởng:</label>
+                                        <input type="text" id="head_student" name="head_student" required>
+                                        <label for="school_year">Năm học:</label>
+                                        <input type="text" id="school_year" name="school_year" pattern="[0-9]{4}-[0-9]{4}" required>
+                                        <div class="form-row">
+                                            <div class="form-column">
+                                                <label for="student_list">Danh sách học sinh (file EXCEL):</label>
+                                        <input type="file" id="student_list" name="student_list" accept=".xlsx" required>
+                                            </div>
+                                            <div class="form-column">
+                                                <label for="class_diagram">Sơ đồ lớp (file image):</label>
+                                        <input type="file" id="class_diagram" name="class_diagram" accept=".jpg,.jpeg,.png" required>
+                                            </div>
+                                        </div>
+                                        <button type="submit">THÊM</button>
+                                    </form>  
+                                    <form id="addForm__groups" class = "addFormType" action="#" method="post" enctype="multipart/form-data">
+                                        <label for="group_name">Tên nhóm:</label>
+                                        <input type="text" id="group_name" name="group_name" required>
+                                        <div class="form-row">
+                                            <div class="form-column">
+                                                <label for="number_of_members">Số lượng thành viên:</label>
+                                                <input type="text" id="number_of_members" name="number_of_members" min="1" required>
+                                            </div>
+                                            <div class="form-column">
+                                                <label for="field">Lĩnh vực:</label>
+                                                <select id="field" name="field" required>
+                                                    <option value="">Chọn lĩnh vực</option>
+                                                    <option value="Khoa học">Khoa học</option>
+                                                    <option value="Công nghệ">Công nghệ</option>
+                                                    <option value="Nghệ thuật">Nghệ thuật</option>
+                                                    <option value="Giáo dục">Giáo dục</option>
+                                                    <option value="Khác">Khác</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <label for="goal">Mục tiêu:</label>
+                                        <textarea id="goal" name="goal" required></textarea>
+                                        <label for="scope">Phạm vi hoạt động:</label>
+                                        <textarea id="scope" name="scope" required></textarea>
+                                        <label for="member_list">Danh sách thành viên (file Excel):</label>
+                                        <input type="file" id="member_list" name="member_list" accept=".xlsx" required>
+                                        <button type="submit">Cập nhật</button>
+                                    </form>
+                                            
+                                </div>
+                                  
+                                <div class="interact__form" id="changeForm">
+                                    <h2>SỬA ĐỔI</h2>
+                                    <form id="changeForm__members" class = "changeFormType" action="#" method="post" enctype="multipart/form-data">
+                                        <div class="form-row">
+                                            <div class="form-column">
+                                                <label for="name">Tên thành viên:</label>
+                                                <input type="text" id="name" name="name" required>
+                                            </div>
+                                            <div class="form-column">
+                                                <label for="dob">Ngày sinh:</label>
+                                                <input type="date" id="dob" name="dob" required>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-column">
+                                                <label for="position">Chức vụ:</label>
+                                                <input type="text" id="position" name="position">
+                                            </div>
+                                            <div class="form-column">
+                                                <label >Đoàn viên:</label>
+                                                <select id="is_member" name="is_member">
+                                                  <option value="true">Có</option>
+                                                  <option value="false">Không</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-column">
+                                                <label for="phone">Số điện thoại:</label>
+                                            <input type="text" id="phone" name="phone" required>
+                                            </div>
+                                            <div class="form-column">
+                                                <label for="email">Email:</label>
+                                                <input type="email" id="email" name="email" required>
+                                            </div>
+                                        </div>
+                                        <label for="note">Nhật ký (100 ký tự):</label>
+                                        <textarea id="note" name="note" maxlength="100"></textarea>
+                                        <button type="submit">THÊM</button>
+                                    </form>
+                                    <form id="changeForm__classes" class = "changeFormType" action="#" method="post" enctype="multipart/form-data">
+                                        <div class="form-row">
+                                            <div class="form-column">
+                                                <label for="class">Lớp:</label>
+                                                <input type="text" id="class" name="class" required>
+                                            </div>
+                                            <div class="form-column">
+                                                <label for="number_of_students">Sĩ số:</label>
+                                                <input type="text" id="number_of_students" name="number_of_students" required>
+                                            </div>
+                                        </div>
+                                        <label for="teacher">Giáo viên chủ nhiệm:</label>
+                                        <input type="text" id="teacher" name="teacher" required>
+                                        <label for="head_student">Lớp trưởng:</label>
+                                        <input type="text" id="head_student" name="head_student" required>
+                                        <label for="school_year">Năm học:</label>
+                                        <input type="text" id="school_year" name="school_year" pattern="[0-9]{4}-[0-9]{4}" required>
+                                        <div class="form-row">
+                                            <div class="form-column">
+                                                <label for="student_list">Danh sách học sinh (file EXCEL):</label>
+                                        <input type="file" id="student_list" name="student_list" accept=".xlsx" required>
+                                            </div>
+                                            <div class="form-column">
+                                                <label for="class_diagram">Sơ đồ lớp (file image):</label>
+                                        <input type="file" id="class_diagram" name="class_diagram" accept=".jpg,.jpeg,.png" required>
+                                            </div>
+                                        </div>
+                                        <button type="submit">THÊM</button>
+                                    </form>  
+                                    <form id="changeForm__groups" class = "changeFormType" action="#" method="post" enctype="multipart/form-data">
+                                        <label for="group_name">Tên nhóm:</label>
+                                        <input type="text" id="group_name" name="group_name" required>
+                                        <div class="form-row">
+                                            <div class="form-column">
+                                                <label for="number_of_members">Số lượng thành viên:</label>
+                                                <input type="text" id="number_of_members" name="number_of_members" min="1" required>
+                                            </div>
+                                            <div class="form-column">
+                                                <label for="field">Lĩnh vực:</label>
+                                                <select id="field" name="field" required>
+                                                    <option value="">Chọn lĩnh vực</option>
+                                                    <option value="Khoa học">Khoa học</option>
+                                                    <option value="Công nghệ">Công nghệ</option>
+                                                    <option value="Nghệ thuật">Nghệ thuật</option>
+                                                    <option value="Giáo dục">Giáo dục</option>
+                                                    <option value="Khác">Khác</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <label for="goal">Mục tiêu:</label>
+                                        <textarea id="goal" name="goal" required></textarea>
+                                        <label for="scope">Phạm vi hoạt động:</label>
+                                        <textarea id="scope" name="scope" required></textarea>
+                                        <label for="member_list">Danh sách thành viên (file Excel):</label>
+                                        <input type="file" id="member_list" name="member_list" accept=".xlsx" required>
+                                        <button type="submit">Cập nhật</button>
+                                    </form>
+                                </div>
+                                  
+                                <div class="interact__form" id="removeForm">
+                                    <h2>Xóa</h2>
+                                    <form class = "removeFormType" action="#" method="post">
+                                      <label for="id">ID:</label>
+                                      <input type="text" id="id" name="id" required>
+                                      <button type="submit">Xóa</button>
+                                    </form>
+                                </div>
+                                  
+                            </div>
+                            <script>               
+                            </script>
                         </div>
                     </div>
                 </div>

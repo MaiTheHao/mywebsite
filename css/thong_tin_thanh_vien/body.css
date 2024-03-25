@@ -143,7 +143,7 @@
 /* LEFT CONTENT*/
 .body-left1 .Acontent__sidebar__element__content{
     overflow: hidden;
-    height: max-content;
+    height: 0;
 }
 
 /* LEFT ACTION BUTTON */

@@ -32,7 +32,7 @@
                     <div class="Acontent__sidebar__element body-left1__searchBlock">
                         <form class="body-left1-Acontent__sidebar__element__form" action="">
                             <i class="fa-solid fa-magnifying-glass"></i>
-                            <input type="text" id="findClass" placeholder="Tìm Lớp">
+                            <input type="text" id="findClass" placeholder="Tìm Thành Viên">
                         </form>
 
                         <div id="body-left1__listYear">
@@ -64,11 +64,29 @@
                         <div class="Acontent__sidebar__element__content" id="listMembers">
 
                         </div>
+                        <div onclick = "setHeight('listMembers', this)" class = "body-left1__sidebarBtn"><i class="fa-solid fa-chevron-up"></i> <span>ALL</span></div>
                     </div>
                     <script>
+                        function setHeight(id, btn) {
+                            let element = document.getElementById(id);
+
+                            if (element.style.height == "max-content"){
+                            document.getElementById(id).style.height = 0;
+                            btn.getElementsByTagName("i")[0].style.transform = "rotate(180deg)";
+                            btn.getElementsByTagName("span")[0].textContent = " ALL";
+
+                            } else {
+                            document.getElementById(id).style.height = "max-content";
+                            btn.getElementsByTagName("i")[0].style.transform = "rotate(0deg)";
+                            btn.getElementsByTagName("span")[0].textContent = " HIDE";
+                            } 
+                        }
+
+                        function showListYears(e){
+                            e.getElementsByTagName("i")
+                        }
+
                         const testPersons = [
-                            "Mai Thế Hào",
-                            "Nguyễn Minh Trí",
                             "Trần Văn An",
                             "Lê Thị Bích",
                             "Phạm Ngọc Cảnh",
@@ -140,7 +158,7 @@
                             let A = document.createElement("a");
                             A.className = "Acontent__sidebar__element__content__element";
                             A.href = "#";
-                            A.innerText = `${index}.${name}`;
+                            A.innerText = `${name}`;
 
                             root.appendChild(A);
                         })

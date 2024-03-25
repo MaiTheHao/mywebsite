@@ -126,6 +126,10 @@ const searchRoot = document.getElementById("searchResult");
 
 const navPage = document.getElementsByClassName("bc6__nav__element")
 
+const sideBar = document.getElementById("bc6__body__sidebar");
+const setSideBarBtn = document.getElementById("hiddenSearchBar")
+setSideBarBtn.addEventListener("click", () => renderSideBar());
+
 // Biến
 let currentPageId = "members";
 let currentPage = document.getElementById(currentPageId);
@@ -168,13 +172,28 @@ function renderResult(base){
         listItem.className = "search__result";
         listItem.id = id;
         anchor.innerText = name;
-        paragraph.innerText = "ID: "+id;
         listItem.appendChild(anchor);
         listItem.appendChild(paragraph);
 
         searchRoot.appendChild(listItem);
     });
 }
+
+function renderSideBar(){
+    console.log( sideBar.style.animation)
+    if(sideBar.style.animation != "0.5s ease-in-out 0s 1 normal forwards running sideBarHide"){
+        sideBar.style.animation = "sideBarHide 0.5s ease-in-out"
+        sideBar.style.animationFillMode = "forwards"
+        setSideBarBtn.style.animation = "rotate180deg 0.5s ease-in-out"
+        setSideBarBtn.style.animationFillMode = "forwards"
+    } else {
+        sideBar.style.animation = "sideBarShow 0.5s ease-in-out"
+        sideBar.style.animationFillMode = "forwards"
+        setSideBarBtn.style.animation = "rotate-180deg 0.5s ease-in-out"
+        setSideBarBtn.style.animationFillMode = "forwards"
+    }
+
+}   
 
 
 // MAI THẾ HÀO - Frontend + Logic + WriteJS + Idea; NGUYỄN MINH TRÍ - Backend + Algorithm + Data + Idea

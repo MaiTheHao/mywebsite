@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,29 +12,30 @@
     <link rel="stylesheet" href="css/thong_tin_thanh_vien/body.css">
 
     <!-- JAVASCRIPT -->
-   
-    <script src = "js/main.js"></script>
+
+    <script src="js/main.js"></script>
     <script src="https://kit.fontawesome.com/0afaeea3b6.js" crossorigin="anonymous"></script>
     <title>THÀNH VIÊN</title>
 </head>
+
 <body>
     <!-- BODY BODY BODY -->
     <!-- KHỞI TẠO KHUNG THÂN -->
     <div class="under-header">
         <!-- KHỞI TẠO KHUNG BODY -->
-        <div class = "body grid">
+        <div class="body grid">
             <!-- KHUNG BODY -->
             <div class="body__content">
                 <!-- TRÁI BODY -->
                 <div class="body-left1 body-part Acontent__sidebar AcontentSidebar--left set-scrollbar--x">
                     <!-- CÁC PHẦN TỬ CON -->
-                    <div class = "Acontent__sidebar__element body-left1__searchBlock">
-                        <form class = "body-left1-Acontent__sidebar__element__form" action="">
-                            <i class = "fa-solid fa-magnifying-glass"></i>
-                            <input type="text" id = "findClass" placeholder="Tìm Lớp">
+                    <div class="Acontent__sidebar__element body-left1__searchBlock">
+                        <form class="body-left1-Acontent__sidebar__element__form" action="">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" id="findClass" placeholder="Tìm Lớp">
                         </form>
-                        
-                        <div id = "body-left1__listYear">
+
+                        <div id="body-left1__listYear">
                             <select name="year" id="selectYear">
                                 <option value="">2024</option>
                                 <option value="1999">1999</option>
@@ -50,73 +52,184 @@
                                 <option value="2010">2010</option>
                                 <option value="2011">2011</option>
                                 <option value="2012">2012</option>
-                            </select> 
-                            <label for="selectYear" id = "icon-selectYear"><i class="fa-solid fa-calendar-days"></i></label>
+                            </select>
+                            <label for="selectYear" id="icon-selectYear"><i
+                                    class="fa-solid fa-calendar-days"></i></label>
                         </div>
 
-                    </div>                       
+                    </div>
+
+                    <div class="Acontent__sidebar__element">
+                        <p class="Acontent__sidebar__element__header">DANH SÁCH THÀNH VIÊN</p>
+                        <div class="Acontent__sidebar__element__content" id="listMembers">
+
+                        </div>
+                    </div>
+                    <script>
+                        const testPersons = [
+                            "Mai Thế Hào",
+                            "Nguyễn Minh Trí",
+                            "Trần Văn An",
+                            "Lê Thị Bích",
+                            "Phạm Ngọc Cảnh",
+                            "Đỗ Thị Dung",
+                            "Nguyễn Văn Duy",
+                            "Lê Thị Hà",
+                            "Trần Văn Hải",
+                            "Nguyễn Thị Hương",
+                            "Phạm Ngọc Hưng",
+                            "Vũ Thị Huyền",
+                            "Lê Văn Kiên",
+                            "Trần Thị Lan",
+                            "Nguyễn Văn Long",
+                            "Phạm Thị Mai",
+                            "Đỗ Văn Nam",
+                            "Lê Thị Nga",
+                            "Trần Văn Phong",
+                            "Nguyễn Thị Phương",
+                            "Phạm Ngọc Quân",
+                            "Vũ Thị Thanh",
+                            "Lê Văn Tùng",
+                            "Trần Thị Tuyết",
+                            "Nguyễn Văn Tuấn",
+                            "Phạm Thị Vân",
+                            "Đỗ Văn Vinh",
+                            "Lê Thị Xuân",
+                            "Trần Văn Xuyên",
+                            "Nguyễn Thị Yến",
+                            "Phạm Ngọc",
+                            "Vũ Thị Ánh",
+                            "Lê Văn Bình",
+                            "Trần Thị Chi",
+                            "Nguyễn Văn Dũng",
+                            "Phạm Thị Dung",
+                            "Đỗ Văn Duy",
+                            "Lê Thị Hà",
+                            "Trần Văn Hải",
+                            "Nguyễn Thị Hiền",
+                            "Phạm Ngọc Huy",
+                            "Vũ Thị Hằng",
+                            "Lê Văn Kiên",
+                            "Trần Thị Lan",
+                            "Nguyễn Văn Long",
+                            "Phạm Thị Mai",
+                            "Đỗ Văn Nam",
+                            "Lê Thị Nga",
+                            "Trần Văn Phong",
+                            "Nguyễn Thị Phương",
+                            "Phạm Ngọc Quân",
+                            "Vũ Thị Thanh",
+                            "Lê Văn Tùng",
+                            "Trần Thị Tuyết",
+                            "Nguyễn Văn Tuấn",
+                            "Phạm Thị Vân",
+                            "Đỗ Văn Vinh",
+                            "Lê Thị Xuân",
+                            "Trần Văn Xuyên",
+                            "Nguyễn Thị Yến",
+                            "Phạm Ngọc",
+                            "Vũ Thị Ánh",
+                            "Lê Văn Bình",
+                            "Trần Thị Chi",
+                            "Nguyễn Văn Dũng",
+                            "Phạm Thị Dung",
+                            "Đỗ Văn Duy",
+                        ]
+                        const root = document.getElementById("listMembers");
+                        testPersons.forEach((name, index) => {
+                            let A = document.createElement("a");
+                            A.className = "Acontent__sidebar__element__content__element";
+                            A.href = "#";
+                            A.innerText = `${index}.${name}`;
+
+                            root.appendChild(A);
+                        })
+                    </script>
 
                     <div class="sideBar paddingBottom"><i class="fa-solid fa-circle-info"></i>Đã hết danh sách</div>
-                    
+
                 </div>
                 <!-- GIỮA BODY -->
                 <div class="body-center1 body-part">
                     <!-- CÁC PHẦN TỬ CON -->
-                    <div  class = "Acontent__table" id = "body-center1__header">
+                    <div class="Acontent__table" id="body-center1__header">
                         <div id="body-center__header__pics">
-                            <div id = "profile__pic">
-                                <img src = "pic/user_background.jpg"  alt = "background" id = "profile__background">
-                                <img src = "pic/user_avatar.jpg" alt = "avatar" id = "profile__avatar">
+                            <div id="profile__pic">
+                                <img src="pic/user_background.jpg" alt="background" id="profile__background">
+                                <img src="pic/user_avatar.jpg" alt="avatar" id="profile__avatar">
                             </div>
-                            <p id = "body-center__header__pics__className">
-                                <span id = "user-name">Tên Thành Viên</span>
-                                <i class="fa-solid fa-user" style = "margin-left: 1.5%; color: rgb(255, 255, 255)"></i>
+                            <p id="body-center__header__pics__className">
+                                <span id="user-name">Tên Thành Viên</span>
+                                <i class="fa-solid fa-user" style="margin-left: 1.5%; color: rgb(255, 255, 255)"></i>
                             </p>
-                        </div>        
+                        </div>
                         <div id="body-center1__header__rightSide">
-                            <div class = "body-center1__header__rightSide__element set-scrollbar--x" id="body-center1__header__rightSide__information">
+                            <div class="body-center1__header__rightSide__element set-scrollbar--x"
+                                id="body-center1__header__rightSide__information">
                                 <h3 class="body-center1__header__rightSide__element__title">THÔNG TIN CÁ NHÂN</h3>
                                 <div class="body-center1__header__rightSide__element__list">
                                     <p class="body-center1__header__rightSide__element__list__element">
-                                        <span class = "body-center1__header__rightSide__element__list__element__title">TÊN</span>
-                                        <span class = "body-center1__header__rightSide__element__list__element__text">Nguyễn Văn A</span>
+                                        <span
+                                            class="body-center1__header__rightSide__element__list__element__title">TÊN</span>
+                                        <span
+                                            class="body-center1__header__rightSide__element__list__element__text">Nguyễn
+                                            Văn A</span>
                                     </p>
                                     <p class="body-center1__header__rightSide__element__list__element">
-                                        <span class = "body-center1__header__rightSide__element__list__element__title">NGÀY SINH</span>
-                                        <span class = "body-center1__header__rightSide__element__list__element__text">DD/MM/YY</span>
+                                        <span
+                                            class="body-center1__header__rightSide__element__list__element__title">NGÀY
+                                            SINH</span>
+                                        <span
+                                            class="body-center1__header__rightSide__element__list__element__text">DD/MM/YY</span>
                                     </p>
                                     <p class="body-center1__header__rightSide__element__list__element">
-                                        <span class = "body-center1__header__rightSide__element__list__element__title">ĐOÀN VIÊN</span>
-                                        <span class = "body-center1__header__rightSide__element__list__element__text">Có / không</span>
+                                        <span
+                                            class="body-center1__header__rightSide__element__list__element__title">ĐOÀN
+                                            VIÊN</span>
+                                        <span class="body-center1__header__rightSide__element__list__element__text">Có /
+                                            không</span>
                                     </p>
                                     <p class="body-center1__header__rightSide__element__list__element">
-                                        <span class = "body-center1__header__rightSide__element__list__element__title">CHỨC VỤ</span>
-                                        <span class = "body-center1__header__rightSide__element__list__element__text">Thường dân/ Tổ phó/ Tổ trưởng/ Lớp phó/ ...</span>
+                                        <span
+                                            class="body-center1__header__rightSide__element__list__element__title">CHỨC
+                                            VỤ</span>
+                                        <span
+                                            class="body-center1__header__rightSide__element__list__element__text">Thường
+                                            dân/ Tổ phó/ Tổ trưởng/ Lớp phó/ ...</span>
                                     </p>
                                 </div>
                             </div>
-                            <div class = "body-center1__header__rightSide__element set-scrollbar--x" id="body-center1__header__rightSide__list">
+                            <div class="body-center1__header__rightSide__element set-scrollbar--x"
+                                id="body-center1__header__rightSide__list">
                                 <h3 class="body-center1__header__rightSide__element__title">THÔNG TIN LIÊN HỆ</h3>
                                 <div class="body-center1__header__rightSide__element__list">
                                     <p class="body-center1__header__rightSide__element__list__element">
-                                        <span class = "body-center1__header__rightSide__element__list__element__title">SỐ ĐIỆN THOẠI</span>
-                                        <span class = "body-center1__header__rightSide__element__list__element__text">Number phone</span>
+                                        <span class="body-center1__header__rightSide__element__list__element__title">SỐ
+                                            ĐIỆN THOẠI</span>
+                                        <span
+                                            class="body-center1__header__rightSide__element__list__element__text">Number
+                                            phone</span>
                                     </p>
                                     <p class="body-center1__header__rightSide__element__list__element">
-                                        <span class = "body-center1__header__rightSide__element__list__element__title">EMAIL</span>
-                                        <span class = "body-center1__header__rightSide__element__list__element__text">Email</span>
+                                        <span
+                                            class="body-center1__header__rightSide__element__list__element__title">EMAIL</span>
+                                        <span
+                                            class="body-center1__header__rightSide__element__list__element__text">Email</span>
                                     </p>
                                     <p class="body-center1__header__rightSide__element__list__element">
-                                        <span class = "body-center1__header__rightSide__element__list__element__title">NHẬT KÍ</span>
-                                        <span class = "body-center1__header__rightSide__element__list__element__text">Paragraph</span>
+                                        <span
+                                            class="body-center1__header__rightSide__element__list__element__title">NHẬT
+                                            KÍ</span>
+                                        <span
+                                            class="body-center1__header__rightSide__element__list__element__text">Paragraph</span>
                                     </p>
                                 </div>
                                 <div class="paddingBottom"></div>
                             </div>
-                        </div>            
+                        </div>
                     </div>
                     <!-- CHỈNH SỬA -->
-                    <div id="updateInfoDiv" class = "set-scrollbar--y" style="margin: 2%">
+                    <div id="updateInfoDiv" class="set-scrollbar--y" style="margin: 2%">
                         <div class="updateInfoDiv__element updateInfoDiv__pic" onclick=show_updateInfoDiv(0)>
                             <span><i class="fa-solid fa-image"></i> Thay đổi ảnh đại diện</span>
                         </div>
@@ -130,16 +243,19 @@
                     <!-- CHỈNH SỬA -->
                     <div class="Acontent__table">
                         <div class="body-center1__bodyTable__nav set-scrollbar--y">
-                            <div class="body-center1__bodyTable__nav__element bc1_nav-active" onclick = "showTable('body-center1__DSHD')">HOẠT ĐỘNG</div>
-                            <div class="body-center1__bodyTable__nav__element bc1_nav-normal" onclick = "showTable('body-center1__DSNhom')">NHÓM CỦA BẠN</div>
-                            <div class="body-center1__bodyTable__nav__element bc1_nav-normal" onclick = "showTable('body-center1__DSTL')">TÀI LIỆU</div>
+                            <div class="body-center1__bodyTable__nav__element bc1_nav-active"
+                                onclick="showTable('body-center1__DSHD')">HOẠT ĐỘNG</div>
+                            <div class="body-center1__bodyTable__nav__element bc1_nav-normal"
+                                onclick="showTable('body-center1__DSNhom')">NHÓM CỦA BẠN</div>
+                            <div class="body-center1__bodyTable__nav__element bc1_nav-normal"
+                                onclick="showTable('body-center1__DSTL')">TÀI LIỆU</div>
                         </div>
                         <script>
-                            document.addEventListener('DOMContentLoaded', function() {
+                            document.addEventListener('DOMContentLoaded', function () {
                                 var elements = document.querySelectorAll('.body-center1__bodyTable__nav__element');
-                                elements.forEach(function(element) {
-                                    element.addEventListener('click', function() {
-                                        elements.forEach(function(el) {
+                                elements.forEach(function (element) {
+                                    element.addEventListener('click', function () {
+                                        elements.forEach(function (el) {
                                             el.classList.remove('bc1_nav-active');
                                             el.classList.add('bc1_nav-normal');
                                         });
@@ -147,18 +263,22 @@
                                         this.classList.add('bc1_nav-active');
                                     });
                                 });
-                            });        
-                            
-                            function showTable(id = "body-center1__UPDATELATER"){
-                                document.querySelectorAll(".Acontent__gridTable__element").forEach(function(element){
+                            });
+
+                            function showTable(id = "body-center1__UPDATELATER") {
+                                document.querySelectorAll(".Acontent__gridTable__element").forEach(function (element) {
                                     element.style.display = "none";
                                 });
 
                                 document.getElementById(id).style.display = "flex";
                             }
+
+                            function showListYears(e) {
+                                e.getElementsByTagName("i")
+                            }
                         </script>
-                        <div class="Acontent__gridTable" id = "body-center1__DS">
-                            <div class = "Acontent__gridTable__element" id="body-center1__DSHD">
+                        <div class="Acontent__gridTable" id="body-center1__DS">
+                            <div class="Acontent__gridTable__element" id="body-center1__DSHD">
                                 <div class="Acontent__gridTable__element__part DS__head">
                                     <p>STT</p>
                                     <p>Hoạt động</p>
@@ -185,7 +305,7 @@
                                 </div>
                             </div>
 
-                            <div class = "Acontent__gridTable__element" id="body-center1__DSNhom">
+                            <div class="Acontent__gridTable__element" id="body-center1__DSNhom">
                                 <div class="Acontent__gridTable__element__part DS__head">
                                     <p>STT</p>
                                     <p>Tên nhóm</p>
@@ -212,41 +332,41 @@
                                 </div>
                             </div>
 
-                            <div class = "Acontent__gridTable__element" id="body-center1__DSTL">
+                            <div class="Acontent__gridTable__element" id="body-center1__DSTL">
                                 <div class="Acontent__gridTable__element__part DS__head">
-                                    <p class = "body-center1__DSTL__STT">STT</p>
-                                    <p class = "body-center1__DSTL__name">Tài liệu</p>
-                                    <p class = "body-center1__DSTL__type">Lĩnh vực</p>
+                                    <p class="body-center1__DSTL__STT">STT</p>
+                                    <p class="body-center1__DSTL__name">Tài liệu</p>
+                                    <p class="body-center1__DSTL__type">Lĩnh vực</p>
                                 </div>
                                 <div class="Acontent__gridTable__element__part DS__body">
-                                    <p class = "body-center1__DSTL__STT">0</p>
-                                    <p class = "body-center1__DSTL__name">update later</p>
-                                    <p class = "body-center1__DSTL__type">update later</p>
+                                    <p class="body-center1__DSTL__STT">0</p>
+                                    <p class="body-center1__DSTL__name">update later</p>
+                                    <p class="body-center1__DSTL__type">update later</p>
                                 </div>
                                 <div class="Acontent__gridTable__element__part DS__body">
-                                    <p class = "body-center1__DSTL__STT">1</p>
-                                    <p class = "body-center1__DSTL__name">update later</p>
-                                    <p class = "body-center1__DSTL__type">update later</p>
+                                    <p class="body-center1__DSTL__STT">1</p>
+                                    <p class="body-center1__DSTL__name">update later</p>
+                                    <p class="body-center1__DSTL__type">update later</p>
                                 </div>
                                 <div class="Acontent__gridTable__element__part DS__body">
-                                    <p class = "body-center1__DSTL__STT">2</p>
-                                    <p class = "body-center1__DSTL__name">update later</p>
-                                    <p class = "body-center1__DSTL__type">update later</p>
+                                    <p class="body-center1__DSTL__STT">2</p>
+                                    <p class="body-center1__DSTL__name">update later</p>
+                                    <p class="body-center1__DSTL__type">update later</p>
                                 </div>
                             </div>
-                            
-                            <div class = "Acontent__gridTable__element" id="body-center1__UPDATELATER">
+
+                            <div class="Acontent__gridTable__element" id="body-center1__UPDATELATER">
                                 <p>UPDATE LATER...</p>
                             </div>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
         </div>
     </div>
     <style>
-        #page1{
+        #page1 {
             color: white !important;
             background-color: rgb(60, 60, 60);
             transition: opacity 0.3s ease-out;
@@ -256,79 +376,86 @@
     </style>
     <!-- FOOTER FOOTER FOOTER -->
     <!-- PHẦN CHÂN KHUNG -->
-    <iframe class = "footer" src="html/footer.html" frameborder="0"></iframe>
-    
+    <iframe class="footer" src="html/footer.html" frameborder="0"></iframe>
+
     <!-- BLOCK CẬP NHẬT-->
-    <div class = "set-scrollbar--x" id = "updateInfoDiv__hideBlock">
+    <div class="set-scrollbar--x" id="updateInfoDiv__hideBlock">
         <div id="updateInfoDiv__infomation__hideBlock">
-            <form class = "updateInfoDiv__hideBlock__part" id="updateInfoDiv__hideBlock__pic" action="" method="">
+            <form class="updateInfoDiv__hideBlock__part" id="updateInfoDiv__hideBlock__pic" action="" method="">
                 <div class="updateInfoDiv__hideBlock__title">
                     <h3>Cập nhật ảnh đại diện</h3>
-                    <div id="updateInfoDiv__hideBlock__title--exit" onclick = show_updateInfoDiv()><i class="fa-solid fa-xmark"></i></div>
+                    <div id="updateInfoDiv__hideBlock__title--exit" onclick=show_updateInfoDiv()><i
+                            class="fa-solid fa-xmark"></i></div>
                 </div>
-                <label class = "updateInfoDiv__hideBlock__part__input--file" for="c-backgroundPic">  <!-- c = change -->
+                <label class="updateInfoDiv__hideBlock__part__input--file" for="c-backgroundPic"> <!-- c = change -->
                     <span>Background</span>
-                    <input class = "updateInfoInput" type="file" accept="image/png, image/jpeg" id = "c-backgroundPic" name = "n-backgroundPic"> <!-- n = new -->
+                    <input class="updateInfoInput" type="file" accept="image/png, image/jpeg" id="c-backgroundPic"
+                        name="n-backgroundPic"> <!-- n = new -->
                 </label>
-                <label class = "updateInfoDiv__hideBlock__part__input--file" for="c-avatar">  <!-- c = change -->
+                <label class="updateInfoDiv__hideBlock__part__input--file" for="c-avatar"> <!-- c = change -->
                     <span>Avatar</span>
-                    <input class = "updateInfoInput" type="file" accept="image/png, image/jpeg" id = "c-avatar" name = "n-avatar"> <!-- n = new -->
+                    <input class="updateInfoInput" type="file" accept="image/png, image/jpeg" id="c-avatar"
+                        name="n-avatar"> <!-- n = new -->
                 </label>
-                <div class = "updateInfoDiv__hideBlock__part" id="updateInfoDiv__hideBlock__footer">
-                    <button id="updateInfoDiv__hideBlock__footer--cancel" type="button" onclick = cancelUpdate(0)>ĐẶT LẠI</button>
+                <div class="updateInfoDiv__hideBlock__part" id="updateInfoDiv__hideBlock__footer">
+                    <button id="updateInfoDiv__hideBlock__footer--cancel" type="button" onclick=cancelUpdate(0)>ĐẶT
+                        LẠI</button>
                     <button id="updateInfoDiv__hideBlock__footer--submit" type="submit">CẬP NHẬT</button>
                 </div>
             </form>
-            <form class = "updateInfoDiv__hideBlock__part" id="updateInfoDiv__hideBlock__information" action="" method="">
+            <form class="updateInfoDiv__hideBlock__part" id="updateInfoDiv__hideBlock__information" action="" method="">
                 <div class="updateInfoDiv__hideBlock__title">
                     <h3>Cập nhật thông tin cơ bản</h3>
-                    <div id="updateInfoDiv__hideBlock__title--exit" onclick = show_updateInfoDiv()><i class="fa-solid fa-xmark"></i></div>
+                    <div id="updateInfoDiv__hideBlock__title--exit" onclick=show_updateInfoDiv()><i
+                            class="fa-solid fa-xmark"></i></div>
                 </div>
-                <label class = "updateInfoDiv__hideBlock__part__input--text" for="c-name">  <!-- c = change -->
+                <label class="updateInfoDiv__hideBlock__part__input--text" for="c-name"> <!-- c = change -->
                     <span>Họ và tên</span>
-                    <input class = "updateInfoInput" type="text" id = "c-name" name = "n-name"> <!-- n = new -->
+                    <input class="updateInfoInput" type="text" id="c-name" name="n-name"> <!-- n = new -->
                 </label>
-                <label class = "updateInfoDiv__hideBlock__part__input--text" for="c-gender">
+                <label class="updateInfoDiv__hideBlock__part__input--text" for="c-gender">
                     <span>Giới tính</span>
-                    <input class = "updateInfoInput" type="text" id = "c-gender" name = "n-gender">
+                    <input class="updateInfoInput" type="text" id="c-gender" name="n-gender">
                 </label>
-                <label class = "updateInfoDiv__hideBlock__part__input--date" for="c-date">
+                <label class="updateInfoDiv__hideBlock__part__input--date" for="c-date">
                     <span>Ngày sinh</span>
-                    <input class = "updateInfoInput" type="date" id = "c-date" name = "n-date">
+                    <input class="updateInfoInput" type="date" id="c-date" name="n-date">
                 </label>
-                <label class = "updateInfoDiv__hideBlock__part__input--checkbox" for="c-doanvien">
+                <label class="updateInfoDiv__hideBlock__part__input--checkbox" for="c-doanvien">
                     <span>Đoàn viên</span>
-                    <input class = "updateInfoInput" type="checkbox" id = "c-doanvien" name = "n-doanvien">
+                    <input class="updateInfoInput" type="checkbox" id="c-doanvien" name="n-doanvien">
                 </label>
-                <label class = "updateInfoDiv__hideBlock__part__input--text" for="c-class">
+                <label class="updateInfoDiv__hideBlock__part__input--text" for="c-class">
                     <span>Lớp</span>
-                    <input class = "updateInfoInput" type="text" id = "c-class" name = "n-class">
+                    <input class="updateInfoInput" type="text" id="c-class" name="n-class">
                 </label>
-                <label class = "updateInfoDiv__hideBlock__part__input--text" for="c-position">
+                <label class="updateInfoDiv__hideBlock__part__input--text" for="c-position">
                     <span>Chức vụ</span>
-                    <input class = "updateInfoInput" type="text" id = "c-position" name = "n-position">
+                    <input class="updateInfoInput" type="text" id="c-position" name="n-position">
                 </label>
-                <label class = "updateInfoDiv__hideBlock__part__input--text" for="c-diary">
+                <label class="updateInfoDiv__hideBlock__part__input--text" for="c-diary">
                     <span>Nhật kí</span>
-                    <textarea class = "updateInfoInput" id="c-diary" name="n-diary" maxlength="100" placeholder="Kích thước tối đa 100 kí tự"></textarea>
+                    <textarea class="updateInfoInput" id="c-diary" name="n-diary" maxlength="100"
+                        placeholder="Kích thước tối đa 100 kí tự"></textarea>
                 </label>
                 <div class="updateInfoDiv__hideBlock__title">
                     <h3>Cập nhật thông tin liên hệ</h3>
                 </div>
-                <label class = "updateInfoDiv__hideBlock__part__input--text" for="c-email">
+                <label class="updateInfoDiv__hideBlock__part__input--text" for="c-email">
                     <span>Email</span>
-                    <input class = "updateInfoInput" type="text" id = "c-email" name = "n-email">
+                    <input class="updateInfoInput" type="text" id="c-email" name="n-email">
                 </label>
-                <label class = "updateInfoDiv__hideBlock__part__input--text" for="c-facebook">
+                <label class="updateInfoDiv__hideBlock__part__input--text" for="c-facebook">
                     <span>Facebook</span>
-                    <input class = "updateInfoInput" type="text" id = "c-facebook" name = "n-facebook">
+                    <input class="updateInfoInput" type="text" id="c-facebook" name="n-facebook">
                 </label>
-                <label class = "updateInfoDiv__hideBlock__part__input--text" for="c-phone">
+                <label class="updateInfoDiv__hideBlock__part__input--text" for="c-phone">
                     <span>Số điện thoại</span>
-                    <input class = "updateInfoInput" type="text" id = "c-phone" name = "n-phone">
+                    <input class="updateInfoInput" type="text" id="c-phone" name="n-phone">
                 </label>
-                <div class = "updateInfoDiv__hideBlock__part" id="updateInfoDiv__hideBlock__footer">
-                    <button id="updateInfoDiv__hideBlock__footer--cancel" type="button" onclick = cancelUpdate(1)>ĐẶT LẠI</button>
+                <div class="updateInfoDiv__hideBlock__part" id="updateInfoDiv__hideBlock__footer">
+                    <button id="updateInfoDiv__hideBlock__footer--cancel" type="button" onclick=cancelUpdate(1)>ĐẶT
+                        LẠI</button>
                     <button id="updateInfoDiv__hideBlock__footer--submit" type="submit">CẬP NHẬT</button>
                 </div>
             </form>
@@ -337,4 +464,5 @@
     </div>
     <!-- BLOCK CẬP NHẬT-->
 </body>
+
 </html>

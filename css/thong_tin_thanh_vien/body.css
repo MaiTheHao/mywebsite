@@ -106,6 +106,32 @@
 
 }
 
+.body-left1__sidebarBtn{
+    font-size: 0.45em;
+    text-align: center;
+    border-radius: 0 0 0.5vw 0.5vw;
+
+    margin-top: 2%;
+
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.body-left1__sidebarBtn:hover{
+    cursor: pointer;
+    
+    background-color: rgb(37, 37, 37);
+    color: white;
+    transform: scale(1.03);
+}
+
+.body-left1__sidebarBtn:active{
+    transform: scale(0.8);
+}
+
+.body-left1__sidebarBtn i{
+    transform: rotate(180deg);
+}
+
 #icon-selectYear{
     font-size: calc(var(--myfontsize)/2.5);
 
@@ -117,7 +143,7 @@
 /* LEFT CONTENT*/
 .body-left1 .Acontent__sidebar__element__content{
     overflow: hidden;
-    height: 0;
+    height: max-content;
 }
 
 /* LEFT ACTION BUTTON */

@@ -229,7 +229,10 @@ function addHeader() {
         <div class = "paddingRight"></div>
         </div>
     </div>
-    <h1 id = "webNote"; style = "position: fixed; left: 0; bottom: 0; background-color:rgb(37, 37, 37); z-index: 1; color: white; padding: 0.25% 1%; border-radius: 0 0.5vw 0 0;font-size: calc(var(--myfontsize)/3)">Đây chỉ là mô hình, dữ liệu chỉ là mô phỏng. <a style="color:yellow;font-size:0.7em" target="_blank" href="https://stealth-leo-c2e.notion.site/M-T-S-N-PH-M-D-N-SCHOOL-WEB-532aa687a4ca4a7fb94f0f37424c9085?pvs=4"><i>link to workspace here</i></a></h1>
+    <div id="chatWithAi" onclick="chatWithAi()">
+        <img src = pic/aiPic.jpg id="chatBotPicture">
+    </div>
+    <h1 id = "webNote">Đây chỉ là mô hình, dữ liệu chỉ là mô phỏng. <a target="_blank" href="https://stealth-leo-c2e.notion.site/M-T-S-N-PH-M-D-N-SCHOOL-WEB-532aa687a4ca4a7fb94f0f37424c9085?pvs=4"><i>link to workspace here</i></a></h1>
     `;
     // Thêm header vào phần đầu của body
     document.body.insertAdjacentHTML('afterbegin', headerHTML);

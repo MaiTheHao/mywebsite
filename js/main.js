@@ -215,7 +215,8 @@ function addHeader() {
                     <a href="gioi_thieu.html" class="header-nav__menu--element navbutton" id = "page5">GIỚI THIỆU</a>
                     <a href="cap_nhat.html" class="header-nav__menu--element navbutton" id = "page6" target = "_blank">CẬP NHẬT THÔNG TIN</a>
                     <a href="thi_dua.html" class="header-nav__menu--element navbutton" id = "page7">THI ĐUA</a>
-                    <a href="elearning.html" class="header-nav__menu--element navbutton" id = "page8">E-LEARNING</a>
+                    <a href="login.html" class="header-nav__menu--element navbutton" id = "page8">E-LEARNING</a>
+                    <a href="login.html" class="header-nav__menu--element navbutton" id = "page9">HOẠT ĐỘNG ĐOÀN</a>
                     <a href="login.html" class="header-nav__menu--element navbutton">ĐĂNG NHẬP-TEST</a>
                     <a target="_blank" href="https://stealth-leo-c2e.notion.site/M-T-S-N-PH-M-D-N-SCHOOL-WEB-532aa687a4ca4a7fb94f0f37424c9085?pvs=4" class="header-nav__menu--element navbutton">LINK MÔ TẢ SẢN PHẨM</a>
                     <a href="login.html" class="header-nav__menu--element navbutton" style = "color: gray">TEST ELEMENT</a>

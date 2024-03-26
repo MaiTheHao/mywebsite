@@ -550,7 +550,7 @@ label + .updateInfoDiv__hideBlock__title{
         background-color: rgb(255, 255, 255);
         box-shadow: 0vw 0vw 1vw 0vw rgb(158, 158, 158);
         
-        border-radius: 1vw;
+        border-radius: 0.5vw;
         margin: 2% 2%;
         padding: 1% 2%;
 
@@ -734,7 +734,7 @@ label + .updateInfoDiv__hideBlock__title{
 
         overflow-y: scroll;
 
-        background-color: rgb(196, 239, 255);
+        background-color: rgb(214, 247, 255);
     }
 
     .Acontent__sidebar__element{
@@ -958,3 +958,7 @@ label + .updateInfoDiv__hideBlock__title{
             padding: 1% 0;
             font-size: calc(var(--myfontsize)/1.2);
         }
+
+.tableTitleObject{
+    border: 0.12vw solid rgb(92, 92, 92);
+}

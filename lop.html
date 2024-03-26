@@ -13,6 +13,7 @@
     <!-- JAVASCRIPT -->
    
     <script src = "js/main.js"></script>
+    <script src="js/lop.js"></script>
     <script src="https://kit.fontawesome.com/0afaeea3b6.js" crossorigin="anonymous"></script>
     <title>LỚP</title>
 </head>
@@ -53,7 +54,7 @@
                             </select> 
                             <label for="selectYear" id = "icon-selectYear"><i class="fa-solid fa-calendar-days"></i></label>
                         </div>
-
+    
                     </div>                       
                     <!-- CÁC PHẦN TỬ CON -->
                     <div class="Acontent__sidebar__element">
@@ -74,7 +75,7 @@
                         </div>
                         <div onclick = "setHeight('group10', this)" class = "body-left2__sidebarBtn"><i class="fa-solid fa-chevron-up"></i> <span>ALL</span></div>
                     </div>
-
+    
                     <div class="Acontent__sidebar__element">
                         <p class="Acontent__sidebar__element__header">DANH SÁCH KHỐI 11</p>
                         <div class="Acontent__sidebar__element__content" id = "group11">
@@ -93,7 +94,7 @@
                         </div>
                         <div onclick = "setHeight('group11', this)" class = "body-left2__sidebarBtn"><i class="fa-solid fa-chevron-up"></i> <span>ALL</span></div>
                     </div>
-
+    
                     <div class="Acontent__sidebar__element">
                         <p class="Acontent__sidebar__element__header">DANH SÁCH KHỐI 12</p>
                         <div class="Acontent__sidebar__element__content" id = "group12">
@@ -113,33 +114,12 @@
                         <div onclick = "setHeight('group12', this)" class = "body-left2__sidebarBtn"><i class="fa-solid fa-chevron-up"></i> <span>ALL</span></div>
                     </div>
                     <div class="sideBar paddingBottom"><i class="fa-solid fa-circle-info"></i>Đã hết danh sách</div>
-                    
-                    <script>
-                        function setHeight(id, btn) {
-                          let element = document.getElementById(id);
-
-                          if (element.style.height == "max-content"){
-                            document.getElementById(id).style.height = 0;
-                            btn.getElementsByTagName("i")[0].style.transform = "rotate(180deg)";
-                            btn.getElementsByTagName("span")[0].textContent = " ALL";
-
-                          } else {
-                            document.getElementById(id).style.height = "max-content";
-                            btn.getElementsByTagName("i")[0].style.transform = "rotate(0deg)";
-                            btn.getElementsByTagName("span")[0].textContent = " HIDE";
-                          } 
-                        }
-
-                        function showListYears(e){
-                            e.getElementsByTagName("i")
-                        }
-                    </script>
-
+    
                 </div>
                 <!-- GIỮA BODY -->
                 <div class="body-center2 body-part">
                     <!-- CÁC PHẦN TỬ CON -->
-                    <div  class = "Acontent__table" id = "body-center2__header">
+                    <div  class = "Acontent__table tableTitleObject" id = "body-center2__header">
                         <div id="body-center__header__pics">
                             <div id = "profile__pic">
                                 <img src = "pic/class_background.jpg"  alt = "background" id = "profile__background">
@@ -220,29 +200,6 @@
                             <div class="body-center2__bodyTable__nav__element bc2_nav-normal" onclick = "showTable('body-center2__UPDATELATER')">SƠ ĐỒ LỚP</div>
                             <div class="body-center2__bodyTable__nav__element bc2_nav-normal" onclick = "showTable('body-center2__UPDATELATER')">TEST ELEMENT</div>
                         </div>
-                        <script>
-                            document.addEventListener('DOMContentLoaded', function() {
-                                var elements = document.querySelectorAll('.body-center2__bodyTable__nav__element');
-                                elements.forEach(function(element) {
-                                    element.addEventListener('click', function() {
-                                        elements.forEach(function(el) {
-                                            el.classList.remove('bc2_nav-active');
-                                            el.classList.add('bc2_nav-normal');
-                                        });
-                                        this.classList.remove('bc2_nav-normal');
-                                        this.classList.add('bc2_nav-active');
-                                    });
-                                });
-                            });  
-                            
-                            function showTable(id){
-                                document.querySelectorAll(".Acontent__gridTable__element").forEach(function(element){
-                                    element.style.display = "none";
-                                });
-
-                                document.getElementById(id).style.display = "flex";
-                            }
-                        </script>
                         <div class="Acontent__gridTable" id="body-center2__DS">
                             <div class = "Acontent__gridTable__element" id="body-center2__DSHS">
                                 <div class="Acontent__gridTable__element__part DS__head">
@@ -278,7 +235,7 @@
                                     <p>Tổ trưởng</p>
                                 </div>
                             </div>
-
+    
                             <div class = "Acontent__gridTable__element" id="body-center2__DSTD">
                                 <div class="Acontent__gridTable__element__part DS__head">
                                     <p>Tuần</p>
@@ -311,7 +268,7 @@
                                     <p><a href="" class = "DS__link">Link chi tiết tại đây</a></p>
                                 </div>
                             </div>
-
+    
                             
                             <div class = "Acontent__gridTable__element" id="body-center2__UPDATELATER">
                                 <p>UPDATE LATER...</p>

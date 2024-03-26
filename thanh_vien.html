@@ -14,6 +14,7 @@
     <!-- JAVASCRIPT -->
 
     <script src="js/main.js"></script>
+    <script defer src="js/thanh_vien.js"></script>
     <script src="https://kit.fontawesome.com/0afaeea3b6.js" crossorigin="anonymous"></script>
     <title>THÀNH VIÊN</title>
 </head>
@@ -34,7 +35,7 @@
                             <i class="fa-solid fa-magnifying-glass"></i>
                             <input type="text" id="findClass" placeholder="Tìm Thành Viên">
                         </form>
-
+    
                         <div id="body-left1__listYear">
                             <select name="year" id="selectYear">
                                 <option value="">2024</option>
@@ -53,124 +54,27 @@
                                 <option value="2011">2011</option>
                                 <option value="2012">2012</option>
                             </select>
-                            <label for="selectYear" id="icon-selectYear"><i
-                                    class="fa-solid fa-calendar-days"></i></label>
+                            <label for="selectYear" id="icon-selectYear"><i class="fa-solid fa-calendar-days"></i></label>
                         </div>
-
+    
                     </div>
-
+    
                     <div class="Acontent__sidebar__element">
                         <p class="Acontent__sidebar__element__header">DANH SÁCH THÀNH VIÊN</p>
                         <div class="Acontent__sidebar__element__content" id="listMembers">
-
+    
                         </div>
-                        <div onclick = "setHeight('listMembers', this)" class = "body-left1__sidebarBtn"><i class="fa-solid fa-chevron-up"></i> <span>ALL</span></div>
+                        <div onclick="setHeight('listMembers', this)" class="body-left1__sidebarBtn"><i
+                                class="fa-solid fa-chevron-up"></i> <span>ALL</span></div>
                     </div>
-                    <script>
-                        function setHeight(id, btn) {
-                            let element = document.getElementById(id);
-
-                            if (element.style.height == "max-content"){
-                            document.getElementById(id).style.height = 0;
-                            btn.getElementsByTagName("i")[0].style.transform = "rotate(180deg)";
-                            btn.getElementsByTagName("span")[0].textContent = " ALL";
-
-                            } else {
-                            document.getElementById(id).style.height = "max-content";
-                            btn.getElementsByTagName("i")[0].style.transform = "rotate(0deg)";
-                            btn.getElementsByTagName("span")[0].textContent = " HIDE";
-                            } 
-                        }
-
-                        function showListYears(e){
-                            e.getElementsByTagName("i")
-                        }
-
-                        const testPersons = [
-                            "Trần Văn An",
-                            "Lê Thị Bích",
-                            "Phạm Ngọc Cảnh",
-                            "Đỗ Thị Dung",
-                            "Nguyễn Văn Duy",
-                            "Lê Thị Hà",
-                            "Trần Văn Hải",
-                            "Nguyễn Thị Hương",
-                            "Phạm Ngọc Hưng",
-                            "Vũ Thị Huyền",
-                            "Lê Văn Kiên",
-                            "Trần Thị Lan",
-                            "Nguyễn Văn Long",
-                            "Phạm Thị Mai",
-                            "Đỗ Văn Nam",
-                            "Lê Thị Nga",
-                            "Trần Văn Phong",
-                            "Nguyễn Thị Phương",
-                            "Phạm Ngọc Quân",
-                            "Vũ Thị Thanh",
-                            "Lê Văn Tùng",
-                            "Trần Thị Tuyết",
-                            "Nguyễn Văn Tuấn",
-                            "Phạm Thị Vân",
-                            "Đỗ Văn Vinh",
-                            "Lê Thị Xuân",
-                            "Trần Văn Xuyên",
-                            "Nguyễn Thị Yến",
-                            "Phạm Ngọc",
-                            "Vũ Thị Ánh",
-                            "Lê Văn Bình",
-                            "Trần Thị Chi",
-                            "Nguyễn Văn Dũng",
-                            "Phạm Thị Dung",
-                            "Đỗ Văn Duy",
-                            "Lê Thị Hà",
-                            "Trần Văn Hải",
-                            "Nguyễn Thị Hiền",
-                            "Phạm Ngọc Huy",
-                            "Vũ Thị Hằng",
-                            "Lê Văn Kiên",
-                            "Trần Thị Lan",
-                            "Nguyễn Văn Long",
-                            "Phạm Thị Mai",
-                            "Đỗ Văn Nam",
-                            "Lê Thị Nga",
-                            "Trần Văn Phong",
-                            "Nguyễn Thị Phương",
-                            "Phạm Ngọc Quân",
-                            "Vũ Thị Thanh",
-                            "Lê Văn Tùng",
-                            "Trần Thị Tuyết",
-                            "Nguyễn Văn Tuấn",
-                            "Phạm Thị Vân",
-                            "Đỗ Văn Vinh",
-                            "Lê Thị Xuân",
-                            "Trần Văn Xuyên",
-                            "Nguyễn Thị Yến",
-                            "Phạm Ngọc",
-                            "Vũ Thị Ánh",
-                            "Lê Văn Bình",
-                            "Trần Thị Chi",
-                            "Nguyễn Văn Dũng",
-                            "Phạm Thị Dung",
-                            "Đỗ Văn Duy",
-                        ]
-                        const root = document.getElementById("listMembers");
-                        testPersons.forEach((name, index) => {
-                            let A = document.createElement("a");
-                            A.className = "Acontent__sidebar__element__content__element";
-                            A.href = "#";
-                            A.innerText = `${name}`;
-
-                            root.appendChild(A);
-                        })
-                    </script>
-
+    
                     <div class="sideBar paddingBottom"><i class="fa-solid fa-circle-info"></i>Đã hết danh sách</div>
-
+    
                 </div>
                 <!-- GIỮA BODY -->
                 <div class="body-center1 body-part">
                     <!-- CÁC PHẦN TỬ CON -->
-                    <div class="Acontent__table" id="body-center1__header">
+                    <div class="Acontent__table  tableTitleObject" id="body-center1__header">
                         <div id="body-center__header__pics">
                             <div id="profile__pic">
                                 <img src="pic/user_background.jpg" alt="background" id="profile__background">
@@ -189,30 +93,25 @@
                                     <p class="body-center1__header__rightSide__element__list__element">
                                         <span
                                             class="body-center1__header__rightSide__element__list__element__title">TÊN</span>
-                                        <span
-                                            class="body-center1__header__rightSide__element__list__element__text">Nguyễn
+                                        <span class="body-center1__header__rightSide__element__list__element__text">Nguyễn
                                             Văn A</span>
                                     </p>
                                     <p class="body-center1__header__rightSide__element__list__element">
-                                        <span
-                                            class="body-center1__header__rightSide__element__list__element__title">NGÀY
+                                        <span class="body-center1__header__rightSide__element__list__element__title">NGÀY
                                             SINH</span>
                                         <span
                                             class="body-center1__header__rightSide__element__list__element__text">DD/MM/YY</span>
                                     </p>
                                     <p class="body-center1__header__rightSide__element__list__element">
-                                        <span
-                                            class="body-center1__header__rightSide__element__list__element__title">ĐOÀN
+                                        <span class="body-center1__header__rightSide__element__list__element__title">ĐOÀN
                                             VIÊN</span>
                                         <span class="body-center1__header__rightSide__element__list__element__text">Có /
                                             không</span>
                                     </p>
                                     <p class="body-center1__header__rightSide__element__list__element">
-                                        <span
-                                            class="body-center1__header__rightSide__element__list__element__title">CHỨC
+                                        <span class="body-center1__header__rightSide__element__list__element__title">CHỨC
                                             VỤ</span>
-                                        <span
-                                            class="body-center1__header__rightSide__element__list__element__text">Thường
+                                        <span class="body-center1__header__rightSide__element__list__element__text">Thường
                                             dân/ Tổ phó/ Tổ trưởng/ Lớp phó/ ...</span>
                                     </p>
                                 </div>
@@ -224,8 +123,7 @@
                                     <p class="body-center1__header__rightSide__element__list__element">
                                         <span class="body-center1__header__rightSide__element__list__element__title">SỐ
                                             ĐIỆN THOẠI</span>
-                                        <span
-                                            class="body-center1__header__rightSide__element__list__element__text">Number
+                                        <span class="body-center1__header__rightSide__element__list__element__text">Number
                                             phone</span>
                                     </p>
                                     <p class="body-center1__header__rightSide__element__list__element">
@@ -235,8 +133,7 @@
                                             class="body-center1__header__rightSide__element__list__element__text">Email</span>
                                     </p>
                                     <p class="body-center1__header__rightSide__element__list__element">
-                                        <span
-                                            class="body-center1__header__rightSide__element__list__element__title">NHẬT
+                                        <span class="body-center1__header__rightSide__element__list__element__title">NHẬT
                                             KÍ</span>
                                         <span
                                             class="body-center1__header__rightSide__element__list__element__text">Paragraph</span>
@@ -268,33 +165,6 @@
                             <div class="body-center1__bodyTable__nav__element bc1_nav-normal"
                                 onclick="showTable('body-center1__DSTL')">TÀI LIỆU</div>
                         </div>
-                        <script>
-                            document.addEventListener('DOMContentLoaded', function () {
-                                var elements = document.querySelectorAll('.body-center1__bodyTable__nav__element');
-                                elements.forEach(function (element) {
-                                    element.addEventListener('click', function () {
-                                        elements.forEach(function (el) {
-                                            el.classList.remove('bc1_nav-active');
-                                            el.classList.add('bc1_nav-normal');
-                                        });
-                                        this.classList.remove('bc1_nav-normal');
-                                        this.classList.add('bc1_nav-active');
-                                    });
-                                });
-                            });
-
-                            function showTable(id = "body-center1__UPDATELATER") {
-                                document.querySelectorAll(".Acontent__gridTable__element").forEach(function (element) {
-                                    element.style.display = "none";
-                                });
-
-                                document.getElementById(id).style.display = "flex";
-                            }
-
-                            function showListYears(e) {
-                                e.getElementsByTagName("i")
-                            }
-                        </script>
                         <div class="Acontent__gridTable" id="body-center1__DS">
                             <div class="Acontent__gridTable__element" id="body-center1__DSHD">
                                 <div class="Acontent__gridTable__element__part DS__head">
@@ -322,7 +192,7 @@
                                     <p>update later</p>
                                 </div>
                             </div>
-
+    
                             <div class="Acontent__gridTable__element" id="body-center1__DSNhom">
                                 <div class="Acontent__gridTable__element__part DS__head">
                                     <p>STT</p>
@@ -349,7 +219,7 @@
                                     <p>update later</p>
                                 </div>
                             </div>
-
+    
                             <div class="Acontent__gridTable__element" id="body-center1__DSTL">
                                 <div class="Acontent__gridTable__element__part DS__head">
                                     <p class="body-center1__DSTL__STT">STT</p>
@@ -372,13 +242,13 @@
                                     <p class="body-center1__DSTL__type">update later</p>
                                 </div>
                             </div>
-
+    
                             <div class="Acontent__gridTable__element" id="body-center1__UPDATELATER">
                                 <p>UPDATE LATER...</p>
                             </div>
                         </div>
                     </div>
-
+    
                 </div>
             </div>
         </div>

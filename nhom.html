@@ -32,7 +32,7 @@
                             <i class = "fa-solid fa-magnifying-glass"></i>
                             <input type="text" id = "findClass" placeholder="Tìm nhóm">
                         </form>
-
+    
                     </div>                       
                     <!-- CÁC PHẦN TỬ CON -->
                     <div class="Acontent__sidebar__element">
@@ -47,35 +47,35 @@
                         </div>
                         <div onclick = "setHeight('bc3_a', this)" class = "body-left3__sidebarBtn"><i class="fa-solid fa-chevron-up"></i> <span>ALL</span></div>
                     </div>
-
+    
                     <div class="sideBar paddingBottom"><i class="fa-solid fa-circle-info"></i>Đã hết danh sách</div>
                     
                     <script>
                         function setHeight(id, btn) {
-                          let element = document.getElementById(id);
-
-                          if (element.style.height == "max-content"){
+                            let element = document.getElementById(id);
+    
+                            if (element.style.height == "max-content"){
                             document.getElementById(id).style.height = 0;
                             btn.getElementsByTagName("i")[0].style.transform = "rotate(180deg)";
                             btn.getElementsByTagName("span")[0].textContent = " ALL";
-
-                          } else {
+    
+                            } else {
                             document.getElementById(id).style.height = "max-content";
                             btn.getElementsByTagName("i")[0].style.transform = "rotate(0deg)";
                             btn.getElementsByTagName("span")[0].textContent = " HIDE";
-                          } 
+                            } 
                         }
-
+    
                         function showListYears(e){
                             e.getElementsByTagName("i")
                         }
                     </script>
-
+    
                 </div>
                 <!-- GIỮA BODY -->
                 <div class="body-center3 body-part">
                     <!-- CÁC PHẦN TỬ CON -->
-                    <div  class = "Acontent__table" id = "body-center3__header">
+                    <div  class = "Acontent__table tableTitleObject" id = "body-center3__header">
                         <div id="body-center__header__pics">
                             <div id = "profile__pic">
                                 <img src = "pic/group_background.jpg"  alt = "background" id = "profile__background">
@@ -153,7 +153,7 @@
                                 document.querySelectorAll(".Acontent__gridTable__element").forEach(function(element){
                                     element.style.display = "none";
                                 });
-
+    
                                 document.getElementById(id).style.display = "flex";
                             }
                         </script>
@@ -222,7 +222,7 @@
                                     <p><a href="">Link chi tiết</a></p>
                                 </div>
                             </div>
-
+    
                             
                             <div class = "Acontent__gridTable__element" id="body-center3__UPDATELATER">
                                 <p>UPDATE LATER...</p>

@@ -89,7 +89,7 @@
                             </div>
                             <div id="interactGui">
                                 <div class="interact__form" id="addForm">
-                                    <h2>THÊM MỚI</h2>
+                                    <h2><i class="fa-solid fa-circle-plus"></i> THÊM MỚI</h2>
                                     <form id="addForm__members" class="addFormType" action="#" method="post"
                                         enctype="multipart/form-data">
                                         <div class="form-row">
@@ -104,8 +104,13 @@
                                         </div>
                                         <div class="form-row">
                                             <div class="form-column">
-                                                <label for="position">Chức vụ:</label>
-                                                <input type="text" id="position" name="position">
+                                                <label>Giới tính:</label>
+                                                <select id="gender" name="gender">
+                                                    <option value="chọn giới tính">chọn giới tính</option>
+                                                    <option value="name">nam</option>
+                                                    <option value="nữ">nữ</option>
+                                                    <option value="khác">khác</option>
+                                                </select>
                                             </div>
                                             <div class="form-column">
                                                 <label>Đoàn viên:</label>
@@ -115,6 +120,8 @@
                                                 </select>
                                             </div>
                                         </div>
+                                        <label for="position">Chức vụ:</label>
+                                        <input type="text" id="position" name="position">
                                         <div class="form-row">
                                             <div class="form-column">
                                                 <label for="phone">Số điện thoại:</label>
@@ -197,11 +204,9 @@
                                 </div>
 
                                 <div class="interact__form" id="changeForm">
-                                    <h2>SỬA ĐỔI</h2>
-                                    <form id="changeForm__members" class="changeFormType" action="#" method="post"
+                                    <h2><i class="fa-solid fa-pencil"></i> SỬA ĐỔI</h2>
+                                    <form id="addForm__members" class="changeFormType" action="#" method="post"
                                         enctype="multipart/form-data">
-                                        <label for="personId">ID thành viên:</label>
-                                        <input type="text" id="personId" name="personId" required>
                                         <div class="form-row">
                                             <div class="form-column">
                                                 <label for="name">Tên thành viên:</label>
@@ -214,8 +219,13 @@
                                         </div>
                                         <div class="form-row">
                                             <div class="form-column">
-                                                <label for="position">Chức vụ:</label>
-                                                <input type="text" id="position" name="position">
+                                                <label>Giới tính:</label>
+                                                <select id="gender" name="gender">
+                                                    <option value="chọn giới tính">chọn giới tính</option>
+                                                    <option value="name">nam</option>
+                                                    <option value="nữ">nữ</option>
+                                                    <option value="khác">khác</option>
+                                                </select>
                                             </div>
                                             <div class="form-column">
                                                 <label>Đoàn viên:</label>
@@ -225,6 +235,8 @@
                                                 </select>
                                             </div>
                                         </div>
+                                        <label for="position">Chức vụ:</label>
+                                        <input type="text" id="position" name="position">
                                         <div class="form-row">
                                             <div class="form-column">
                                                 <label for="phone">Số điện thoại:</label>
@@ -309,7 +321,7 @@
                                 </div>
 
                                 <div class="interact__form" id="removeForm">
-                                    <h2>Xóa</h2>
+                                    <h2><i class="fa-solid fa-trash"></i> Xóa</h2>
                                     <form class="removeFormType" action="#" method="post">
                                         <label for="id">ID:</label>
                                         <input type="text" id="id" name="id" required>
@@ -318,8 +330,6 @@
                                 </div>
 
                             </div>
-                            <script>
-                            </script>
                         </div>
                     </div>
                 </div>
